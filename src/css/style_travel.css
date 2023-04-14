@@ -27,17 +27,20 @@ nav {
 .banner {
     height: 140px;
     position: relative;
+
+    display: flex;
+    align-items: center;
 }
 
 .banner img {
+    width: 100%;
     height: 100%;
-    width: auto;
+    object-fit: cover;
 }
 
 .banner h1 {
     position: absolute;
     margin: 0;
-    top: calc(50% - 0.5em);
     left: 10%;
     font-size: 2.5em;
     color: white;
@@ -48,8 +51,6 @@ nav {
     background-color: var(--gray-input);
     padding-left: 5vw;
     padding-right: calc(40% - 2vw);
-    /* flex: calc(60% - 3vw); */
-    /* width: calc(60% - 3vw); */
 }
 
 .top-brief {
@@ -87,7 +88,6 @@ ul.tabs-nav {
     display: flex;
     padding-inline-start: 0;
     width: 100%;
-    /* justify-content: space-between; */
     margin: 0;
 }
 
@@ -104,6 +104,7 @@ ul.tabs-nav {
     border-radius: 10px 10px 0 0;
     align-items: center;
     margin-right: 15px;
+    height: 1rem;
 }
 
 .tabs-nav a {
@@ -122,6 +123,7 @@ ul.tabs-nav {
 
 .content h1 {
     font-size: 2.5em;
+    width: 100%;
 }
 
 .content p {
@@ -162,11 +164,10 @@ table img {
 }
 
 aside {
-    width: calc(40% - 2vw - 100px);
-    padding: 0 50px;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0px 50px;
     transform: translateY(calc(-16vh - 89px));
-    /* -16vh - 88.67px */
-    /* -14vh - 89px */
 }
 
 .timer {
@@ -180,6 +181,7 @@ aside {
 .timer > div {
     background-color: var(--gray-background);
     width: 60px;
+    min-width: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -215,7 +217,7 @@ aside {
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
     margin-top: 10px;
-    border-bottom: 1px solid var(--gray-input);
+    border-bottom: 2px solid var(--gray-input);
     padding-bottom: 14px;
 }
 
@@ -284,16 +286,75 @@ form input[type="submit"] {
     margin: 25px 0px;
 }
 
-/* 768px
-   320px    
-*/
+@media only screen and (max-width: 1200px) {
+    ul.tabs-nav {
+        font-size: small;
+    }
+    .tabs-nav li {
+        padding: 15px 10px;
+        margin-right: 5px;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .pre-content {
+        padding-right: 5vw;
+    }
+    .tabs-nav li {
+        padding: 15px 20px;
+        margin-right: 15px;
+    }
+    .main-content {
+        display: block;
+    }
+    .content {
+        width: calc(100% - 10vw);
+        margin: 0 5vw;
+    }
+    aside {
+        max-width: unset;
+        margin: unset;
+        padding: 0px 10%;
+        transform: unset;
+    }
+    .timer {
+        justify-content: center;
+    }
+    .timer > div {
+        margin: 0 10px;
+    }
+    .booking-form h4 {
+        font-size: 1.5em;
+    }
+    /* Нийт дүн */
+    form span {
+        font-size: 1.25em;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .banner {
+        height: 100px;
+    }
+    .banner h1 {
+        font-size: 26px;
+    }
+    .top-brief {
+        justify-content: space-between;
+    }
+    .brief-info {
+        flex: unset;
+    }
+    ul.tabs-nav {
+        display: none ;
+    }
+}
 
 @media only screen and (max-width: 560px) {
     .banner {
         height: 100px;
     }
     .banner h1 {
-        top: calc(50% - 13px);
         font-size: 26px;
     }
     .top-brief {
@@ -301,5 +362,17 @@ form input[type="submit"] {
       grid-template-columns: repeat(2, 1fr);
       grid-gap: 10px;
       padding: 30px 0px;
+    }
+    .content h1 {
+        font-size: 30px;
+    }
+    aside {
+        padding: 0 5%;
+    }
+    .booking-form h4 {
+        font-size: 18px;
+    }
+    form span {
+        font-size: 15px;
     }
 }
