@@ -5,6 +5,7 @@
     --gray-light: #A0A2A6;
     --gray-background: #E6E8EE;
     --gray-input: #F5F7FB;
+    --primary-yellow: #FC7E08;
 }
 
 body {
@@ -13,6 +14,7 @@ body {
     font-family: 'Open Sans', sans-serif;
     font-size: 14px;
     overflow-x: hidden;
+    min-height: 100vh;
 }
 
 header {
@@ -286,6 +288,15 @@ form input[type="submit"] {
     margin: 25px 0px;
 }
 
+form input[type="submit"]:hover {
+    background-color: #186b4e;
+    cursor: pointer;
+}
+
+.book-button {
+    display: none;
+}
+
 @media only screen and (max-width: 1200px) {
     ul.tabs-nav {
         font-size: small;
@@ -347,6 +358,26 @@ form input[type="submit"] {
     }
     ul.tabs-nav {
         display: none ;
+    }
+    .book-button {
+        display: block;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background-color: white;
+        font-weight: bold;
+        font-size: 18px;
+        height: 50px;
+        border: 0;
+        /* box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); */
+        box-shadow: 0 0 60px 0 rgba(6,30,98,.08);
+    }
+    .book-button a {
+        text-decoration: none;
+        color: black;
+    }
+    .book-button a:hover {
+        color: var(--primary-yellow);
     }
 }
 
