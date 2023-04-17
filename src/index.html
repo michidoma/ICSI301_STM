@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -8,68 +7,98 @@
       name="keywords"
       content="travel, ayalal, book, mongol ayalal, gadaad ayalal, аялал, монгол аялал, гадаад аялал, жуулчлал"
     />
-    <meta
-      name="viewport"
-      content="width=device-width,initial-scale=1,maximum-scale=6"
-    />
-    <!-- <meta name="theme-color" content="#4d4d4d" /> -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script defer src="./components/Card.js"></script>
     <script defer src="./components/CardNews.js"></script>
-    <script defer src="./components/AdvantageBox.js"></script>
+    <script defer src="./components/InformationBox.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.js"></script>
+    <script src="./scripts/main.js"></script>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
+    />
   </head>
   <body>
     <header>
       <div class="top-bar">
-        <div class="right">
-          <div>USD <img src="../assets/images/svg/usd.svg" /> 3,527.29</div>
-          <div>Улаанбаатар -13.9°C</div>
-          <div>
-            <img src="../assets/images/svg/message.svg" /> info@mongolayalal.mn
+        <div class="wrapper bar-container">
+          <div class="right">
+            <div>USD <img src="../assets/svg/usd.svg" /> 3,527.29</div>
+            <div>Улаанбаатар -13.9°C</div>
+            <div>
+              <img src="../assets/icons/mail.png" /> info@mongolayalal.mn
+            </div>
+            <div><img src="../assets/icons/phone.png" /> (+976) 75707779</div>
           </div>
-          <div>
-            <img src="../assets/images/svg/phone.svg" /> (+976) 75707779
+          <div class="left">
+            <a target="_blank" href="https://www.facebook.com/mongoliantravel/">
+              <img src="../assets/icons/facebook.png" />
+            </a>
+            <a target="_blank" href="https://www.instagram.com/mongolayalal/">
+              <img src="../assets/icons/instagram.png" />
+            </a>
+            <a target="_blank" href="https://www.youtube.com/@mongoliantravelcompany">
+              <img src="../assets/icons/youtube.png" />
+            </a>
+            <a target="_blank" href="https://twitter.com/mongolayalal">
+              <img src="../assets/icons/twitter.png" />
+            </a>
           </div>
         </div>
-        <div class="left">// icons</div>
       </div>
-      <nav>
+
+      <nav class="wrapper">
         <a href="#" class="logo"
-          ><img src="../assets/images/png/logo.png" alt="logo"
+          ><img src="../assets/png/logo_2.png" alt="logo"
         /></a>
-        <ul>
+        <ul class="menu">
           <li>
-            <a aria-label="navigate to home page" href="index.html">Нүүр</a>
+            <a aria-label="navigate to home page" class="active" href="#home"
+              >Нүүр</a
+            >
           </li>
           <li>
-            <a aria-label="navigate to travels list page" href="travels.html"
+            <a aria-label="navigate to travels list page" href="#travels"
               >Аялалууд</a
             >
           </li>
           <li>
-            <a aria-label="navigate to blog page" href="news.html">Мэдээлэл</a>
+            <a aria-label="navigate to blog page" href="#news">Мэдээлэл</a>
           </li>
           <li>
-            <a aria-label="navigate to contact page" href="contact.html"
+            <a aria-label="navigate to contact page" href="#contact"
               >Холбоо барих</a
             >
           </li>
           <li>
-            <a aria-label="navigate to booking page" href="book.html"
-              >Захиалах</a
-            >
+            <a aria-label="navigate to booking page" href="#book">Захиалах</a>
           </li>
+          <div class="menu-bottom">
+            <div>
+              <img src="../assets/icons/mail.png" /> info@mongolayalal.mn
+            </div>
+            <div><img src="../assets/icons/phone.png" /> (+976) 75707779</div>
+            <div class="left">
+              <img src="../assets/icons/facebook.png" />
+              <img src="../assets/icons/instagram.png" />
+              <img src="../assets/icons/youtube.png" />
+              <img src="../assets/icons/twitter.png" />
+            </div>
+          </div>
         </ul>
+        <div class="bx bx-menu" id="menu-icon"></div>
       </nav>
     </header>
     <main>
       <div class="carousel">
-        <img alt="left arrow" src="../assets/images/svg/left.svg" />
         <div class="c_track-container">
           <ul class="c_track">
             <li class="c_slide current-slide">
               <img
                 alt="travel photo"
-                src="../assets/images/png/travel_1.png"
+                src="../assets/png/travel_1.png"
                 class="c_image"
               />
               <div class="c_slide-content">
@@ -80,15 +109,18 @@
                 <button class="book"><p>Захиалах</p></button>
               </div>
             </li>
-            <!-- <li class="c_slide">
-                      /* content-2 */
-                  </li>
-                  <li class="c_slide">
-                      /* content-3 */
-                  </li> -->
           </ul>
         </div>
-        <img alt="right arrow" src="../assets/images/svg/right.svg" />
+        <img
+          alt="left arrow"
+          class="arrow left-arrow"
+          src="../assets/svg/left.svg"
+        />
+        <img
+          alt="right arrow"
+          class="arrow right-arrow"
+          src="../assets/svg/right.svg"
+        />
         <div class="c_nav">
           <button
             aria-label="jump to carousel 1"
@@ -96,117 +128,213 @@
           ></button>
           <button aria-label="jump to carousel 2" class="c_indicator"></button>
           <button aria-label="jump to carousel 3" class="c_indicator"></button>
+          <button aria-label="jump to carousel 4" class="c_indicator"></button>
+          <button aria-label="jump to carousel 5" class="c_indicator"></button>
         </div>
-        <section>
-          <h1>Удахгүй эхлэх аялалууд</h1>
-          <div class="carousel">
-            <img alt="left arrow" src="../assets/images/svg/left.svg" />
-            <div class="c_track-container">
-              <ul class="c_track">
-                <li class="c_slide">
-                  <travel-card
-                    name="Product Name"
-                    date="10"
-                    picture="../assets/images/png/travel_2.png"
-                    price="$19.99"
-                  ></travel-card>
-                </li>
-              </ul>
-            </div>
-            <img alt="right arrow" src="../assets/images/svg/right.svg" />
-          </div>
-        </section>
-        <section>
-          <h1>Захиалгын аяллууд</h1>
-          <div class="carousel">
-            <img alt="left arrow" src="../assets/images/svg/left.svg" />
-            <div class="c_track-container">
-              <ul class="c_track">
-                <li class="c_slide">
-                  <travel-card
-                    name="Product Name"
-                    date="10"
-                    picture="../assets/images/png/travel_3.png"
-                    price="$19.99"
-                  ></travel-card>
-                </li>
-              </ul>
-            </div>
-            <img alt="right arrow" src="../assets/images/svg/right.svg" />
-          </div>
-        </section>
-        <section>
-          <h1>Мэдээ мэдээлэл</h1>
-          <div class="news-container">
-            <news-card
-              title="Аялагчдын зөвлөмж"
-              description="Та гадаад улс руу аялахаар төлөвлөж байгаа бол юу шаардлагатайг энэхүү нийтлэлээс хараарай. Хамгийн түрүүнд гадаад пасспортоо..."
-              picture="../assets/images/png/travel_4.png"
-            ></news-card>
-          </div>
-        </section>
-        <section>
-          <div>
-            <advantage-box
-              title="Аялагчдын тоо"
-              data="1500"
-              picture="../assets/images/png/travelers.png"
-            ></advantage-box>
-            <advantage-box
-              title="Аялагчдын тоо"
-              data="1500"
-              picture="../assets/images/png/global.png"
-            ></advantage-box>
-            <advantage-box
-              title="Аялагчдын тоо"
-              data="1500"
-              picture="../assets/images/png/document.png"
-            ></advantage-box>
-            <advantage-box
-              title="Аялагчдын тоо"
-              data="1500"
-              picture="../assets/images/png/destination.png"
-            ></advantage-box>
-          </div>
-        </section>
       </div>
+      <section class="wrapper travel-cat 1">
+        <h1>Удахгүй эхлэх аялалууд</h1>
+        <div class="card-slider">
+          <div class="card-slider-container">
+            <custom-card
+              title="Их Британи"
+              date="9 шөнө / 10 өдөр"
+              picture="../assets/png/travel_1.png"
+              price="3,335,000₮ "
+            ></custom-card>
+            <custom-card
+              title="Прага"
+              date="6 шөнө / 7 өдөр"
+              picture="../assets/png/travel_2.png"
+              price="750,000₮"
+            ></custom-card>
+            <custom-card
+              title="Калифорни"
+              date="7 шөнө / 8 өдөр"
+              picture="../assets/png/travel_3.png"
+              price="3,350,000₮"
+            ></custom-card>
+            <custom-card
+              title="Сингапур"
+              date="5 шөнө / 6 өдөр"
+              picture="../assets/png/travel_4.png"
+              price="600,000₮"
+            ></custom-card>
+            <custom-card
+              title="Прага"
+              date="6 шөнө / 7 өдөр"
+              picture="../assets/png/travel_2.png"
+              price="750,000₮"
+            ></custom-card>
+            <custom-card
+              title="Их Британи"
+              date="9 шөнө / 10 өдөр"
+              picture="../assets/png/travel_1.png"
+              price="3,335,000₮ "
+            ></custom-card>
+          </div>
+          <img
+            alt="left arrow btn"
+            class="arrow left-arrow prev-btn"
+            src="../assets/icons/black-left-arrow.svg"
+          />
+          <img
+            alt="right arrow btn"
+            class="arrow right-arrow next-btn"
+            src="../assets/icons/black-right-arrow.svg"
+          />
+        </div>
+      </section>
+      <section class="wrapper travel-cat 2">
+        <h1>Захиалгын аяллууд</h1>
+        <div class="card-slider">
+          <div class="card-slider-container">
+            <custom-card
+              title="Их Британи"
+              date="9 шөнө / 10 өдөр"
+              picture="../assets/png/travel_1.png"
+              price="3,335,000₮ "
+            ></custom-card>
+            <custom-card
+              title="Прага"
+              date="6 шөнө / 7 өдөр"
+              picture="../assets/png/travel_2.png"
+              price="750,000₮"
+            ></custom-card>
+            <custom-card
+              title="Калифорни"
+              date="7 шөнө / 8 өдөр"
+              picture="../assets/png/travel_3.png"
+              price="3,350,000₮"
+            ></custom-card>
+            <custom-card
+              title="Сингапур"
+              date="5 шөнө / 6 өдөр"
+              picture="../assets/png/travel_4.png"
+              price="600,000₮"
+            ></custom-card>
+            <custom-card
+              title="Прага"
+              date="6 шөнө / 7 өдөр"
+              picture="../assets/png/travel_2.png"
+              price="750,000₮"
+            ></custom-card>
+            <custom-card
+              title="Их Британи"
+              date="9 шөнө / 10 өдөр"
+              picture="../assets/png/travel_1.png"
+              price="3,335,000₮ "
+            ></custom-card>
+          </div>
+          <img
+            alt="left arrow btn"
+            class="arrow left-arrow prev-btn-2"
+            src="../assets/icons/black-left-arrow.svg"
+          />
+          <img
+            alt="right arrow btn"
+            class="arrow right-arrow next-btn-2"
+            src="../assets/icons/black-right-arrow.svg"
+          />
+        </div>
+      </section>
+      <section class="wrapper">
+        <h1>Сэтгэгдлүүд</h1>
+        <div class="carousel-feedback">
+          <div class="c_track-container">
+            <ul class="c_track">
+              <li class="c_slide current-slide">
+                <div class="c_slide-content-feedback">
+                  <div class="feedback">
+                    “ Олон хүн ардынхаа төлөө гэсэн сэтгэлтэй, зохион байгуулалт
+                    сайтай, сайхан аялуулдаг гэдгийг өөрийн биеэр мэдэрлээ.
+                    Сэтгэл ханамж 100% байлаа. Монгол аяллын хамт олонд ажлын
+                    өндөр амжилт, сайн сайхан бүхнийг хүсэн ерөөе. “
+                  </div>
+                  <div class="author"><p>Б. Энгүүлэн</p></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <img
+            alt="left arrow"
+            class="arrow left-arrow"
+            src="../assets/svg/left.svg"
+          />
+          <img
+            alt="right arrow"
+            class="arrow right-arrow"
+            src="../assets/svg/right.svg"
+          />
+        </div>
+      </section>
+      <section class="wrapper information">
+        <information-box
+          title="Аялагчдын тоо"
+          data="1500"
+          logo="../assets/png/travelers.png"
+        ></information-box>
+        <information-box
+          title="Аялагчдын тоо"
+          data="10"
+          logo="../assets/png/global.png"
+        ></information-box>
+        <information-box
+          title="Аялагчдын тоо"
+          data="111"
+          logo="../assets/png/document.png"
+        ></information-box>
+        <information-box
+          title="Аялагчдын тоо"
+          data="20"
+          logo="../assets/png/destination.png"
+        ></information-box>
+      </section>
     </main>
-    <footer>
+    <footer class="wrapper">
       <div class="footer">
         <div>
-          <h3>МОНГОЛ АЯЛАЛ</h3>
-          <ul class="li-1">
-            <li>Нүүр</li>
-            <li>Бидний тухай</li>
-            <li>Аяллууд</li>
-            <li>Захиалах</li>
-          </ul>
+          <div>
+            <ul class="li-1">
+              <h3>МОНГОЛ АЯЛАЛ</h3>
+              <li>Нүүр</li>
+              <li>Бидний тухай</li>
+              <li>Аяллууд</li>
+              <li>Захиалах</li>
+            </ul>
+          </div>
         </div>
         <div>
-          <h3>ХОЛБООСУУД</h3>
-          <ul class="li-1">
-            <li>Мэдээ, мэдээлэл</li>
-            <li>Нийгмийн хариуцлага</li>
-            <li>Тусламж</li>
-            <li>Санал хүсэлт</li>
-          </ul>
+          <div>
+            <ul class="li-1">
+              <h3>ХОЛБООСУУД</h3>
+              <li>Мэдээ, мэдээлэл</li>
+              <li>Нийгмийн хариуцлага</li>
+              <li>Тусламж</li>
+              <li>Санал хүсэлт</li>
+            </ul>
+          </div>
         </div>
         <div>
-          <h3>ХОЛБОО БАРИХ</h3>
-          <ul class="li-1">
-            <li>(+976) 75707779</li>
-            <li>info@mongolayalal.mn</li>
-            <li>УБ, Сүхбаатар - 14190</li>
-          </ul>
+          <div>
+            <ul class="li-1">
+              <h3>ХОЛБОО БАРИХ</h3>
+              <li>(+976) 75707779</li>
+              <li>info@mongolayalal.mn</li>
+              <li>УБ, Сүхбаатар - 14190</li>
+            </ul>
+          </div>
         </div>
         <div>
-          <h3>БИДНИЙГ ДАГАХ</h3>
-          <ul class="li-1">
-            <li>Facebook</li>
-            <li>Instagram</li>
-            <li>Youtube</li>
-            <li>Twitter</li>
-          </ul>
+          <div>
+            <ul class="li-1">
+              <h3>БИДНИЙГ ДАГАХ</h3>
+              <li>Facebook</li>
+              <li>Instagram</li>
+              <li>Youtube</li>
+              <li>Twitter</li>
+            </ul>
+          </div>
         </div>
       </div>
       <hr />
