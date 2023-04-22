@@ -2,7 +2,7 @@
 
 :root {
     --primary-green: rgb(5, 72, 34);
-    --gray-light: #A0A2A6;
+    --gray-light: #4A4E4F;
     --gray-background: #E6E8EE;
     --gray-input: #F5F7FB;
     --primary-yellow: #FC7E08;
@@ -17,19 +17,166 @@ body {
     min-height: 100vh;
 }
 
-header {
-    height: 30px;
+header .top-bar {
+    /* height: 30px; */
     background-color: var(--primary-green);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: .3rem 5vw;
+    font-size: 0.9em;
 }
 
-nav {
+.right {
+    display: flex;
+}
+
+.right div {
+    display: flex;
+    align-items: center;
+    margin-right: 3em;
+}
+
+.right img {
+    margin: 0px .2rem;
+}
+
+.right svg {
+    margin: 0 .3rem;
+}
+
+.right path {
+    stroke: white;
+}
+
+.right a {
+    text-decoration: none;
+    color: white;
+}
+
+.top-bar .left img {
+    margin-left: 1.2rem;
+    height: 1rem;
+    width: auto;
+}
+
+/* header nav {
     height: 70px;
+} */
+
+.wrapper {
+    padding: 0 5vw;
+}
+
+.wrapper .logo img {
+    height: 4em;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    position: fixed;
+    font-weight: 600;
+    letter-spacing: 2px;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1.3rem 0px;
+    z-index: 1;
+    transition: background-color .5s ease;
+    background-color: white;
+}
+
+nav.green {
+    background-color: var(--primary-green);
+    transition: background-color .2s ease;
+    padding-top: .2rem;
+    padding-bottom: .2rem;
+    /* padding: 100px auto; */
+    top: 0;
+}
+
+.menu {
+    display: flex;
+}
+
+.menu li {
+    list-style-type: none;
+}
+
+.menu li a {
+    padding: .6rem 1.8rem;
+    text-align: start;
+    color: black;
+    font-size: 12px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.menu li a.active::after {
+    width: 100%;
+}
+
+.menu li a:hover::after {
+    width: 100%;
+}
+
+.menu li a::after {
+    content: '';
+    width: 0px;
+    height: 1px;
+    display: block;
+    background: black;
+    transition: 300ms;
+}
+
+#book-button {
+    background-color: var(--primary-yellow);
+    border-radius: 1.5rem;
+}
+
+#book-button a {
+    color: white;
+}
+
+.menu-bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    margin: 20px 0px;
+    color: #fff;
+    font-weight: 500;
+}
+
+.menu-bottom img {
+    width: 1rem;
+    height: auto;
+    margin: 0px .6rem; 
+}
+
+.menu-bottom .left img {
+    width: auto;
+    margin: 0px .6rem;
+}
+
+.menu-bottom {
+    display: none;
+}
+
+#menu-icon {
+    font-size: 2.1rem;
+    color: #fff;
+    cursor: pointer;
+    z-index: 2;
+    display: none;
 }
 
 .banner {
     height: 140px;
     position: relative;
-
     display: flex;
     align-items: center;
 }
@@ -215,8 +362,7 @@ aside {
     border-radius: 0px 0px 8px 8px;
 }
 
-.booking-form h4 {
-    font-family: 'Open Sans', sans-serif;
+.booking-form h3 {
     font-weight: bold;
     margin-top: 10px;
     border-bottom: 2px solid var(--gray-input);
@@ -308,6 +454,16 @@ form input[type="submit"]:hover {
 }
 
 @media only screen and (max-width: 1024px) {
+    .top-bar .left {
+        display: none;
+    }
+    .top-bar .right div {
+        margin-right: 0;
+    }
+    .top-bar .right {
+        width: 100%;
+        justify-content: space-between;
+    }
     .pre-content {
         padding-right: 5vw;
     }
