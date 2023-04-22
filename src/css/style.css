@@ -508,3 +508,8 @@ footer p {
         display: none;
     }
 }
+
+.c_slide-content p {
+    font-size: large;
+    color: black;
+}
