@@ -248,11 +248,11 @@ input:nth-child(1) {
 }
 
 input:nth-child(2), input:nth-child(3) {
-    background-image: url('../../assets/icons/email.png');
+    background-image: url('../../assets/icons/mail.png');
 }
 
 input:nth-child(4) {
-    background-image: url('../../assets/icons/phone-call.png');
+    background-image: url('../../assets/icons/phone.png');
 }
 
 input:nth-child(5) {
