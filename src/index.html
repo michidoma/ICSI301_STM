@@ -9,12 +9,12 @@
     />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script defer src="./components/Card.js"></script>
-    <script defer src="./components/CardNews.js"></script>
-    <script defer src="./components/InformationBox.js"></script>
+    <script defer src="./components/card.js"></script>
+    <script defer src="./components/card-news.js"></script>
+    <script defer src="./components/information-box.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.4.js"></script>
-    <script src="./scripts/main.js"></script>
-    <link rel="stylesheet" href="./css/styles.css" />
+    <script src="./js/main.js"></script>
+    <link rel="stylesheet" href="./css/style.css" />
     <link
       rel="stylesheet"
       href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
@@ -28,9 +28,12 @@
             <div>USD <img src="../assets/svg/usd.svg" /> 3,527.29</div>
             <div>Улаанбаатар -13.9°C</div>
             <div>
-              <img src="../assets/icons/mail.png" /> info@mongolayalal.mn
+              <img src="../assets/icons/mail.png" />
+              <a href="mailto:info@mongolayalal.mn" rel="nofollow">info@mongolayalal.mn</a>
             </div>
-            <div><img src="../assets/icons/phone.png" /> (+976) 75707779</div>
+            <div><img src="../assets/icons/phone.png" />
+              <a href="tel:(+976) 75707779" rel="nofollow">(+976) 75707779</a>
+            </div>
           </div>
           <div class="left">
             <a target="_blank" href="https://www.facebook.com/mongoliantravel/">
@@ -50,29 +53,23 @@
       </div>
 
       <nav class="wrapper">
-        <a href="#" class="logo"
-          ><img src="../assets/png/logo_2.png" alt="logo"
-        /></a>
+        <a href="#" class="logo">
+          <img src="../assets/img/logo-no-background.png" alt="logo"/>
+        </a>
         <ul class="menu">
           <li>
-            <a aria-label="navigate to home page" class="active" href="#home"
-              >Нүүр</a
-            >
+            <a aria-label="navigate to home page" class="active" href="#home">Нүүр</a>
           </li>
           <li>
-            <a aria-label="navigate to travels list page" href="#travels"
-              >Аялалууд</a
-            >
+            <a aria-label="navigate to travels list page" href="#travels">Аяллууд</a>
           </li>
           <li>
             <a aria-label="navigate to blog page" href="#news">Мэдээлэл</a>
           </li>
           <li>
-            <a aria-label="navigate to contact page" href="#contact"
-              >Холбоо барих</a
-            >
+            <a aria-label="navigate to contact page" href="#contact">Холбоо барих</a>
           </li>
-          <li>
+          <li id="book-button">
             <a aria-label="navigate to booking page" href="#book">Захиалах</a>
           </li>
           <div class="menu-bottom">
@@ -98,7 +95,7 @@
             <li class="c_slide current-slide">
               <img
                 alt="travel photo"
-                src="../assets/png/travel_1.png"
+                src="../assets/img/travel-1-tokyo.png"
                 class="c_image"
               />
               <div class="c_slide-content">
@@ -133,44 +130,44 @@
         </div>
       </div>
       <section class="wrapper travel-cat 1">
-        <h1>Удахгүй эхлэх аялалууд</h1>
+        <h1>Удахгүй эхлэх аяллууд</h1>
         <div class="card-slider">
           <div class="card-slider-container">
             <custom-card
               title="Их Британи"
-              date="9 шөнө / 10 өдөр"
-              picture="../assets/png/travel_1.png"
+              date="10 өдөр / 9 шөнө"
+              picture="../assets/img/card-5-great-britain.png"
               price="3,335,000₮ "
             ></custom-card>
             <custom-card
               title="Прага"
-              date="6 шөнө / 7 өдөр"
-              picture="../assets/png/travel_2.png"
+              date="7 өдөр / 6 шөнө"
+              picture="../assets/img/card-6-prague.png"
               price="750,000₮"
             ></custom-card>
             <custom-card
               title="Калифорни"
-              date="7 шөнө / 8 өдөр"
-              picture="../assets/png/travel_3.png"
+              date="8 өдөр / 7 шөнө"
+              picture="../assets/img/card-7-california.png"
               price="3,350,000₮"
             ></custom-card>
             <custom-card
               title="Сингапур"
-              date="5 шөнө / 6 өдөр"
-              picture="../assets/png/travel_4.png"
+              date="6 өдөр / 5 шөнө"
+              picture="../assets/img/card-8-singapore.png"
               price="600,000₮"
             ></custom-card>
             <custom-card
-              title="Прага"
-              date="6 шөнө / 7 өдөр"
-              picture="../assets/png/travel_2.png"
-              price="750,000₮"
+              title="Их Британи"
+              date="10 өдөр / 9 шөнө"
+              picture="../assets/img/card-5-great-britain.png"
+              price="3,335,000₮ "
             ></custom-card>
             <custom-card
-              title="Их Британи"
-              date="9 шөнө / 10 өдөр"
-              picture="../assets/png/travel_1.png"
-              price="3,335,000₮ "
+              title="Прага"
+              date="7 өдөр / 6 шөнө"
+              picture="../assets/img/card-6-prague.png"
+              price="750,000₮"
             ></custom-card>
           </div>
           <img
@@ -190,40 +187,40 @@
         <div class="card-slider">
           <div class="card-slider-container">
             <custom-card
-              title="Их Британи"
-              date="9 шөнө / 10 өдөр"
-              picture="../assets/png/travel_1.png"
+              title="Япон"
+              date="2 өдөр / 1 шөнө"
+              picture="../assets/img/card-1-tokyo.png"
               price="3,335,000₮ "
             ></custom-card>
             <custom-card
-              title="Прага"
-              date="6 шөнө / 7 өдөр"
-              picture="../assets/png/travel_2.png"
+              title="Сөүл"
+              date="1 өдөр / 1 шөнө"
+              picture="../assets/img/card-2-seoul.png"
               price="750,000₮"
             ></custom-card>
             <custom-card
-              title="Калифорни"
-              date="7 шөнө / 8 өдөр"
-              picture="../assets/png/travel_3.png"
+              title="Парис"
+              date="4 өдөр / 3 шөнө"
+              picture="../assets/img/card-3-paris.png"
               price="3,350,000₮"
             ></custom-card>
             <custom-card
-              title="Сингапур"
-              date="5 шөнө / 6 өдөр"
-              picture="../assets/png/travel_4.png"
-              price="600,000₮"
+              title="Лондон"
+              date="3 өдөр / 2 шөнө"
+              picture="../assets/img/card-4-london.png"
+              price="6,000,000₮"
             ></custom-card>
             <custom-card
-              title="Прага"
-              date="6 шөнө / 7 өдөр"
-              picture="../assets/png/travel_2.png"
-              price="750,000₮"
-            ></custom-card>
-            <custom-card
-              title="Их Британи"
-              date="9 шөнө / 10 өдөр"
-              picture="../assets/png/travel_1.png"
+              title="Япон"
+              date="2 өдөр / 1 шөнө"
+              picture="../assets/img/card-1-tokyo.png"
               price="3,335,000₮ "
+            ></custom-card>
+            <custom-card
+              title="Сөүл"
+              date="1 өдөр / 1 шөнө"
+              picture="../assets/img/card-2-seoul.png"
+              price="750,000₮"
             ></custom-card>
           </div>
           <img
@@ -246,12 +243,14 @@
               <li class="c_slide current-slide">
                 <div class="c_slide-content-feedback">
                   <div class="feedback">
-                    “ Олон хүн ардынхаа төлөө гэсэн сэтгэлтэй, зохион байгуулалт
-                    сайтай, сайхан аялуулдаг гэдгийг өөрийн биеэр мэдэрлээ.
-                    Сэтгэл ханамж 100% байлаа. Монгол аяллын хамт олонд ажлын
-                    өндөр амжилт, сайн сайхан бүхнийг хүсэн ерөөе. “
+                    <i>
+                      “ Олон хүн ардынхаа төлөө гэсэн сэтгэлтэй, зохион байгуулалт
+                      сайтай, сайхан аялуулдаг гэдгийг өөрийн биеэр мэдэрлээ.
+                      Сэтгэл ханамж 100% байлаа. Монгол аяллын хамт олонд ажлын
+                      өндөр амжилт, сайн сайхан бүхнийг хүсэн ерөөе. “
+                    </i>
                   </div>
-                  <div class="author"><p>Б. Энгүүлэн</p></div>
+                  <div class="author"><p><i>Б. Энгүүлэн</i></p></div>
                 </div>
               </li>
             </ul>
@@ -272,73 +271,90 @@
         <information-box
           title="Аялагчдын тоо"
           data="1500"
-          logo="../assets/png/travelers.png"
+          logo="../assets/img/travelers.png"
         ></information-box>
         <information-box
-          title="Аялагчдын тоо"
+          title="Актив аялал"
           data="10"
-          logo="../assets/png/global.png"
+          logo="../assets/img/global.png"
         ></information-box>
         <information-box
-          title="Аялагчдын тоо"
+          title="Нийт зохион байгуулсан"
           data="111"
-          logo="../assets/png/document.png"
+          logo="../assets/img/document.png"
         ></information-box>
         <information-box
-          title="Аялагчдын тоо"
+          title="Нийт чиглэл"
           data="20"
-          logo="../assets/png/destination.png"
+          logo="../assets/img/destination.png"
         ></information-box>
       </section>
     </main>
-    <footer class="wrapper">
+    <footer>
       <div class="footer">
-        <div>
-          <div>
-            <ul class="li-1">
-              <h3>МОНГОЛ АЯЛАЛ</h3>
-              <li>Нүүр</li>
-              <li>Бидний тухай</li>
-              <li>Аяллууд</li>
-              <li>Захиалах</li>
-            </ul>
-          </div>
+        <div> 
+          <ul class="li-1">
+            <h3>МОНГОЛ АЯЛАЛ</h3>
+            <li><a href="#">Нүүр</a></li>
+            <li><a href="javascript:void(0)">Бидний тухай</a></li>
+            <li><a href="#travels">Аяллууд</a></li>
+            <li><a href="#book">Захиалах</a></li>
+          </ul>   
         </div>
         <div>
-          <div>
-            <ul class="li-1">
-              <h3>ХОЛБООСУУД</h3>
-              <li>Мэдээ, мэдээлэл</li>
-              <li>Нийгмийн хариуцлага</li>
-              <li>Тусламж</li>
-              <li>Санал хүсэлт</li>
-            </ul>
-          </div>
+          <ul class="li-1">
+            <h3>ХОЛБООСУУД</h3>
+            <li><a href="#news">Мэдээ, мэдээлэл</a></li>
+            <li><a href="javascript:void(0)">Нийгмийн хариуцлага</a></li>
+            <li><a href="javascript:void(0)">Тусламж</a></li>
+            <li><a href="javascript:void(0)">Санал хүсэлт</a></li>
+          </ul>  
         </div>
         <div>
-          <div>
+          <address>
             <ul class="li-1">
               <h3>ХОЛБОО БАРИХ</h3>
-              <li>(+976) 75707779</li>
-              <li>info@mongolayalal.mn</li>
-              <li>УБ, Сүхбаатар - 14190</li>
-            </ul>
-          </div>
+              <li>
+                <img src="../assets/icons/phone.png" alt="phone">
+                <a href="tel:(+976) 75707779" rel="nofollow">(+976) 75707779</a>
+              </li>
+              <li>
+                <img src="../assets/icons/mail.png" alt="mail">
+                <a href="mailto:info@mongolayalal.mn" rel="nofollow">info@mongolayalal.mn</a>
+              </li>
+              <li>
+                <img src="../assets/icons/navigator.png" alt="map">
+                УБ, Сүхбаатар - 14190
+              </li>
+            </ul> 
+          </address>
         </div>
         <div>
-          <div>
+          <address>
             <ul class="li-1">
               <h3>БИДНИЙГ ДАГАХ</h3>
-              <li>Facebook</li>
-              <li>Instagram</li>
-              <li>Youtube</li>
-              <li>Twitter</li>
-            </ul>
-          </div>
+              <li>
+                <img src="../assets/icons/facebook.png" alt="facebook">
+                <a target="_blank" href="https://www.facebook.com/mongoliantravel/">Facebook</a>
+              </li>
+              <li>
+                <img src="../assets/icons/instagram.png" alt="facebook">
+                <a target="_blank" href="https://www.instagram.com/mongolayalal/">Instagram</a>
+              </li>
+              <li>
+                <img src="../assets/icons/youtube.png" alt="facebook">
+                <a target="_blank" href="https://www.youtube.com/@mongoliantravelcompany">Youtube</a>
+              </li>
+              <li>
+                <img src="../assets/icons/twitter.png" alt="facebook">
+                <a target="_blank" href="https://twitter.com/mongolayalal">Twitter</a>
+              </li>
+            </ul> 
+          </address>
         </div>
       </div>
       <hr />
-      <p>БҮХ ЭРХ ХУУЛИАР ХАМГААЛАГДСАН © 2023 он “Монгол Аялал”</p>
+      <p><b>БҮХ ЭРХ ХУУЛИАР ХАМГААЛАГДСАН © 2023 он “Монгол Аялал”</b></p>
     </footer>
   </body>
 </html>

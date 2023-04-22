@@ -73,6 +73,8 @@ class Card extends HTMLElement {
       }
       .price {
         margin: .8rem;
+        font-weight: bold;
+        text-shadow: #000 1px 0 10px;
       }
       .bottom {
         text-align: start;
@@ -81,7 +83,7 @@ class Card extends HTMLElement {
         margin: 5px 0px;
       }
       .title {
-        font-size: 20px;
+        font-size: 24px;
         font-weight: bold;
       }
       .date {

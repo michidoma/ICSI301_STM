@@ -39,14 +39,14 @@ class InformationBox extends HTMLElement {
     this.shadowRoot.innerHTML = `
     <style>
       .box {
-        width: 100%;
+        // width: 100%;
         display: flex;
         align-items: center;
         gap: 20px;
       }
       .box img {
-        width: 80px;
-        height: 80px;
+        width: 50px;
+        height: 50px;
       }
       p, h1 {
         margin: 5px 0px;

@@ -6,7 +6,7 @@ newsTemplate.innerHTML = `
         <div class="description"></div>
         <button> 
             Цааш унших
-            <img src="../assets/images/svg/rightArrowLong.svg" />
+            <img src="../assets/images/svg/right-arrow-long.svg" />
         </button>
     </div>
 `;
