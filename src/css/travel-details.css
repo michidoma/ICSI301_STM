@@ -244,19 +244,19 @@ input::placeholder {
 }
 
 input:nth-child(1) {
-    background-image: url('https://cdn-icons-png.flaticon.com/512/1159/1159633.png');
+    background-image: url('../../assets/icons/edit.png');
 }
 
 input:nth-child(2), input:nth-child(3) {
-    background-image: url('https://cdn-icons-png.flaticon.com/512/646/646094.png');
+    background-image: url('../../assets/icons/email.png');
 }
 
 input:nth-child(4) {
-    background-image: url('https://cdn-icons-png.flaticon.com/512/126/126509.png');
+    background-image: url('../../assets/icons/phone-call.png');
 }
 
 input:nth-child(5) {
-    background-image: url('https://cdn-icons-png.flaticon.com/512/2956/2956777.png');
+    background-image: url('../../assets/icons/group-black.png');
 }
   
 form span {
