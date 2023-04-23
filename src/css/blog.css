@@ -1,5 +1,19 @@
-html,
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans&display=swap');
+
+:root {
+  --primary-green: rgb(5, 72, 34);
+  --gray-light: #A0A2A6;
+  --gray-background: #E6E8EE;
+  --gray-input: #F5F7FB;
+  --primary-yellow: #FC7E08;
+  --primary-text: #000000;
+  --gray: #6E6D70;
+}
+
+
 body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
   height: 100%;
   margin: 0 auto;
   overflow-x: hidden;
@@ -34,7 +48,7 @@ img {
 }
 
 .text-info {
-  color: #000;
+  color: var(--primary-text);
   display: flex;
 }
 
@@ -46,23 +60,22 @@ img {
   display: flex;
   margin-right: 2em;
   align-items: center;
-  font-family: "Open Sans";
-  color: #6E6D70;
+  color: var(--gray);
 }
+
 .text-info .grey {
-  color: #6E6D70;
+  color: var(--gray);
 }
+
 .text-info i {
   margin-right: 0.5em;
-  font-size: 14px;
-  color: #D9D9D9;
+  color: var(--gray-light);
   display: flex;
   align-items: center;
 }
 
 h1 {
   font-size: 36px;
-  font-family: "Open Sans";
 }
 
 .article-image {
@@ -83,25 +96,21 @@ h1 {
 
 .article p {
   line-height: 2.5;
-  font-size: 14px;
   text-align: justify;
-  font-family: 'Open Sans';
 }
 
 .article h3 {
   font-size: 20px;
-  font-family: 'Open Sans';
 }
 
 .wrap-sidebar {
     width: calc(40% - 3em);
-    font-family: "Open Sans";
 }
 
 .wrap-sidebar .wrap-blog-type, .lastest-blog {
     width: 100%;
     height: fit-content;
-    background-color: #E6E8EE;
+    background-color: var(--gray-background);
     margin-top: 80px;
     border-radius: 20px;
     padding: 20px 0;
@@ -110,7 +119,6 @@ h1 {
 .blog-type {
     margin: 0;
     font-size: 20px;
-    font-family: "Open Sans";
     padding: 1em 3vw;
     font-weight: bold;
 }
@@ -135,16 +143,16 @@ h1 {
     display: flex;
     justify-content:space-between;
     padding: 0;
-    color: black;
+    color: var(--primary-text);
     margin-left: 2vw;
 }
 
 .blog-types a:hover {
-    color: #FC7E08;
+    color: var(--primary-yellow);
 }
 
 .blog-types a div {
-    color: #FC7E08;
+    color: var(--primary-yellow);
 }
 
 .mini-blog-info {
