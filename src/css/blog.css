@@ -10,45 +10,36 @@
   --gray: #6E6D70;
 }
 
-
 body {
   font-family: 'Open Sans', sans-serif;
-  font-size: 14px;
+  font-size: 2vh;
   height: 100%;
   margin: 0 auto;
   overflow-x: hidden;
   width: 100%;
 }
 
-/* .blog-page-title {
-  align-items: center;
-  display: flex;
-  height: 120px;
-  justify-content: center;
-  position: relative;
-  text-align: left;
-} */
-
-img {
-  height: 120px;
+/* Тэрэлж зураг */
+.landscape {
+  height: 16vh;
+  /* height: 120px; */
   object-fit: cover;
-  object-position: 45% 55%;
+  /* object-position: 45% 55%; */
   width: 100%;
 }
-
+/* Нэгтгэл */
 .wrap {
-  padding: 3em 8vw;
+  padding: 5vh 8vw;
   display: flex;
   justify-content: space-between;
   width: calc(100% - 16vw);
 }
-
+/* Нийтлэл нэгтгэл */
 .wrap-article {
   width: 60%;
 }
-
+/* Нийтлэгч, нийтэлсэн он, сар, өдөр */
 .text-info {
-  color: var(--primary-text);
   display: flex;
 }
 
@@ -58,37 +49,36 @@ img {
 
 .text-info .info {
   display: flex;
-  margin-right: 2em;
+  margin-right: 3vw;
   align-items: center;
   color: var(--primary-green);
 }
 
-.text-info .grey {
-  color: var(--gray);
-}
-
 .text-info i {
-  margin-right: 0.5em;
+  margin-right: 0.5vw;
   color: var(--gray-light);
   display: flex;
   align-items: center;
 }
 
+/* Гарчиг */
 h1 {
-  font-size: 36px;
+  /* font-size: 36px; */
+  font-size: 5vh;
 }
-
+/* Нийтлэлийн зураг */
 .article-image {
   align-items: center;
   display: flex;
-  height: 400px;
+  height: 60vh;
+  /* height: 30em; */
   justify-content: center;
   position: relative;
   text-align: left;
 }
 
 .article-image img {  
-  border-radius: 20px;
+  border-radius: 4vh;
   height: 100%;
   object-fit: cover;
   width: 100%;
@@ -97,72 +87,80 @@ h1 {
 .article p {
   line-height: 2.5;
   text-align: justify;
+  font-size: 2vh;
 }
 
-.article h3 {
-  font-size: 20px;
+.article h2 {
+  /* font-size: 20px; */
+  font-size: 3vh;
 }
 
+/* Нэмэлт хэсэг */
 .wrap-sidebar {
-    width: calc(40% - 3em);
+  width: calc(40% - 3vw);
 }
 
-.wrap-sidebar .wrap-blog-type, .lastest-blog {
-    width: 100%;
-    height: fit-content;
-    background-color: var(--gray-background);
-    margin-top: 80px;
-    border-radius: 20px;
-    padding: 20px 0;
+.wrap-blog-type, .wrap-lastest-blog {
+  width: 100%;
+  height: fit-content;
+  background-color: var(--gray-background);
+  /* margin-top: 80px; */
+  margin-top: 10vh;
+  /* border-radius: 20px; */
+  border-radius: 3vh;
+  padding: 1vh 0;
 }
-
-.blog-type {
-    margin: 0;
-    font-size: 20px;
-    padding: 1em 3vw;
-    font-weight: bold;
+/* Блогийн ангилал, Сүүлд нийтлэгдсэн блогууд гарчиг */
+.blog-type-title {
+  margin: 0;
+  /* font-size: 20px; */
+  font-size: 2.5vh;
+  padding: 2vh 3vw;
+  font-weight: bold;
 }
-
-.wrap-sidebar .wrap-blog-type .divider {
-    width: auto;
+/* Тусгаарлагч шугам */
+.divider {
+  width: auto;
+  color: var(--gray-background);
 }
 
 .blog-types {
-    margin: 20px 3vw;
-    font-size: 20px;
+  margin: 3vh 3vw;
+  /* font-size: 20px; */
+  font-size: 2.5vh;
 }
 
 .blog-types div {
-    margin-bottom: 3vh;
-    display: flex;
-    align-items: center;
+  align-items: center;
+  display: flex;
+  margin-bottom: 3vh;
 }
 
 .blog-types a {
-    text-decoration: none;
-    display: flex;
-    justify-content:space-between;
-    padding: 0;
-    color: var(--primary-text);
-    margin-left: 2vw;
+  color: var(--primary-text);
+  display: flex;
+  justify-content:space-between;
+  margin-left: 2vw;
+  text-decoration: none;
 }
 
 .blog-types a:hover {
-    color: var(--primary-yellow);
+  color: var(--primary-yellow);
 }
 
-.blog-types a div {
-    color: var(--primary-yellow);
-}
+/* .blog-types a div {
+  color: var(--primary-yellow);
+} */
 
-.mini-blog-info {
-    margin: 20px 3vw;
-    width: calc(100% - 6vw);
+/* Сүүлд нийтлэгдсэн блогууд хэсэг */
+.mini-blogs {
+  margin: 3vh 3vw;
+  width: calc(100% - 6vw);
 }
 
 .wrap-mini-blog {
-    display: flex;
-    margin: 1em 0;
+  display: flex;
+  margin: 3vh 0;
 }
 
 .mini-blog-title h4 {
@@ -170,61 +168,59 @@ h1 {
 }
 
 .mini-blog-img {
-    align-items: center;
-    display: flex;
-    height: 80px;
-    width: 80px;
-    min-width: 80px;
-    justify-content: center;
-    position: relative;
+  align-items: center;
+  display: flex;
+  height: 80px;
+  justify-content: center;
+  min-width: 80px;
+  position: relative;
+  width: 80px;
 }
 
 .mini-blog-img img {
-    border-radius: 10px;
-    height: 100%;
-    object-fit: cover;
-    width: 100%;
-    height: 80px;
-    width: 80px;
+  border-radius: 1vh;
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
 }
 
 .wrap-mini-blog div {
-    margin-left: 2vw;
+  align-content: space-between;
+  margin-left: 2vw;
+  display: grid;
 }
 
-.wrap-mini-blog article {
-    margin-bottom: 2em;
+@media only screen and (max-width: 1200px) {
+  .wrap {
+    padding: 3vh 5vw;
+    width: calc(100% - 10vw);
+  }
 }
 
-@media (max-width: 1200px) {
-    .wrap {
-      padding: 3em 5vw;
-      width: calc(100% - 10vw);
-    }
+@media only screen and (max-width: 1024px) {
+  .wrap {
+    padding: 3vh 3vw;
+    width: calc(100% - 6vw);
+    display: block;
+    align-items: center;
+  }
+  .wrap-article {
+      width: 100%;
+  }
+  .wrap-sidebar{
+    width: 100%;
+    display: none;
+  }
 }
 
-@media (max-width: 1024px) {
-    .wrap {
-      padding: 3em 3vw;
-      width: calc(100% - 6vw);
-      display: block;
-      align-items: center;
-    }
-    .wrap-article {
-        width: 100%;
-    }
-    .wrap-sidebar{
-        width: 100%;
-        display: none;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    h1 {
-        font-size: 20px;
-    }
-    .article h3 {
-        font-size: 16px;
-    }
+@media only screen and (max-width: 768px) {
+  h1 {
+    /* font-size: 20px; */
+    font-size: 3vh;
+  }
+  .article h2 {
+    /* font-size: 16px; */
+    font-size: 2.5vh;
+  }
 }
 

@@ -1,7 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans&display=swap');
 
-html,
+:root {
+  --primary-green: rgb(5, 72, 34);
+  --gray-light: #A0A2A6;
+  --gray-background: #E6E8EE;
+  --gray-input: #F5F7FB;
+  --primary-yellow: #FC7E08;
+  --primary-text: #000000;
+  --gray: #6E6D70;
+  --white: #ffffff;
+}
+
 body {
+  font-family: 'Open Sans', sans-serif;
+  /* font-size: 2vh; */
   height: 100%;
   margin: 0 auto;
   overflow-x: hidden;
@@ -10,7 +22,7 @@ body {
 
 .contact-page-title {
   align-items: center;
-  color: white;
+  color: var(--white);
   display: flex;
   height: 120px;
   justify-content: center;
@@ -43,8 +55,9 @@ body {
   width: 50%;
 }
 
+/* Холбогдох мэдээлэл хэсэг */
 .information {
-  background-color: #054822;
+  background-color: var(--primary-green);
   color: #fff;
   width: 350px;
   height: fit-content;
@@ -59,7 +72,7 @@ body {
 }
 
 .text-info .text {
-  font-family: 'Open Sans';
+  /* font-family: 'Open Sans'; */
   font-size: 13px;
   margin: 10px 0;
 }
@@ -73,23 +86,23 @@ body {
   display: flexbox;
   justify-content: space-between;
   font-size: 24px;
-  margin-top: 20px;
+  margin-right: 2vw;
 }
-
+/* Байршил */
 .location iframe {
   height: 250px;
   margin-top: 50px;
   width: 100%;
 }
-
+/* Санал хүсэлт илгээх хэсэг */
 .form {
   width: calc(50% - 3em);
 }
 
 .sub-title {
-  color: #054822;
+  color: var(--primary-green);
   font-size: 32px;
-  font-family: 'Open Sans';
+  /* font-family: 'Open Sans'; */
   font-weight: bold;
   margin-bottom: 30px;
 }
@@ -107,10 +120,10 @@ body {
 
 input,
 textarea {
-  border: 1px solid #D9D9D9;
+  border: 1px solid var(--gray-light);
   border-radius: 0px;
-  font-family: 'Open Sans';
-  font-size: 13px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
   height: 30px;
   padding: 10px 20px;
   width: calc(100% - 40px);
@@ -123,7 +136,7 @@ textarea {
 }
 
 button[type="submit"] {
-  background-color: #054822;
+  background-color: var(--primary-green);
   border: none;
   border-radius: 20px;
   color: #fff;
