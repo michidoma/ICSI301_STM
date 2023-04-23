@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans&display=swap');
+
 html,
 body {
   height: 100%;
@@ -219,4 +221,3 @@ h1 {
         font-size: 16px;
     }
 }
-

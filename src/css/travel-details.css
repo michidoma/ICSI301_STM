@@ -5,7 +5,7 @@
     --gray-light: #4A4E4F;
     --gray-background: #E6E8EE;
     --gray-input: #F5F7FB;
-    --primary-yellow: #FC7E08;
+    --primary-orange: #FC7E08;
 }
 
 body {
@@ -18,12 +18,12 @@ body {
 }
 
 header .top-bar {
-    /* height: 30px; */
+    height: 20px;
     background-color: var(--primary-green);
     color: white;
     display: flex;
     justify-content: space-between;
-    padding: .3rem 5vw;
+    padding: 5px 5vw;
     font-size: 0.9em;
 }
 
@@ -57,7 +57,6 @@ header .top-bar {
 .top-bar .left img {
     margin-left: 1.2rem;
     height: 1rem;
-    width: auto;
 }
 
 /* header nav {
@@ -66,6 +65,7 @@ header .top-bar {
 
 .wrapper {
     padding: 0 5vw;
+    height: 65px;
 }
 
 .wrapper .logo img {
@@ -87,14 +87,14 @@ header nav {
     z-index: 1;
     transition: background-color .5s ease;
     background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
 }
 
 nav.green {
-    background-color: var(--primary-green);
-    transition: background-color .2s ease;
-    padding-top: .2rem;
-    padding-bottom: .2rem;
-    /* padding: 100px auto; */
+    /* background-color: var(--primary-green); */
+    /* transition: background-color 5s ease; */
+    /* padding-top: .2rem;
+    padding-bottom: .2rem; */
     top: 0;
 }
 
@@ -132,14 +132,30 @@ nav.green {
     transition: 300ms;
 }
 
-#book-button {
-    background-color: var(--primary-yellow);
-    border-radius: 1.5rem;
+.menu li.menu-bottom a::after {
+    height: 0;
+}
+
+#book-button a::after, .menu.open li a::after {
+    background: white;
 }
 
 #book-button a {
     color: white;
 }
+
+#book-button {
+    background-color: var(--primary-orange);
+    border-radius: 1.5rem;
+}
+
+.menu.open #book-button {
+    background-color: transparent;
+}
+
+.menu.open li a {
+    color: white;
+} 
 
 .menu-bottom {
     display: flex;
@@ -149,16 +165,24 @@ nav.green {
     margin: 20px 0px;
     color: #fff;
     font-weight: 500;
+    text-transform: none;
 }
 
-.menu-bottom img {
-    width: 1rem;
-    height: auto;
+.menu-bottom div {
+    display: flex;
+    align-items: center;
+}
+
+.menu-bottom svg {
     margin: 0px .6rem; 
 }
 
+li.menu-bottom a {
+    padding: 0;
+}
+
 .menu-bottom .left img {
-    width: auto;
+    height: 16px;
     margin: 0px .6rem;
 }
 
@@ -172,6 +196,10 @@ nav.green {
     cursor: pointer;
     z-index: 2;
     display: none;
+}
+
+main {
+    margin-top: 65px;
 }
 
 .banner {
@@ -439,7 +467,7 @@ form input[type="submit"]:hover {
     cursor: pointer;
 }
 
-.book-button {
+.book-now {
     display: none;
 }
 
@@ -464,6 +492,43 @@ form input[type="submit"]:hover {
         width: 100%;
         justify-content: space-between;
     }
+    
+    #menu-icon {
+        display: block;
+        color: var(--primary-green);
+    }
+    .bx-x#menu-icon {
+        color: white;
+    }
+    .menu {
+        position: absolute;
+        margin: 0;
+        top: 0;
+        right: -100%;
+        transition: right 1s;
+        padding: 0px 1.2rem;
+        width: 270px;
+        height: 100vh;
+        background-color: rgba(0,0,0,.5);
+        backdrop-filter: blur(8px);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 6.25rem;
+    } 
+    .menu.open {
+        top: -30px;
+        right: 0;
+        transition: right .5s;
+    }
+    .menu li {
+        margin: 10px 0px;
+    }
+    .menu li.menu-bottom {
+        display: flex;
+        margin: 3em 0;
+    }
+
     .pre-content {
         padding-right: 5vw;
     }
@@ -500,6 +565,9 @@ form input[type="submit"]:hover {
 }
 
 @media only screen and (max-width: 768px) {
+    .top-bar .right div:first-child, .top-bar .right div:nth-child(2) {
+        display: none;
+    }
     .banner {
         height: 100px;
     }
@@ -515,12 +583,12 @@ form input[type="submit"]:hover {
     ul.tabs-nav {
         display: none ;
     }
-    .book-button {
+    .book-now {
         display: block;
         position: fixed;
         bottom: 0;
         width: 100%;
-        background-color: white;
+        background-color: var(--gray-input);
         font-weight: bold;
         font-size: 18px;
         height: 50px;
@@ -528,16 +596,22 @@ form input[type="submit"]:hover {
         /* box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); */
         box-shadow: 0 0 60px 0 rgba(6,30,98,.08);
     }
-    .book-button a {
+    .book-now a {
         text-decoration: none;
-        color: black;
+        color: var(--primary-green);
     }
-    .book-button a:hover {
-        color: var(--primary-yellow);
+    .book-now a:hover {
+        color: var(--primary-orange);
     }
 }
 
 @media only screen and (max-width: 560px) {
+    header .top-bar {
+        display: none;
+    }
+    header nav {
+        top: 0;
+    }
     .banner {
         height: 100px;
     }

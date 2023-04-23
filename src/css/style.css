@@ -44,27 +44,6 @@ body {
     padding-bottom: .3rem;
 }
 
-.menu-bottom {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    align-items: center;
-    margin: 20px 0px;
-    color: #fff;
-    font-weight: 500;
-}
-
-.menu-bottom img {
-    width: 1rem;
-    height: auto;
-    margin: 0px .6rem; 
-}
-
-.menu-bottom .left img {
-    width: auto;
-    margin: 0px .6rem;
-}
-
 .right {
     display: flex;
     justify-content: space-between;
@@ -157,6 +136,10 @@ nav.green #book-button {
     transition: 300ms;
 }
 
+li {
+    list-style-type: none;
+}
+
 #menu-icon {
     font-size: 2.1rem;
     color: #fff;
@@ -166,11 +149,25 @@ nav.green #book-button {
 }
 
 .menu-bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    margin: 20px 0px;
+    color: #fff;
+    font-weight: 500;
     display: none;
 }
 
-li {
-    list-style-type: none;
+.menu-bottom img {
+    width: 1rem;
+    height: auto;
+    margin: 0px .6rem; 
+}
+
+.menu-bottom .left img {
+    height: 16px;
+    margin: 0px .6rem;
 }
 
 .carousel-feedback {
@@ -462,7 +459,7 @@ footer p {
         padding: 0px 1.2rem;
         width: 270px;
         height: 100vh;
-        background-color: rgba(0,0,0,.2);
+        background-color: rgba(0,0,0,.5);
         backdrop-filter: blur(8px);
         display: flex;
         flex-direction: column;
@@ -477,6 +474,10 @@ footer p {
 
     .menu li {
         margin: 10px 0px;
+    }
+
+    .menu .menu-bottom {
+        margin: 20px 0;
     }
 
     .footer {
