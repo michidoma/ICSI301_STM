@@ -60,7 +60,7 @@ img {
   display: flex;
   margin-right: 2em;
   align-items: center;
-  color: var(--gray);
+  color: var(--primary-green);
 }
 
 .text-info .grey {

@@ -2,10 +2,10 @@
 
 :root {
     --primary-green: rgb(5, 72, 34);
-    --gray-light: #A0A2A6;
+    --gray-light: #4A4E4F;
     --gray-background: #E6E8EE;
     --gray-input: #F5F7FB;
-    --primary-yellow: #FC7E08;
+    --primary-orange: #FC7E08;
 }
 
 body {
@@ -17,19 +17,194 @@ body {
     min-height: 100vh;
 }
 
-header {
-    height: 30px;
+header .top-bar {
+    height: 20px;
     background-color: var(--primary-green);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 5vw;
+    font-size: 0.9em;
 }
 
-nav {
+.right {
+    display: flex;
+}
+
+.right div {
+    display: flex;
+    align-items: center;
+    margin-right: 3em;
+}
+
+.right img {
+    margin: 0px .2rem;
+}
+
+.right svg {
+    margin: 0 .3rem;
+}
+
+.right path {
+    stroke: white;
+}
+
+.right a {
+    text-decoration: none;
+    color: white;
+}
+
+.top-bar .left img {
+    margin-left: 1.2rem;
+    height: 1rem;
+}
+
+/* header nav {
     height: 70px;
+} */
+
+.wrapper {
+    padding: 0 5vw;
+    height: 65px;
+}
+
+.wrapper .logo img {
+    height: 4em;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    position: fixed;
+    font-weight: 600;
+    letter-spacing: 2px;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1.3rem 0px;
+    z-index: 1;
+    transition: background-color .5s ease;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+}
+
+nav.green {
+    /* background-color: var(--primary-green); */
+    /* transition: background-color 5s ease; */
+    /* padding-top: .2rem;
+    padding-bottom: .2rem; */
+    top: 0;
+}
+
+.menu {
+    display: flex;
+}
+
+.menu li {
+    list-style-type: none;
+}
+
+.menu li a {
+    padding: .6rem 1.8rem;
+    text-align: start;
+    color: black;
+    font-size: 12px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.menu li a.active::after {
+    width: 100%;
+}
+
+.menu li a:hover::after {
+    width: 100%;
+}
+
+.menu li a::after {
+    content: '';
+    width: 0px;
+    height: 1px;
+    display: block;
+    background: black;
+    transition: 300ms;
+}
+
+.menu li.menu-bottom a::after {
+    height: 0;
+}
+
+#book-button a::after, .menu.open li a::after {
+    background: white;
+}
+
+#book-button a {
+    color: white;
+}
+
+#book-button {
+    background-color: var(--primary-orange);
+    border-radius: 1.5rem;
+}
+
+.menu.open #book-button {
+    background-color: transparent;
+}
+
+.menu.open li a {
+    color: white;
+} 
+
+.menu-bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    margin: 20px 0px;
+    color: #fff;
+    font-weight: 500;
+    text-transform: none;
+}
+
+.menu-bottom div {
+    display: flex;
+    align-items: center;
+}
+
+.menu-bottom svg {
+    margin: 0px .6rem; 
+}
+
+li.menu-bottom a {
+    padding: 0;
+}
+
+.menu-bottom .left img {
+    height: 16px;
+    margin: 0px .6rem;
+}
+
+.menu-bottom {
+    display: none;
+}
+
+#menu-icon {
+    font-size: 2.1rem;
+    color: #fff;
+    cursor: pointer;
+    z-index: 2;
+    display: none;
+}
+
+main {
+    margin-top: 65px;
 }
 
 .banner {
     height: 140px;
     position: relative;
-
     display: flex;
     align-items: center;
 }
@@ -215,8 +390,7 @@ aside {
     border-radius: 0px 0px 8px 8px;
 }
 
-.booking-form h4 {
-    font-family: 'Open Sans', sans-serif;
+.booking-form h3 {
     font-weight: bold;
     margin-top: 10px;
     border-bottom: 2px solid var(--gray-input);
@@ -293,8 +467,114 @@ form input[type="submit"]:hover {
     cursor: pointer;
 }
 
-.book-button {
+section.travel-cat {
+    padding: 2em;
+}
+  
+section.travel-cat h1 {
+      text-align: center;
+      color: var(--primary-green);
+      font-size: 2em;
+}
+  
+.card-slider {
+    max-width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+  
+.card-slider-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2em;
+    /* margin: 0 1rem; */
+    transition: transform 0.5s ease;
+}
+
+custom-card {
+    margin-right: calc((100vw - 9em - 1040px) / 3);
+    background-color: #fff;
+}
+
+.right-arrow {
+    position: absolute;
+    bottom: 50%;
+    /* transform: translateY(50%); */
+    right: 0;
+    width: 2em;
+}
+
+.left-arrow {
+    position: absolute;
+    bottom: 50%;
+    /* transform: translateY(50%); */
+    left: 0;
+    width: 2em;
+}
+
+.book-now {
     display: none;
+}
+
+footer {
+    background-image: url('../../assets/img/footer-background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0 5rem;
+    color: white;
+    text-align: center;
+}
+
+.footer-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+    cursor: default;
+    white-space: nowrap;
+    flex-wrap: wrap;
+}
+
+.footer-content section, .footer-content address {
+    margin: 2rem 0;
+    text-align: start;
+}
+
+.footer-content address {
+    font-style: normal;
+}
+
+.footer-content section ul, .footer-content address ul {
+    margin: 2rem 0;
+    padding: 0;
+}
+
+.footer-content section h3, .footer-content address h3 {
+    margin-top: 0;
+    margin-bottom: 2em;
+}
+
+.footer-content section ul li, .footer-content address ul li {
+    margin: .8rem 0;
+    display: flex;
+    align-items: center;
+}
+
+.footer-content li img, .footer-content li svg {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+}
+
+.footer-content section ul li a, .footer-content address ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+footer p {
+    margin: 0;
+    padding: 1.5em 0 2em 0;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -308,6 +588,53 @@ form input[type="submit"]:hover {
 }
 
 @media only screen and (max-width: 1024px) {
+    .top-bar .left {
+        display: none;
+    }
+    .top-bar .right div {
+        margin-right: 0;
+    }
+    .top-bar .right {
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    #menu-icon {
+        display: block;
+        color: var(--primary-green);
+    }
+    .bx-x#menu-icon {
+        color: white;
+    }
+    .menu {
+        position: absolute;
+        margin: 0;
+        top: 0;
+        right: -100%;
+        transition: right 1s;
+        padding: 0px 1.2rem;
+        width: 270px;
+        height: 100vh;
+        background-color: rgba(0,0,0,.5);
+        backdrop-filter: blur(8px);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 6.25rem;
+    } 
+    .menu.open {
+        top: -30px;
+        right: 0;
+        transition: right .5s;
+    }
+    .menu li {
+        margin: 10px 0px;
+    }
+    .menu li.menu-bottom {
+        display: flex;
+        margin: 3em 0;
+    }
+
     .pre-content {
         padding-right: 5vw;
     }
@@ -341,9 +668,15 @@ form input[type="submit"]:hover {
     form span {
         font-size: 1.25em;
     }
+    footer {
+        padding: 0 5vw;
+    }
 }
 
 @media only screen and (max-width: 768px) {
+    .top-bar .right div:first-child, .top-bar .right div:nth-child(2) {
+        display: none;
+    }
     .banner {
         height: 100px;
     }
@@ -359,12 +692,30 @@ form input[type="submit"]:hover {
     ul.tabs-nav {
         display: none ;
     }
-    .book-button {
+
+    .footer-content {
+        flex-wrap: wrap;
+    }
+    .footer-content section, .footer-content address {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 40%;
+        margin: 1rem;
+    }
+    .footer-content section h3, .footer-content address h3 {
+        margin-bottom: 1em;
+    }
+    .footer-content section ul, .footer-content address ul {
+        margin: 0;
+    }
+
+    .book-now {
         display: block;
         position: fixed;
         bottom: 0;
         width: 100%;
-        background-color: white;
+        background-color: var(--gray-input);
         font-weight: bold;
         font-size: 18px;
         height: 50px;
@@ -372,16 +723,22 @@ form input[type="submit"]:hover {
         /* box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); */
         box-shadow: 0 0 60px 0 rgba(6,30,98,.08);
     }
-    .book-button a {
+    .book-now a {
         text-decoration: none;
-        color: black;
+        color: var(--primary-green);
     }
-    .book-button a:hover {
-        color: var(--primary-yellow);
+    .book-now a:hover {
+        color: var(--primary-orange);
     }
 }
 
 @media only screen and (max-width: 560px) {
+    header .top-bar {
+        display: none;
+    }
+    header nav {
+        top: 0;
+    }
     .banner {
         height: 100px;
     }
