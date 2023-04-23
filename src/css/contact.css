@@ -127,6 +127,7 @@ nav.green {
   display: block;
   background: black;
   transition: 300ms;
+  margin-top: 3px;
 }
 
 .menu li.menu-bottom a::after {

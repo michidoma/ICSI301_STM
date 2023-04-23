@@ -53,7 +53,7 @@ class InformationBox extends HTMLElement {
       }
     </style>
     <div class="box">
-      <img src="${this.logo}" />
+      <img src="${this.logo}" alt="statistics"/>
       <div class="information">
         <p>${this.title}</p>
         <h1>${this.data}</h1>
