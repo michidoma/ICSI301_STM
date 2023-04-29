@@ -199,7 +199,7 @@ li.menu-bottom a {
   display: flex;
   justify-content: space-between;
   font-size: 1rem;
-  width: 20vw;
+  width: calc(80% - 10vw);
 }
 
 .menu-bottom .left a {
