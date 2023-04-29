@@ -4,30 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Хятадын Хунань мужийн шилдэг аялал Тэнгэрийн хаалганы аялалдаа Монгол Аялал компани аялагчдаа бүртгэж байна. Яг одоо захиалаад цоо шинэ, сэтгэл сэргээм адал явдалдаа гараарай."
-    />
-    <meta
-      name="keywords"
-      content="Монгол, аялал, адал явдал, дурсамж, соёл, жуулчлал, байгаль, үзэсгэлэнт газар, гадаад улс, тойрон аялал, Тэнгэрийн хаалга, Хятад, Хунань муж, Тиэнмэн уул, УБ, Замын-Үүд, Эрээн, Хөх хот, Чангша, Жанжиажэ, Тунтиэний авто зам, аяллыг захиалах, аяллын маршрут, Улаанбаатар возкал, гадаад улс руу аялах, зөвлөмж, гадаад пасспорт, Улаанбаатар, сэтгэл ханамж, аялагч, аялагчид, Исланд, Щвейцарь, аяллын компани, travel, ayalal, book, mongol ayalal, gadaad ayalal, аялал, монгол аялал, гадаад аялал, жуулчлал, facebook, youtube, instagram, twitter"
-    />
-    <meta
-      name="author"
-      content="Mongol Ayalal, Монгол Аялал, Мичидмаа, Цэлмэг, Сарнай"
-    />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="robots" content="index, follow" />
-    <meta name="geo.region" content="MN-1" />
-    <meta name="geo.placename" content="Ulaanbaatar, Mongolia" />
-    <meta name="geo.position" content="47.9212;106.9186" />
-    <meta name="geo.icbm" content="47.9212, 106.9186" />
-    <meta name="theme-color" content="#054822" />
-    <title>
-      Тэнгэрийн хаалганы аялал | Хунань мужийн шилдэг аялал | Яг одоо захиал -
-      Монгол Аялал
-    </title>
+    <title>Захиалах</title>
     <link
       rel="stylesheet"
       href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
@@ -151,23 +128,16 @@
             >
           </li>
           <li>
-            <a
-              aria-label="navigate to travels list page"
-              class="active"
-              href="#"
-              >Аяллууд</a
-            >
+            <a aria-label="navigate to travels list page" href="#">Аяллууд</a>
           </li>
           <li>
             <a aria-label="navigate to blog page" href="blog.html">Мэдээлэл</a>
           </li>
           <li>
-            <a aria-label="navigate to contact page" href="contact.html"
-              >Холбоо барих</a
-            >
+            <a aria-label="navigate to contact page" href="contact.html">Холбоо барих</a>
           </li>
           <li id="book-button">
-            <a aria-label="navigate to booking page" href="#book">Захиалах</a>
+            <a aria-label="navigate to booking page" class="active" href="#book">Захиалах</a>
           </li>
           <li class="menu-bottom">
             <div>
@@ -256,8 +226,8 @@
     <main>
       <section class="banner">
         <img
-          src="../../assets/webp/header-tengeriin-haalga.webp"
-          alt="Тэнгэрийн хаалга"
+          src="../../assets/webp/header_background_terelj.webp"
+          alt="Terelj-Background-image"
         />
         <h1>Захиалах</h1>
       </section>
@@ -267,50 +237,50 @@
           <section class="info-personal">
             <h2>Хувийн мэдээлэл</h2>
             <form class="form" action="">
-                <div>
-                    <label class="container">
-                        Овог
-                    </label>
-                      <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        required
-                      />
-                </div>
-                <div>
-                    <label class="container">
-                      Нэр
-                  </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      required
-                    />
-                </div>
-                <div>
-                    <label class="container">
-                      Утасны дугаар
-                  </label>
-                    <input
-                      type="email"
-                      id="email_verify"
-                      name="email_verify"
-                      required
-                    />
-                </div>
-                <div>
-                    <label class="container">
-                      И-мэйл хаяг
-                  </label>
-                    <input
-                      type="tel"
-                      id="phone"
-                      name="phone"
-                      required
-                    />
-                </div>
+              <div>
+                <label for="last-name" class="container">
+                  Овог
+                </label>
+                <input
+                  type="text"
+                  id="last-name"
+                  name="last-name"
+                  required
+                />
+              </div>
+              <div>
+                <label for="first-name" class="container">
+                  Нэр
+                </label>
+                <input
+                  type="text"
+                  id="first-name"
+                  name="first-name"
+                  required
+                />
+              </div>  
+              <div>
+                <label for="phone-number" class="container">
+                  Утасны дугаар
+                </label>
+                <input
+                  type="tel"
+                  id="phone-number"
+                  name="phone-number"
+                  required
+                />
+              </div>
+              <div>
+                <label for="email" class="container">
+                  И-мэйл хаяг
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                />
+              </div>
             </form>
           </section>
           <section class="info-travel">
@@ -345,36 +315,91 @@
               <div class="check-box-container">
                 <img src="../../assets/img/uncheck.png" />
                 <label class="container">
-                    Гуанжу - Canton Fair аялал
+                    Хайнан арлын аялал
                 </label>
               </div>
               <div class="check-box-container">
                 <img src="../../assets/img/uncheck.png" />
                 <label class="container">
-                    Гуанжу - Canton Fair аялал
+                    Ханх - Эрхүү - Байгал аялал
                 </label>
               </div>
             </form>
           </section>
           <section class="info-additional">
             <form action="">
-                <label class="container">
+                <label for="people-count" class="container">
                     Хүний тоо
                 </label>
                 <input
-                  type="text"
-                  id="name"
-                  name="name"
+                  type="number"
+                  id="people-count"
+                  name="people-count"
+                  min="1"
                   required
                 />
-                <label class="container">
+                <label for="message" class="container">
                     Нэмэлт мэдээлэл
                 </label>
-                <textarea class="text-area" rows="4" cols="50"></textarea>
+                <textarea id="message" name="message" class="text-area" rows="4" cols="50"></textarea>
           </section>
           <button>Илгээх</button>
         </section>
       </section>
+      <!-- <div class="main">
+        <form class="form-group" action="">
+          <div class="top-green"></div>
+          <section class="info-personal">
+            <h2>Хувийн мэдээлэл</h2>
+            <form class="form" action="">
+              <div>
+                <label for="last-name" class="container">
+                  Овог
+                </label>
+                <input
+                  type="text"
+                  id="last-name"
+                  name="last-name"
+                  required
+                />
+              </div>
+              <div>
+                <label for="first-name" class="container">
+                  Нэр
+                </label>
+                <input
+                  type="text"
+                  id="first-name"
+                  name="first-name"
+                  required
+                />
+              </div>  
+              <div>
+                <label for="phone-number" class="container">
+                  Утасны дугаар
+                </label>
+                <input
+                  type="tel"
+                  id="phone-number"
+                  name="phone-number"
+                  required
+                />
+              </div>
+              <div>
+                <label for="email" class="container">
+                  И-мэйл хаяг
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                />
+              </div>
+            </form>
+          </section>
+        </form>
+      </div> -->
     </main>
     <footer>
       <div class="footer-content">
@@ -382,18 +407,18 @@
           <h3>МОНГОЛ АЯЛАЛ</h3>
           <ul>
             <li><a href="../../index.html">Нүүр</a></li>
-            <li><a href="javascript:void(0)">Бидний тухай</a></li>
-            <li><a href="#">Аяллууд</a></li>
-            <li><a href="#book">Захиалах</a></li>
+            <li><a href="#">Бидний тухай</a></li>
+            <li><a href="travel-details.html">Аяллууд</a></li>
+            <li><a href="#">Захиалах</a></li>
           </ul>
         </section>
         <section>
           <h3>ХОЛБООСУУД</h3>
           <ul>
             <li><a href="blog.html">Мэдээ, мэдээлэл</a></li>
-            <li><a href="javascript:void(0)">Нийгмийн хариуцлага</a></li>
-            <li><a href="javascript:void(0)">Тусламж</a></li>
-            <li><a href="javascript:void(0)">Санал хүсэлт</a></li>
+            <li><a href="#">Нийгмийн хариуцлага</a></li>
+            <li><a href="#">Тусламж</a></li>
+            <li><a href="#">Санал хүсэлт</a></li>
           </ul>
         </section>
         <address>
