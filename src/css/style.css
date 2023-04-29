@@ -269,7 +269,8 @@ li.menu-bottom a {
     position: absolute;
     top: 50%;
     margin: 0px 3vw;
-    transition: 0.6s ease;
+    transition: 0.6s ease;    
+    /* width: 40px; */
 }
   
 /* next button-г баруун талд байрлуулах */
