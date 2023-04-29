@@ -51,6 +51,12 @@ setTimeout(() => {
       menu.classList.toggle('bx-x');
       navbar.classList.toggle('open');
   }
+
+  document.querySelectorAll('custom-card').forEach(function(customCard) {
+    customCard.addEventListener('click', function() {
+      window.location.href = 'src/html/travel-details.html';
+    })
+  })
 }, 100);
 
 $(window).scroll(function () {
