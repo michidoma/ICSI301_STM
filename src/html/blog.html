@@ -23,15 +23,102 @@
     <meta name="geo.icbm" content="47.9212, 106.9186">
     <meta name="theme-color" content="#054822">
     <title>Гадаад руу аялагчдын зөвлөмж</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
+    />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="../css/blog.css">
     <link rel="icon" href="../../assets/icons/logo-mongol-ayalal.png" type="image/png">
+    <script defer src="https://code.jquery.com/jquery-3.6.4.js"></script>
+    <script defer src="../js/blog.js"></script>
 </head>
 <body>
     <header>
-
+        <section class="top-bar">
+            <div class="right">
+                <div>USD <img src="../../assets/icons/usd.webp" width="16" height="16" alt="US currency"/> 3,527.29</div>
+                <div>Улаанбаатар -13.9°C</div>
+                <div>
+                    <svg width="1rem" height="1rem" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M21.5 18L14.8571 12M9.14286 12L2.50003 18M2 7L10.1649 12.7154C10.8261 13.1783 11.1567 13.4097 11.5163 13.4993C11.8339 13.5785 12.1661 13.5785 12.4837 13.4993C12.8433 13.4097 13.1739 13.1783 13.8351 12.7154L22 7M6.8 20H17.2C18.8802 20 19.7202 20 20.362 19.673C20.9265 19.3854 21.3854 18.9265 21.673 18.362C22 17.7202 22 16.8802 22 15.2V8.8C22 7.11984 22 6.27976 21.673 5.63803C21.3854 5.07354 20.9265 4.6146 20.362 4.32698C19.7202 4 18.8802 4 17.2 4H6.8C5.11984 4 4.27976 4 3.63803 4.32698C3.07354 4.6146 2.6146 5.07354 2.32698 5.63803C2 6.27976 2 7.11984 2 8.8V15.2C2 16.8802 2 17.7202 2.32698 18.362C2.6146 18.9265 3.07354 19.3854 3.63803 19.673C4.27976 20 5.11984 20 6.8 20Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <a href="mailto:info@mongolayalal.mn" rel="nofollow">info@mongolayalal.mn</a>
+                </div>
+                <div>
+                    <svg width="1rem" height="1rem" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14.5 6.5C15.2372 6.64382 15.9689 6.96892 16.5 7.5C17.0311 8.03108 17.3562 8.76284 17.5 9.5M15 3C16.5315 3.17014 17.9097 3.91107 19 5C20.0903 6.08893 20.8279 7.46869 21 9M20.9995 16.4767V19.1864C21.0037 20.2223 20.0723 21.0873 19.0265 20.9929C10.0001 21 3.00006 13.935 3.00713 4.96919C2.91294 3.92895 3.77364 3.00106 4.80817 3.00009H7.52331C7.96253 2.99577 8.38835 3.151 8.72138 3.43684C9.66819 4.24949 10.2772 7.00777 10.0429 8.10428C9.85994 8.96036 8.99696 9.55929 8.41026 10.1448C9.69864 12.4062 11.5747 14.2785 13.8405 15.5644C14.4272 14.9788 15.0274 14.1176 15.8851 13.935C16.9855 13.7008 19.7615 14.3106 20.5709 15.264C20.858 15.6021 21.0105 16.0337 20.9995 16.4767Z" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <a href="tel:(+976) 75707779" rel="nofollow">(+976) 75707779</a>
+                </div>
+            </div>
+            <div class="left">
+                <a target="_blank" href="https://www.facebook.com/mongoliantravel/">
+                  <img src="../../assets/icons/facebook.png" width="16" height="16" alt="Facebook"/>
+                </a>
+                <a target="_blank" href="https://www.instagram.com/mongolayalal/">
+                  <img src="../../assets/icons/instagram.png" width="16" height="16" alt="Instagram"/>
+                </a>
+                <a target="_blank" href="https://www.youtube.com/@mongoliantravelcompany">
+                  <img src="../../assets/icons/youtube.png" width="16" height="14" alt="Youtube"/>
+                </a>
+                <a target="_blank" href="https://twitter.com/mongolayalal">
+                  <img src="../../assets/icons/twitter.png" width="16" height="16" alt="Twitter"/>
+                </a>
+            </div>
+        </section>
+        <nav class="wrapper">
+            <a href="../../index.html" class="logo">
+              <img src="../../assets/img/logo.png" width="193" height="56" alt="logo-mongol-ayalal"/>
+            </a>
+            <ul class="menu">
+              <li>
+                <a aria-label="navigate to home page" href="../../index.html">Нүүр</a>
+              </li>
+              <li>
+                <a aria-label="navigate to travels list page" href="travel-details.html">Аяллууд</a>
+              </li>
+              <li>
+                <a aria-label="navigate to blog page" class="active" href="#">Мэдээлэл</a>
+              </li>
+              <li>
+                <a aria-label="navigate to contact page" href="contact.html">Холбоо барих</a>
+              </li>
+              <li id="book-button">
+                <a aria-label="navigate to booking page" href="#book">Захиалах</a>
+              </li>
+              <li class="menu-bottom">
+                <div>
+                    <svg width="16px" height="16px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M21.5 18L14.8571 12M9.14286 12L2.50003 18M2 7L10.1649 12.7154C10.8261 13.1783 11.1567 13.4097 11.5163 13.4993C11.8339 13.5785 12.1661 13.5785 12.4837 13.4993C12.8433 13.4097 13.1739 13.1783 13.8351 12.7154L22 7M6.8 20H17.2C18.8802 20 19.7202 20 20.362 19.673C20.9265 19.3854 21.3854 18.9265 21.673 18.362C22 17.7202 22 16.8802 22 15.2V8.8C22 7.11984 22 6.27976 21.673 5.63803C21.3854 5.07354 20.9265 4.6146 20.362 4.32698C19.7202 4 18.8802 4 17.2 4H6.8C5.11984 4 4.27976 4 3.63803 4.32698C3.07354 4.6146 2.6146 5.07354 2.32698 5.63803C2 6.27976 2 7.11984 2 8.8V15.2C2 16.8802 2 17.7202 2.32698 18.362C2.6146 18.9265 3.07354 19.3854 3.63803 19.673C4.27976 20 5.11984 20 6.8 20Z" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <a href="mailto:info@mongolayalal.mn" rel="nofollow">info@mongolayalal.mn</a>
+                </div>
+                <div>
+                    <svg width="16px" height="16px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14.5 6.5C15.2372 6.64382 15.9689 6.96892 16.5 7.5C17.0311 8.03108 17.3562 8.76284 17.5 9.5M15 3C16.5315 3.17014 17.9097 3.91107 19 5C20.0903 6.08893 20.8279 7.46869 21 9M20.9995 16.4767V19.1864C21.0037 20.2223 20.0723 21.0873 19.0265 20.9929C10.0001 21 3.00006 13.935 3.00713 4.96919C2.91294 3.92895 3.77364 3.00106 4.80817 3.00009H7.52331C7.96253 2.99577 8.38835 3.151 8.72138 3.43684C9.66819 4.24949 10.2772 7.00777 10.0429 8.10428C9.85994 8.96036 8.99696 9.55929 8.41026 10.1448C9.69864 12.4062 11.5747 14.2785 13.8405 15.5644C14.4272 14.9788 15.0274 14.1176 15.8851 13.935C16.9855 13.7008 19.7615 14.3106 20.5709 15.264C20.858 15.6021 21.0105 16.0337 20.9995 16.4767Z" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <a href="tel:(+976) 75707779" rel="nofollow">(+976) 75707779</a>
+                </div>
+                <div class="left">
+                    <a target="_blank" href="https://www.facebook.com/mongoliantravel/">
+                        <img src="../../assets/icons/facebook.png" width="16" height="16" alt="Facebook"/>
+                    </a>
+                    <a target="_blank" href="https://www.instagram.com/mongolayalal/">
+                        <img src="../../assets/icons/instagram.png" width="16" height="16" alt="Instagram"/>
+                    </a>
+                    <a target="_blank" href="https://www.youtube.com/@mongoliantravelcompany">
+                        <img src="../../assets/icons/youtube.png" width="16" height="14" alt="Youtube"/>
+                    </a>
+                    <a target="_blank" href="https://twitter.com/mongolayalal">
+                        <img src="../../assets/icons/twitter.png" width="16" height="16" alt="Twitter"/>
+                    </a>
+                </div>
+              </li>
+            </ul>
+            <div class="bx bx-menu" id="menu-icon"></div>
+        </nav>
     </header>
-
     <main>
         <img src="../../assets/webp/header_background_terelj.webp" alt="Terelj-Background-image" class="landscape">
 
@@ -142,10 +229,73 @@
             </section>
         </section>
     </main>
-
     <footer>
-        
+        <div class="footer-content">
+            <section> 
+                <h3>МОНГОЛ АЯЛАЛ</h3>
+                <ul>
+                    <li><a href="../../index.html">Нүүр</a></li>
+                    <li><a href="javascript:void(0)">Бидний тухай</a></li>
+                    <li><a href="travel-details.html">Аяллууд</a></li>
+                    <li><a href="#book">Захиалах</a></li>
+                </ul>   
+            </section>
+            <section>
+                <h3>ХОЛБООСУУД</h3>
+                <ul>
+                    <li><a href="#">Мэдээ, мэдээлэл</a></li>
+                    <li><a href="javascript:void(0)">Нийгмийн хариуцлага</a></li>
+                    <li><a href="javascript:void(0)">Тусламж</a></li>
+                    <li><a href="javascript:void(0)">Санал хүсэлт</a></li>
+                </ul>  
+            </section>
+            <address>
+                <h3>ХОЛБОО БАРИХ</h3>
+                <ul>
+                    <li>
+                        <svg width="16px" height="16px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14.5 6.5C15.2372 6.64382 15.9689 6.96892 16.5 7.5C17.0311 8.03108 17.3562 8.76284 17.5 9.5M15 3C16.5315 3.17014 17.9097 3.91107 19 5C20.0903 6.08893 20.8279 7.46869 21 9M20.9995 16.4767V19.1864C21.0037 20.2223 20.0723 21.0873 19.0265 20.9929C10.0001 21 3.00006 13.935 3.00713 4.96919C2.91294 3.92895 3.77364 3.00106 4.80817 3.00009H7.52331C7.96253 2.99577 8.38835 3.151 8.72138 3.43684C9.66819 4.24949 10.2772 7.00777 10.0429 8.10428C9.85994 8.96036 8.99696 9.55929 8.41026 10.1448C9.69864 12.4062 11.5747 14.2785 13.8405 15.5644C14.4272 14.9788 15.0274 14.1176 15.8851 13.935C16.9855 13.7008 19.7615 14.3106 20.5709 15.264C20.858 15.6021 21.0105 16.0337 20.9995 16.4767Z" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <a href="tel:(+976) 75707779" rel="nofollow">(+976) 75707779</a>
+                    </li>
+                    <li>
+                        <svg width="16px" height="16px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21.5 18L14.8571 12M9.14286 12L2.50003 18M2 7L10.1649 12.7154C10.8261 13.1783 11.1567 13.4097 11.5163 13.4993C11.8339 13.5785 12.1661 13.5785 12.4837 13.4993C12.8433 13.4097 13.1739 13.1783 13.8351 12.7154L22 7M6.8 20H17.2C18.8802 20 19.7202 20 20.362 19.673C20.9265 19.3854 21.3854 18.9265 21.673 18.362C22 17.7202 22 16.8802 22 15.2V8.8C22 7.11984 22 6.27976 21.673 5.63803C21.3854 5.07354 20.9265 4.6146 20.362 4.32698C19.7202 4 18.8802 4 17.2 4H6.8C5.11984 4 4.27976 4 3.63803 4.32698C3.07354 4.6146 2.6146 5.07354 2.32698 5.63803C2 6.27976 2 7.11984 2 8.8V15.2C2 16.8802 2 17.7202 2.32698 18.362C2.6146 18.9265 3.07354 19.3854 3.63803 19.673C4.27976 20 5.11984 20 6.8 20Z" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <a href="mailto:info@mongolayalal.mn" rel="nofollow">info@mongolayalal.mn</a>
+                    </li>
+                    <li>
+                        <svg width="16px" height="16px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19.9 4.09001C19.6576 3.92895 19.3789 3.83088 19.089 3.80469C18.7992 3.7785 18.5073 3.82501 18.24 3.94001L14.67 5.47001L9.92 3.47001C9.73338 3.3908 9.53273 3.34998 9.33 3.34998C9.12727 3.34998 8.92661 3.3908 8.74 3.47001L4.38 5.31001C4.04012 5.45784 3.75151 5.70283 3.55046 6.01419C3.3494 6.32556 3.24487 6.68941 3.25 7.06001V18.31C3.24816 18.6262 3.32486 18.938 3.47321 19.2172C3.62157 19.4965 3.83694 19.7345 4.1 19.91C4.3424 20.0711 4.62114 20.1691 4.91099 20.1953C5.20084 20.2215 5.49265 20.175 5.76 20.06L9.33 18.53L14.08 20.53C14.2661 20.6109 14.4671 20.6517 14.67 20.65C14.8727 20.6498 15.0733 20.609 15.26 20.53L19.62 18.66C19.9599 18.5122 20.2485 18.2672 20.4495 17.9558C20.6506 17.6445 20.7551 17.2806 20.75 16.91V5.69001C20.7518 5.3738 20.6751 5.06207 20.5268 4.78281C20.3784 4.50356 20.1631 4.2655 19.9 4.09001ZM10.08 5.09001L13.92 6.73001V18.86L10.08 17.22V5.09001ZM5.17 18.68C5.13199 18.702 5.08888 18.7135 5.045 18.7135C5.00111 18.7135 4.958 18.702 4.92 18.68C4.86421 18.641 4.81932 18.5883 4.78957 18.5271C4.75982 18.4658 4.7462 18.398 4.75 18.33V7.06001C4.74877 6.98016 4.77209 6.90186 4.8168 6.83569C4.86151 6.76952 4.92546 6.71867 5 6.69001L8.58 5.14001V17.22L5.17 18.68ZM19.25 16.94C19.2537 17.0165 19.2348 17.0923 19.1957 17.1581C19.1565 17.2239 19.0989 17.2767 19.03 17.31L15.42 18.86V6.78001L18.83 5.32001C18.868 5.29807 18.9111 5.28652 18.955 5.28652C18.9989 5.28652 19.042 5.29807 19.08 5.32001C19.1358 5.35906 19.1807 5.4117 19.2104 5.47295C19.2402 5.5342 19.2538 5.60203 19.25 5.67001V16.94Z" fill="#fff"/>
+                        </svg>
+                        УБ, Сүхбаатар - 14190
+                    </li>
+                </ul> 
+            </address>
+            <address>
+                <h3>БИДНИЙГ ДАГАХ</h3>
+                <ul>
+                    <li>
+                        <img src="../../assets/icons/facebook.png" alt="facebook">
+                        <a target="_blank" href="https://www.facebook.com/mongoliantravel/">Facebook</a>
+                    </li>
+                    <li>
+                        <img src="../../assets/icons/instagram.png" alt="facebook">
+                        <a target="_blank" href="https://www.instagram.com/mongolayalal/">Instagram</a>
+                    </li>
+                    <li>
+                        <img src="../../assets/icons/youtube.png" alt="facebook">
+                        <a target="_blank" href="https://www.youtube.com/@mongoliantravelcompany">Youtube</a>
+                    </li>
+                    <li>
+                        <img src="../../assets/icons/twitter.png" alt="facebook">
+                        <a target="_blank" href="https://twitter.com/mongolayalal">Twitter</a>
+                    </li>
+                </ul> 
+            </address>
+        </div>
+        <hr/>
+        <p><b>БҮХ ЭРХ ХУУЛИАР ХАМГААЛАГДСАН © 2023 он “Монгол Аялал”</b></p>
     </footer>
-
 </body>
 </html>
