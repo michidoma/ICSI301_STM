@@ -56,9 +56,17 @@ header .top-bar {
   color: white;
 }
 
-.top-bar .left img {
-  margin-left: 1.2rem;
-  height: 1rem;
+.top-bar .left {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+  width: 10vw;
+
+}
+
+.top-bar .left a {
+  text-decoration: none;
+  color: var(--white);
 }
 
 /* header nav {
@@ -184,9 +192,16 @@ li.menu-bottom a {
   padding: 0;
 }
 
-.menu-bottom .left img {
-  height: 16px;
-  margin: 0px .6rem;
+.menu-bottom .left {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+  width: calc(80% - 10vw);
+}
+
+.menu-bottom .left a {
+  text-decoration: none;
+  color: var(--white);
 }
 
 .menu-bottom {
@@ -434,7 +449,7 @@ footer {
   align-items: center;
 }
 
-.footer-content li img, .footer-content li svg {
+.footer-content li i, .footer-content li svg {
   width: 16px;
   height: 16px;
   margin-right: 8px;
