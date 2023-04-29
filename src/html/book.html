@@ -18,7 +18,6 @@
     <script defer src="https://code.jquery.com/jquery-3.6.4.js"></script>
     <script defer src="../components/card.js"></script>
     <script defer src="../js/script.js"></script>
-    <script src="../components/clock-component.js"></script>
   </head>
   <body>
     <header>
@@ -231,7 +230,7 @@
         />
         <h1>Захиалах</h1>
       </section>
-      <section class="main">
+      <!-- <section class="main">
         <section class="main-form">
           <div class="top-green"></div>
           <section class="info-personal">
@@ -345,14 +344,14 @@
           </section>
           <button>Илгээх</button>
         </section>
-      </section>
-      <!-- <div class="main">
+      </section> -->
+      <div class="main">
         <form class="form-group" action="">
           <div class="top-green"></div>
           <section class="info-personal">
             <h2>Хувийн мэдээлэл</h2>
-            <form class="form" action="">
-              <div>
+            <div>
+              <div class="input-group">
                 <label for="last-name" class="container">
                   Овог
                 </label>
@@ -363,7 +362,7 @@
                   required
                 />
               </div>
-              <div>
+              <div class="input-group">
                 <label for="first-name" class="container">
                   Нэр
                 </label>
@@ -374,7 +373,7 @@
                   required
                 />
               </div>  
-              <div>
+              <div class="input-group">
                 <label for="phone-number" class="container">
                   Утасны дугаар
                 </label>
@@ -385,7 +384,7 @@
                   required
                 />
               </div>
-              <div>
+              <div class="input-group">
                 <label for="email" class="container">
                   И-мэйл хаяг
                 </label>
@@ -396,10 +395,114 @@
                   required
                 />
               </div>
-            </form>
+            </div>
+          </section>
+          <section class="info-travel">
+            <h2>Аяллын мэдээлэл</h2>
+            <div class="travel-type-select">
+              <div class="image-select">
+                <input type="radio" id="int-travel" name="travel-type">
+                <img src="../../assets/img/select-image-1.png"/>
+                <label for="int-travel">Гадаад аялал</label>
+              </div>
+              <div class="image-select">
+                <input type="radio" id="local-travel" name="travel-type">
+                <img src="../../assets/img/select-image-2.png"/>
+                <label for="local-travel">Дотоод аялал</label>
+              </div>
+              <div class="image-select">
+                <input type="radio" id="special-travel" name="travel-type">
+                <img src="../../assets/img/select-image-3.png"/>
+                <label for="special-travel">Тусгай аялал</label>
+              </div>
+            </div>
+            <div class="travel-name-select">
+              <div class="check-box-container">
+                <input type="radio" id="guangzhou" name="travel-name">
+                <label for="guangzhou" class="container">Гуанжу - Canton Fair аялал</label>
+              </div>
+              <div class="check-box-container">
+                <input type="radio" id="hainan" name="travel-name">
+                <label for="hainan" class="container">Хайнан арлын аялал</label>
+              </div>
+              <div class="check-box-container">
+                <input type="radio" id="baikal" name="travel-name">
+                <label for="baikal" class="container">Ханх - Эрхүү - Байгал аялал</label>
+              </div>
+            </div>
+            <div class="input-bottom">
+              <label for="people-count" class="container">Хүний тоо</label>
+              <input
+                type="number"
+                id="people-count"
+                name="people-count"
+                min="1"
+                required
+              />
+            </div>
+            <div class="input-bottom">
+              <label for="message" class="container">
+                Нэмэлт мэдээлэл
+              </label>
+              <textarea id="message" name="message" rows="4" cols="50"></textarea>
+            </div>
+            <input type="submit" value="Илгээх">
           </section>
         </form>
-      </div> -->
+      </div>
+      <section class="travel-cat">
+        <h1>Санал болгож буй аяллууд</h1>
+        <div class="card-slider">
+            <div class="card-slider-container">
+                <custom-card
+                    title="Их Британи"
+                    date="10 өдөр / 9 шөнө"
+                    picture="../../assets/img/card-5-great-britain.png"
+                    price="3,335,000₮ "
+                ></custom-card>
+                <custom-card
+                    title="Прага"
+                    date="7 өдөр / 6 шөнө"
+                    picture="../../assets/img/card-6-prague.png"
+                    price="750,000₮"
+                ></custom-card>
+                <custom-card
+                    title="Калифорни"
+                    date="8 өдөр / 7 шөнө"
+                    picture="../../assets/img/card-7-california.png"
+                    price="3,350,000₮"
+                ></custom-card>
+                <custom-card
+                    title="Сингапур"
+                    date="6 өдөр / 5 шөнө"
+                    picture="../../assets/img/card-8-singapore.png"
+                    price="600,000₮"
+                ></custom-card>
+                <custom-card
+                    title="Их Британи"
+                    date="10 өдөр / 9 шөнө"
+                    picture="../../assets/img/card-5-great-britain.png"
+                    price="3,335,000₮ "
+                ></custom-card>
+                <custom-card
+                    title="Прага"
+                    date="7 өдөр / 6 шөнө"
+                    picture="../../assets/img/card-6-prague.png"
+                    price="750,000₮"
+                ></custom-card>
+            </div>
+            <img
+                alt="previous"
+                class="arrow left-arrow prev-btn"
+                src="../../assets/icons/black-left-arrow.svg"
+            />
+            <img
+                alt="next"
+                class="arrow right-arrow next-btn"
+                src="../../assets/icons/black-right-arrow.svg"
+            />
+        </div>
+      </section>
     </main>
     <footer>
       <div class="footer-content">
