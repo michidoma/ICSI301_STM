@@ -30,6 +30,7 @@
     <link rel="icon" href="assets/icons/logo-mongol-ayalal.png" type="image/png">
     <link rel="stylesheet" href="src/css/style.css" />
     <script defer src="https://code.jquery.com/jquery-3.6.4.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">  
     <script defer src="src/components/card.js"></script>
     <script defer src="src/components/card-news.js"></script>
     <script defer src="src/components/information-box.js"></script>
@@ -122,44 +123,38 @@
       </nav>
     </header>
     <main>
-      <div class="carousel">
-        <div class="c_track-container">
-          <ul class="c_track">
-            <li class="c_slide current-slide">
-              <img
-                alt="travel photo"
-                src="assets/webp/travel-1-tokyo.webp"
-                class="c_image"
-              />
-              <div class="c_slide-content">
-                <p class="title">Япон</p>
-                <p class="description">
-                  Ханой – Халонг арал (криузтэй) - Фукуок
-                </p>
-                <button class="book"><p>Захиалах</p></button>
-              </div>
-            </li>
-          </ul>
+      <!-- Slideshow -->
+      <div class="slideshow-container">
+        <div class="mySlides fade">
+          <img src="assets/webp/travel-1-tokyo.webp">
+          <div class="caption">
+            <h1>Япон</h1>
+            <p>Ханой - Халонг арал (криузтэй) - Фукуок</p>
+            <button><a href="src/html/travel-details.html">ЗАХИАЛАХ</a><i class="material-icons">arrow_forward</i></button>
+          </div>
         </div>
-        <img
-          alt="left arrow"
-          class="arrow left-arrow"
-          src="assets/svg/left.svg"
-        />
-        <img
-          alt="right arrow"
-          class="arrow right-arrow"
-          src="assets/svg/right.svg"
-        />
-        <div class="c_nav">
-          <button
-            aria-label="jump to carousel 1"
-            class="c_indicator current-slide"
-          ></button>
-          <button aria-label="jump to carousel 2" class="c_indicator"></button>
-          <button aria-label="jump to carousel 3" class="c_indicator"></button>
-          <button aria-label="jump to carousel 4" class="c_indicator"></button>
-          <button aria-label="jump to carousel 5" class="c_indicator"></button>
+        <div class="mySlides fade">
+          <img src="assets/webp/travel-2-iceland.webp">
+          <div class="caption">
+            <h1>Исланд</h1>
+            <p>Ханой - Халонг арал (криузтэй) - Фукуок</p>
+            <button><a href="src/html/travel-details.html">ЗАХИАЛАХ</a><i class="material-icons">arrow_forward</i></button>
+          </div>
+        </div>
+        <div class="mySlides fade">
+          <img src="assets/webp/travel-3-switzerland.webp">
+          <div class="caption">
+            <h1>Швейцарь</h1>
+            <p>Ханой - Халонг арал (криузтэй) - Фукуок</p>
+            <button><a href="src/html/travel-details.html">ЗАХИАЛАХ</a><i class="material-icons">arrow_forward</i></button>
+          </div>
+        </div>
+        <img class="prev" onclick="plusSlides(-1)" src="assets/svg/left.svg"></img>
+        <img class="next" onclick="plusSlides(1)" src="assets/svg/right.svg"></img>
+        <div class="dot-container">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
         </div>
       </div>
       <section class="wrapper travel-cat 1">
