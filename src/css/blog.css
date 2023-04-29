@@ -12,7 +12,7 @@
 
 body {
   font-family: 'Open Sans', sans-serif;
-  font-size: 2vh;
+  font-size: 14px;
   height: 100%;
   margin: 0 auto;
   overflow-x: hidden;
@@ -406,7 +406,7 @@ h1 {
 }
 
 footer {
-  background-image: url('../../assets/img/footer-background.png');
+  background-image: url('../../assets/webp/footer-background.webp');
   background-repeat: no-repeat;
   background-size: cover;
   padding: 0 5rem;
@@ -500,7 +500,7 @@ footer p {
         padding: 0px 1.2rem;
         width: 270px;
         height: 100vh;
-        background-color: rgba(0,0,0,.5);
+        background-color: rgba(0,0,0,.7);
         backdrop-filter: blur(8px);
         display: flex;
         flex-direction: column;

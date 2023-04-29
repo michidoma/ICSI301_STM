@@ -311,7 +311,7 @@ h1.page-title {
   width: calc(50% - 3em);
 }
 
-h3.sub-title {
+h2.sub-title {
   color: var(--primary-green);
   font-size: 32px;
   /* font-family: 'Open Sans'; */
@@ -364,7 +364,7 @@ button[type="submit"]:hover {
 }
 
 footer {
-  background-image: url('../../assets/img/footer-background.png');
+  background-image: url('../../assets/webp/footer-background.webp');
   background-repeat: no-repeat;
   background-size: cover;
   padding: 0 5rem;
@@ -461,7 +461,7 @@ footer p {
       padding: 0px 1.2rem;
       width: 270px;
       height: 100vh;
-      background-color: rgba(0,0,0,.5);
+      background-color: rgba(0,0,0,.7);
       backdrop-filter: blur(8px);
       display: flex;
       flex-direction: column;

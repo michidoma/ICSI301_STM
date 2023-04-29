@@ -434,7 +434,7 @@ custom-card {
 }
 
 footer {
-    background-image: url('../../assets/img/footer-background.png');
+    background-image: url('../../assets/webp/footer-background.webp');
     background-repeat: no-repeat;
     background-size: cover;
     padding: 0 5rem;
@@ -475,9 +475,15 @@ footer {
     padding: 0;
 }
 
-.footer-content section h3, .footer-content address h3 {
+/* .footer-content section h3, .footer-content address h3 {
     margin-top: 0;
     margin-bottom: 2em;
+} */
+
+.footer-content section h2, .footer-content address h2 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1rem;
 }
 
 .footer-content section ul li, .footer-content address ul li {
@@ -529,7 +535,7 @@ footer p {
         padding: 0px 1.2rem;
         width: 270px;
         height: 100vh;
-        background-color: rgba(0,0,0,.5);
+        background-color: rgba(0,0,0, .7);
         backdrop-filter: blur(8px);
         display: flex;
         flex-direction: column;
@@ -589,7 +595,7 @@ footer p {
         padding: 0px 1.2rem;
         width: 270px;
         height: 100vh;
-        background-color: rgba(0,0,0,.2);
+        background-color: rgba(0,0,0,.7);
         backdrop-filter: blur(8px);
         display: flex;
         flex-direction: column;
