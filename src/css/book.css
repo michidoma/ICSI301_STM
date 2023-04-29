@@ -348,9 +348,10 @@ form label {
     text-align: center;
 }
 
-input[type="radio"]:checked {
+input[type="radio"], input[type="radio"]:checked ~ label {
     accent-color: var(--primary-green);
-  }
+    color: var(--primary-green);
+}
 
 .travel-name-select {
     margin: 5em 0px 3em 0px;
@@ -370,6 +371,10 @@ input[type="radio"]:checked {
 
 .check-box-container input {
     margin: 0;
+}
+
+.travel-name-select label {
+    cursor: pointer;
 }
 
 .input-bottom {
