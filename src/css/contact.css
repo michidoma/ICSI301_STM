@@ -5,7 +5,7 @@
   --gray-light: #A0A2A6;
   --gray-background: #E6E8EE;
   --gray-input: #F5F7FB;
-  --primary-yellow: #FC7E08;
+  --primary-orange: #FC7E08;
   --primary-text: #000000;
   --gray: #6E6D70;
   --white: #ffffff;
@@ -59,9 +59,12 @@ body {
 .information {
   background-color: var(--primary-green);
   color: #fff;
-  width: 350px;
+  /* width: 350px; */
+  width: fit-content;
   height: fit-content;
   padding: 30px 40px;
+  justify-content: center;
+  align-content: center;
   border-radius: 30px;
 }
 
@@ -72,14 +75,13 @@ body {
 }
 
 .text-info .text {
-  /* font-family: 'Open Sans'; */
-  font-size: 13px;
+  font-size: 14px;
   margin: 10px 0;
 }
 
 .text-info i {
-  margin-right: 1em;
   font-size: 24px;
+  margin-right: 2vw;
 }
 
 .icons i {
@@ -99,11 +101,11 @@ body {
   width: calc(50% - 3em);
 }
 
-.sub-title {
+h3.sub-title {
   color: var(--primary-green);
   font-size: 32px;
-  /* font-family: 'Open Sans'; */
   font-weight: bold;
+  margin-top: 0;
   margin-bottom: 30px;
 }
 
@@ -150,6 +152,10 @@ button[type="submit"]:hover {
   background-color: #053822;
 }
 
+button[type="submit"]:active {
+  transform: scale(0.96);
+}
+
 @media (max-width: 1200px) {
   .wrap {
     padding: 3em 5vw;
@@ -175,7 +181,7 @@ button[type="submit"]:hover {
     width: 300px;
   }
   .icons i {
-    margin-right: 30px;
+    margin-right: 3vw;
   }
   .location iframe {
     min-width: 320px;

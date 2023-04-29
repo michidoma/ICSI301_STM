@@ -5,7 +5,7 @@
   --gray-light: #A0A2A6;
   --gray-background: #E6E8EE;
   --gray-input: #F5F7FB;
-  --primary-yellow: #FC7E08;
+  --primary-orange: #FC7E08;
   --primary-text: #000000;
   --gray: #6E6D70;
 }
@@ -145,12 +145,8 @@ h1 {
 }
 
 .blog-types a:hover {
-  color: var(--primary-yellow);
+  color: var(--primary-orange);
 }
-
-/* .blog-types a div {
-  color: var(--primary-yellow);
-} */
 
 /* Сүүлд нийтлэгдсэн блогууд хэсэг */
 .mini-blogs {
@@ -163,7 +159,7 @@ h1 {
   margin: 3vh 0;
 }
 
-.mini-blog-title h4 {
+h4 {
   margin: 0;
 }
 
