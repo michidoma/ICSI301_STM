@@ -58,6 +58,11 @@ submitButton.addEventListener("click", (event) => {
 
       // Enable the button again
       // submitButton.disabled = false;
+
+      // Save the data
+      for (const i = 0; i < inputs.length; i++) {
+        localStorage.setItem(inputs[i].name, inputs[i].value);
+      }
     }, 3000);
   }
 });
