@@ -421,6 +421,7 @@ form input[type="submit"] {
     font-weight: 600;
     font-size: 1.2rem;
     margin: 50px 0px 25px 0px;
+    border: 0;
 }
 
 form input[type="submit"]:hover {

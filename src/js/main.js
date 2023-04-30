@@ -82,6 +82,24 @@ function currentSlide(n) {
   showSlides(slideIndex = n);
 }
 
+// Autoplay animation
+let slideInterval = setInterval(() => {
+  plusSlides(1);
+}, 3000);
+
+// Pause autoplay animation when user hovers over the slideshow
+let slideshowContainer = document.querySelector('.slideshow-container');
+slideshowContainer.addEventListener('mouseover', () => {
+  clearInterval(slideInterval);
+});
+
+// Resume autoplay animation when user moves mouse away from the slideshow
+slideshowContainer.addEventListener('mouseout', () => {
+  slideInterval = setInterval(() => {
+    plusSlides(1);
+  }, 3000);
+});
+
 function showSlides(n) {
   let i;
   let slides = document.getElementsByClassName("mySlides");
@@ -96,4 +114,7 @@ function showSlides(n) {
   }
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active-slide";
+  // slideIndex++;
+  // console.log('i, n, slideIndex :>> ', i, n, slideIndex);
+  // setInterval(showSlides(slideIndex), 2000);
 }

@@ -270,6 +270,8 @@ li.menu-bottom a {
     top: 50%;
     margin: 0px 3vw;
     transition: 0.6s ease;
+    height: 96px;
+    width: 96px;
 }
   
 /* next button-г баруун талд байрлуулах */
@@ -282,12 +284,13 @@ li.menu-bottom a {
     color: white;
     position: absolute;
     top: 30%;
-    width: 100%;
+    width: calc(100% - 12vw - 72px);
+    padding: 0 calc(6vw + 36px);
     text-align: center;
 }
 
 .caption h1 {
-    font-size: 8em;
+    font-size: 12em;
     margin: 0;
     font-family: 'KursivC', sans-serif;
     font-weight: 100;
@@ -295,18 +298,19 @@ li.menu-bottom a {
 
 .caption p {
     margin: 0;
-    font-size: 1.2em;
+    font-size: 1.7em;
     font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
 }
 
 .caption button {
-    font-size: 1.3em;
+    font-size: 1.7em;
     margin: 8vh auto 0 auto;
     display: flex;
     align-items: center;
-    border-radius: 15px;
+    border-radius: 20px;
     border: 0;
-    padding: 8px 15px;
+    padding: 12px 30px;
     background-color: var(--primary-orange);
     color: white;
     cursor: pointer;
@@ -626,6 +630,20 @@ footer p {
     padding: 1.5em 0 2em 0;
 }
 
+@media only screen and (max-width: 1280px) {
+    .caption h1 {
+        font-size: 8em;
+    }
+    .caption p {
+        font-size: 1.3em;
+    }
+    .caption button {
+        font-size: 1.3em;
+        border-radius: 15px;
+        padding: 8px 15px;
+    }
+}
+
 @media only screen and (max-width: 1024px) {
     .top-bar .left {
         display: none;
@@ -747,6 +765,13 @@ footer p {
     .top-bar .right div:first-child, .top-bar .right div:nth-child(2) {
         display: none;
     }
+    .caption h1 {
+        font-size: 7em;
+    }
+    .prev, .next {
+        width: 60px;
+        height: 60px;
+    }
     .footer-content {
         flex-wrap: wrap;
     }
@@ -781,6 +806,18 @@ footer p {
     }
     header nav {
         top: 0;
+    }
+    .caption h1 {
+        font-size: 15vw;
+    }
+    .caption p {
+        font-size: 1em;
+    }
+    .caption button {
+        font-size: 1em;
+    }
+    .prev, .next {
+        width: 36px;
     }
 }
 
