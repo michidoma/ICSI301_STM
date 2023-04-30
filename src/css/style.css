@@ -46,27 +46,6 @@ header .top-bar {
     font-size: 0.9em;
 }
 
-/* .menu-bottom {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    align-items: center;
-    margin: 20px 0px;
-    color: #fff;
-    font-weight: 500;
-}
-
-.menu-bottom img {
-    width: 1rem;
-    height: auto;
-    margin: 0px .6rem; 
-}
-
-.menu-bottom .left img {
-    width: auto;
-    margin: 0px .6rem;
-} */
-
 .right {
     display: flex;
 }
@@ -137,7 +116,6 @@ nav.green {
     transition: background-color .2s ease;
     padding-top: .2rem;
     padding-bottom: .2rem;
-    /* padding: 100px auto; */
     top: 0;
 }
 
@@ -184,10 +162,6 @@ nav.green #book-button {
 .menu li.menu-bottom a::after {
     height: 0;
 }
-
-/* .menu.open li a::after {
-    background: white;
-} */
 
 .menu.open #book-button {
     background-color: transparent;
@@ -476,14 +450,12 @@ li.menu-bottom a {
 
 }
 .c_nav{
-    /* background: pink; */
     display: flex;
     justify-content: center;
     position: absolute;
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
-    /* padding:10px 0 ; */
 }
 .c_indicator{
     border:0 ; 
@@ -500,9 +472,6 @@ li.menu-bottom a {
 .is-hidden {
     display: none;
 }
-/* .main-book-carousel {
-    margin:5vw;
-} */
 
 .card-carousel {
     position: relative;
@@ -560,81 +529,23 @@ section.blogs {
     padding: 0 5vw;
 }
 
-.blog-container article {
-  width: calc(50% - 2vw);
-  height: 200px;
-  display: flex;
-  margin: 2rem 0;
-  padding: 0 1vw;
-}
-
-.blog-container img {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 15%;
-}
-
-.blog-info {
-    padding: 1em;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.blog-info h2 {
-    margin: 0;
-    font-family: 'PT Sans';
-}
-
-.blog-info p {
-    height: 78px;
-    text-align: justify;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.blog-info button {
-    /* margin: 8vh auto 0 auto; */
-    border: 0;
-    background-color: transparent;
-    /* padding: 12px 30px; */
-    cursor: pointer;
-    padding: 0;
-}
-
-.blog-info button a {
-    text-decoration: none;
-    color: var(--primary-orange);
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-}
-
-.blog-info button i {
-    font-size: 1.5em;
-    margin-left: 8px;
-}
-
 /* Блог */
 
 .information {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* height: 150px; */
     padding: 0 5rem 1.4rem 5rem;
     flex-wrap: wrap;
 }
 
-/* information-box {
-    width: 25%;
-} */
-
 custom-card {
     margin-right: 3.5rem;
     background-color: #fff;
+}
+
+news-card {
+    width: calc(50% - 2vw);
 }
 
 footer {
@@ -678,11 +589,6 @@ footer {
     margin: 2rem 0;
     padding: 0;
 }
-
-/* .footer-content section h3, .footer-content address h3 {
-    margin-top: 0;
-    margin-bottom: 2em;
-} */
 
 .footer-content section h2, .footer-content address h2 {
     margin-top: 0;
@@ -783,16 +689,11 @@ footer p {
         display: none;
     }
     .menu li a{
-        /* padding: .6rem .8rem; */
         transition: .2s;
     }
     .carousel {
         height: 500px;
         transition: .2s;
-    }
-
-    .blog-info h2{
-        font-size: 1rem;
     }
 
     information-box {
@@ -834,19 +735,6 @@ footer p {
         margin: 10px 0px;
     }
 
-    .blog-container article img {
-        height: 150px;
-        width: 150px;
-    }
-
-    .blog-container article {
-        height: 150px;
-    }
-
-    section.blog-info {
-        padding: 0.5em 1em;
-    }
-
     .footer {
         flex-wrap: wrap;
     }
@@ -874,20 +762,9 @@ footer p {
     .blog-container {
         flex-direction: column;
     }
-    .blog-container article img {
-        height: 200px;
-        width: 200px;
-    }
-    .blog-container article {
-        height: 200px;
+    news-card {
         width: 100%;
     }
-    .blog-info h2 {
-        font-size: 1.5em;
-    }
-    /* .blog-info p {
-        height: 96px;
-    } */
     .footer-content {
         flex-wrap: wrap;
     }
@@ -934,20 +811,6 @@ footer p {
     }
     .prev, .next {
         width: 36px;
-    }
-    .blog-container article {
-        margin: 1rem 0;
-        height: 150px;
-    }
-    .blog-container article img {
-        height: 150px;
-        width: 150px;
-    }
-    .blog-info h2 {
-        font-size: 1em;
-    }
-    .blog-info p {
-        height: 60px;
     }
 }
 
