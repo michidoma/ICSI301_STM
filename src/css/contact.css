@@ -348,19 +348,48 @@ textarea {
   resize: none;
 }
 
-button[type="submit"] {
+button.sendBtn {
   background-color: var(--primary-green);
   border: none;
   border-radius: 20px;
   color: #fff;
   cursor: pointer;
   font-size: 16px;
+  height: 40px;
   padding: 10px 20px;
   width: 100%;
+  transition: 0.5s;
+  display: grid;
+  justify-content: center;
 }
 
-button[type="submit"]:hover {
+button.sendBtn:hover {
   background-color: #186b4e;
+}
+
+.sendBtn:active {
+  background-color: #fff;
+  color: #000;
+  border: 2px solid #000;
+}
+
+.loader {
+  pointer-events: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: var(--white);
+  animation: ani1 2s ease infinite;
+}
+
+@keyframes ani1 {
+  0% {
+    transform: rotate(0turn);
+  }
+  100% {
+    transform: rotate(1turn);
+  }
 }
 
 footer {
