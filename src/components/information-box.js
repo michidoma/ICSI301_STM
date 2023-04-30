@@ -38,19 +38,27 @@ class InformationBox extends HTMLElement {
   render() {
     this.shadowRoot.innerHTML = `
     <style>
+    .box {
+      // width: 100%;
+      display: flex;
+      align-items: center;
+      margin-bottom: 2vh;
+      gap: 20px;
+    }
+    .box img {
+      width: 50px;
+      height: 50px;
+    }
+    p, h1 {
+      margin: 5px 0px;
+    }
+    @media only screen and (max-width: 520px) {
       .box {
-        // width: 100%;
-        display: flex;
-        align-items: center;
-        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
       }
-      .box img {
-        width: 50px;
-        height: 50px;
-      }
-      p, h1 {
-        margin: 5px 0px;
-      }
+    }
     </style>
     <div class="box">
       <img src="${this.logo}" alt="statistics"/>
