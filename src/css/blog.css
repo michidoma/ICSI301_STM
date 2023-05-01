@@ -264,8 +264,7 @@ img.landscape {
 
 /* Гарчиг */
 h1 {
-  /* font-size: 36px; */
-  font-size: 5vh;
+  font-size: 36px;
 }
 /* Нийтлэлийн зураг */
 .article-image {
@@ -288,12 +287,11 @@ h1 {
 .article p {
   line-height: 2.5;
   text-align: justify;
-  font-size: 2vh;
+  /* font-size: 16px; */
 }
 
 .article h2 {
-  /* font-size: 20px; */
-  font-size: 3vh;
+  font-size: 20px;
 }
 
 /* Нэмэлт хэсэг */
@@ -314,8 +312,8 @@ h1 {
 /* Блогийн ангилал, Сүүлд нийтлэгдсэн блогууд гарчиг */
 .blog-type-title {
   margin: 0;
-  /* font-size: 20px; */
-  font-size: 2.5vh;
+  font-size: 20px;
+  /* font-size: 2.5vh; */
   padding: 2vh 3vw;
   font-weight: bold;
 }
@@ -327,8 +325,8 @@ h1 {
 
 .blog-types {
   margin: 3vh 3vw;
-  /* font-size: 20px; */
-  font-size: 2.5vh;
+  font-size: 16px;
+  /* font-size: 2.5vh; */
 }
 
 .blog-types div {
@@ -366,6 +364,7 @@ h1 {
 
 .mini-blog-title h4 {
   margin: 0;
+  font-size: 16px;
 }
 
 .mini-blog-img {
@@ -460,6 +459,9 @@ footer p {
     padding: 3vh 5vw;
     width: calc(100% - 10vw);
   }
+  .article-image {
+    height: 50vh;
+  }
 }
 
 @media only screen and (max-width: 1024px) {
@@ -509,7 +511,12 @@ footer p {
         display: flex;
         margin: 3em 0;
     }
-
+    img.landscape {
+      height: 14vh;
+    }
+    .article-image {
+      height: 45vh;
+    }
     .wrap {
       padding: 3vh 3vw;
       width: calc(100% - 6vw);
@@ -530,27 +537,20 @@ footer p {
 }
 
 @media only screen and (max-width: 768px) {
-  h1 {
-    /* font-size: 20px; */
-    font-size: 3vh;
-  }
-  .article h2 {
-    /* font-size: 16px; */
-    font-size: 2.5vh;
-  }
-}
-
-@media only screen and (max-width: 768px) {
     .top-bar .right div:first-child, .top-bar .right div:nth-child(2) {
       display: none;
     }
     h1 {
-      /* font-size: 20px; */
-      font-size: 3vh;
+      font-size: 20px;
     }
     .article h2 {
-      /* font-size: 16px; */
-      font-size: 2.5vh;
+      font-size: 16px;
+    }
+    img.landscape {
+      height: 10vh;
+    }
+    .article-image {
+      height: 40vh;
     }
     .footer-content {
       flex-wrap: wrap;
@@ -576,5 +576,11 @@ footer p {
     }
     header nav {
         top: 0;
+    }
+    img.landscape {
+      height: 8vh;
+    }
+    .article-image {
+      height: 30vh;
     }
 }
