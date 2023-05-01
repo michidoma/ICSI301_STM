@@ -390,7 +390,8 @@ section.blogs {
 .blog-container {
     display: flex;
     flex-wrap: wrap;
-    padding: 0 var(--gap-horizontal);
+    /* padding: 0 5vw; */
+    justify-content: space-between;
 }
 
 .blog-container article {
