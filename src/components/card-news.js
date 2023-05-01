@@ -51,6 +51,7 @@ class CardNews extends HTMLElement {
 
   render() {
     this.shadowRoot.innerHTML = `
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">  
     <style>
       .blog-card {
         width: 100%;
@@ -153,7 +154,7 @@ class CardNews extends HTMLElement {
           <h2>${this.title}</h2>
           <p>${this.description}</p>
         </div>
-        <button><a href="src/html/blog.html">Цааш унших<i class="material-icons">&#xe5cf</i></a></button>
+        <button><a href="src/html/blog.html">Цааш унших<i class="material-icons">arrow_forward</i></a></button>
       </section>
     </article>
     `;
