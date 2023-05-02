@@ -483,7 +483,7 @@ form input[type="submit"]:hover {
     cursor: pointer;
 }
 
-section.travel-cat {
+/* section.travel-cat {
     padding: 2em;
 }
   
@@ -504,7 +504,7 @@ section.travel-cat h1 {
     display: flex;
     justify-content: space-between;
     padding: 0 2em;
-    /* margin: 0 1rem; */
+    /* margin: 0 1rem;
     transition: transform 0.5s ease;
 }
 
@@ -516,7 +516,7 @@ custom-card {
 .right-arrow {
     position: absolute;
     bottom: 50%;
-    /* transform: translateY(50%); */
+    /* transform: translateY(50%);
     right: 0;
     width: 2em;
 }
@@ -524,9 +524,74 @@ custom-card {
 .left-arrow {
     position: absolute;
     bottom: 50%;
-    /* transform: translateY(50%); */
+    /* transform: translateY(50%);
     left: 0;
     width: 2em;
+} */
+
+
+.travel-cat {
+    color: var(--primary-green);
+    margin: 5vh 5vw;
+}
+.travel-cat h1 {
+    text-align: center;
+    font-size: 2em;
+}
+
+.card-slider {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-slider-container {
+    display: flex;
+    width: 90%;
+    overflow: hidden;
+}
+.card-slider-content {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 100%;
+}
+
+.card {
+    margin: 0 2vw;
+    width: calc(25% - 4vw);
+    flex: 1 0 calc(25% - 4vw); 
+    position: relative;
+}
+
+.card img {
+    width: 100%;
+}
+
+.prev-btn-1, .next-btn-1, .prev-btn-2, .next-btn-2, .prev-btn-3, .next-btn-3 {
+    cursor: pointer;
+    transition: 0.6s ease;
+    height: 96px;
+    width: 96px;
+}
+
+.card span {
+    position: absolute;
+    color: white;
+    margin: .8em;
+    font-size: 1.3em;
+    text-shadow: #000 1px 0 10px;
+    font-weight: bold;
+    right: 0;
+}
+.card h2 {
+    margin-bottom: 0;
+    font-size: 1.5em;
+}
+
+.card p {
+    margin: 0; 
+    font-size: 1em;
+    opacity: .6;
 }
 
 .book-now {
@@ -614,7 +679,16 @@ footer p {
         width: 100%;
         justify-content: space-between;
     }
-    
+    /* section h1 {
+        font-size: 24px;
+    } */
+    .card span {
+        font-size: 1.2em;
+    }
+    .card {
+        width: calc(100% / 3 - 4vw);
+        flex: 1 0 calc(100% / 3 - 4vw);
+    }
     #menu-icon {
         display: block;
         color: var(--primary-green);
@@ -708,7 +782,19 @@ footer p {
     ul.tabs-nav {
         display: none ;
     }
-
+    .travel-cat h1 {
+        font-size: 1.5em;
+    }
+    .prev-btn, .next-btn {
+        width: 60px;
+        height: 60px;
+    }
+    .card span {
+        font-size: 1em;
+    }
+    .card h2 {
+        font-size: 1.2em;
+    }
     .footer-content {
         flex-wrap: wrap;
     }
@@ -778,5 +864,12 @@ footer p {
     }
     form span {
         font-size: 15px;
+    }
+    .prev-btn, .next-btn {
+        width: 36px;
+    }
+    .card {
+        width: calc(50% - 4vw);
+        flex: 1 0 calc(50% - 4vw);
     }
 }

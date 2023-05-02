@@ -53,7 +53,7 @@ setTimeout(() => {
     customCard.addEventListener('click', function() {
       window.location.href = 'src/html/travel-details.html';
     })
-  })
+  });
 
   // Side menu
   let menu = document.querySelector('#menu-icon');
