@@ -26,10 +26,11 @@
     <script defer src="https://code.jquery.com/jquery-3.6.4.js"></script>
     <script defer src="../components/card.js"></script>
     <script defer src="../js/script.js"></script>
-    <script src="../components/clock-component.js"></script>
+    <!-- <script src="../components/clock-component.js"></script> -->
 </head>
 <body>
     <header>
+        <!-- Top green bar -->
         <section class="top-bar">
             <div class="right">
                 <div>USD <img src="../../assets/icons/usd.webp" width="16" height="16" alt="US currency"/> 3,527.29</div>
@@ -62,6 +63,7 @@
                 </a>
             </div>
         </section>
+        <!-- Navigation bar -->
         <nav class="wrapper">
             <a href="../../index.html" class="logo">
               <img src="../../assets/img/logo.png" width="193" height="56" alt="logo-mongol-ayalal"/>
@@ -115,10 +117,12 @@
         </nav>
     </header>
     <main>
+        <!-- Page banner -->
         <section class="banner">
             <img src="../../assets/webp/header-tengeriin-haalga.webp" alt="Тэнгэрийн хаалга">
             <h1>Тэнгэрийн хаалганы аялал</h1>
         </section>
+        <!-- Аяллын тухай товч мэдээлэл хүргэх хэсэг -->
         <section class="pre-content">
             <section class="top-brief">
                 <div class="brief-info">
@@ -158,6 +162,7 @@
                     </div>
                 </div>
             </section>
+            <!-- Tab navigation -->
             <ul class="tabs-nav">
                 <li id="selected-tab">
                     <a href="#"><b>Дэлгэрэнгүй</b></a>
@@ -177,6 +182,7 @@
             </ul>
         </section>
         <section class="main-content">
+            <!-- Аяллын тухай дэлгэрэнгүй мэдээллүүд -->
             <section class="content">
                 <h1>Танилцуулга</h1>
                 <p>Хятадын Хунань мужид Тиэнмэн хэмээх нэгэн уул буй. Энэ газар өдгөө аялал жуулчлалын томоохон цогцолбор болон хөгжжээ. Энэ уулыг оройд нь байх Тэнгэрийн хаалга ихэд алдаршуулсан юм. Тэнгэрийн хаалга болвоос хамгийн өндөрт байдаг нуман хаалга билээ. Энэ хаалга нь (нуман хаалга) өргөөшөө 57 м, уртаашаа 60 м, өндрөөшөө 136 м. <br><br> Байгалийн жамаар үүссэн энэ нуман хаалга МЭӨ 263 онд бий болжээ. Тэр үед энэ хадны хэсэг өгөршиж элэгдэн нурж унасныг Хятадын судар бичигт тэмдэглэн үлдээсэн юм. Чингээд тэр цагаас хойш нуман хаалгыг Тэнгэрийн хаалга гэх болов. <br><br> Нар жаргах цагаар энэ замаар зорчиход эргэн тойрон алган дээр тавьсан мэт ил харагдаж, нар өндөр уулсын цаагуур орж гарахыг ажих боломжтой.
@@ -202,12 +208,12 @@
                         <th>Аяллын үнэд багтсан зүйлс</th>
                         <td>
                             <ul>
-                                <li><img src="../../assets/icons/check.png" alt="Check">2 талын галт тэрэг</li>
-                                <li><img src="../../assets/icons/check.png" alt="Check">Автобус, онгоцны билет</li>
-                                <li><img src="../../assets/icons/check.png" alt="Check">Тосох үдэх унаа</li>
-                                <li><img src="../../assets/icons/check.png" alt="Check">Буудал</li>
-                                <li><img src="../../assets/icons/check.png" alt="Check">Хөтөлбөрт орсон хоол</li>
-                                <li><img src="../../assets/icons/check.png" alt="Check">Хөтөлбөрт багтсан үзвэр, хөтөч</li>
+                                <li><i class="fa-regular fa-circle-check" style="color: #16c016;"></i>2 талын галт тэрэг</li>
+                                <li><i class="fa-regular fa-circle-check" style="color: #16c016;"></i>Автобус, онгоцны билет</li>
+                                <li><i class="fa-regular fa-circle-check" style="color: #16c016;"></i>Тосох үдэх унаа</li>
+                                <li><i class="fa-regular fa-circle-check" style="color: #16c016;"></i>Буудал</li>
+                                <li><i class="fa-regular fa-circle-check" style="color: #16c016;"></i>Хөтөлбөрт орсон хоол</li>
+                                <li><i class="fa-regular fa-circle-check" style="color: #16c016;"></i>Хөтөлбөрт багтсан үзвэр, хөтөч</li>
                             </ul>
                         </td>
                     </tr>
@@ -215,13 +221,14 @@
                         <th>Аяллын үнэд багтаагүй зүйлс</th>
                         <td>
                             <ul>
-                                <li><img src="../../assets/icons/remove.png" alt="Cross sign">PCR шинжилгээний төлбөр</li>
+                                <li><i class="fa-regular fa-circle-xmark" style="color: #F44336;"></i>PCR шинжилгээний төлбөр</li>
                             </ul>
                         </td>
                     </tr>
                 </table>
             </section>
             <aside id="booking-section">
+                <!-- Аяллын бүртгэл хаагдахад үлдсэн хугацаа -->
                 <section class="timer">
                     <div class="days">
                         <h2>6</h2>
@@ -241,6 +248,7 @@
                     </div>
                     <!-- <clock-component days="6"></clock-component> -->
                 </section>
+                <!-- Аяллын захиалгын форм бөглөх хэсэг -->
                 <section class="booking-form">
                     <div class="form-top"></div>
                     <h3>Энэ аяллыг захиалах</h3>
@@ -257,6 +265,7 @@
                 </section>
             </aside>
         </section>
+        <!-- Төстэй аяллууд санал болгох хэсэг -->
         <section class="travel-cat">
             <h1>Төстэй аяллууд</h1>
             <div class="card-slider">
@@ -304,10 +313,12 @@
               <svg class="next-btn" xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 96 960 960" width="48" fill="#054822"><path d="m375.385 811.153-41.615-41.615 195.154-195.153L333.77 378.846l41.615-41.614 236.768 237.153-236.768 236.768Z"/></svg>
             </div>  
         </section>
+        <!-- mobile version дээр захиалах товч байнга доод хэсэгт гарч ирэх -->
         <button class="book-now">
             <a href="#booking-section">Одоо захиал</a>
         </button>
     </main>
+    <!-- footer -->
     <footer>
         <div class="footer-content">
             <section> 
