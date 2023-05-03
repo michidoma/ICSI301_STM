@@ -345,10 +345,8 @@ table ul {
     line-height: 2;
 }
 
-/* icon */
-table img {
-    width: 16px;
-    height: 16px;
+table i {
+    font-size: 16px;
     margin-right: 8px;
 }
 
