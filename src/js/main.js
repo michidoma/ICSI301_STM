@@ -49,6 +49,31 @@ setTimeout(() => {
     }
   });
 
+  const feedbackSliderContent = document.querySelectorAll(".c_track");
+  const feedbacks = document.querySelectorAll(".carousel-feedback .c_slide");
+  const feedbackCount = feedbacks.length;
+
+  // const feedbackContainerWidth = document.querySelector(".c_track-container").offsetWidth;
+
+  const feedbackWidth = feedbacks[0].offsetWidth;
+
+  let offset3 = 0;
+  const maxX3 = -(feedbackWidth * (feedbackCount - 1));
+
+  document.querySelector(".prev-btn-3").addEventListener("click", () => {
+    if (offset3 < 0) {
+      offset3 += feedbackWidth;
+      feedbackSliderContent[0].style.transform = `translateX(${offset3}px)`;
+    }
+  });
+
+  document.querySelector(".next-btn-3").addEventListener("click", () => {
+    if (offset3 > maxX3) {
+      offset3 -= feedbackWidth;
+      feedbackSliderContent[0].style.transform = `translateX(${offset3}px)`;
+    }
+  });
+
   document.querySelectorAll('custom-card').forEach(function(customCard) {
     customCard.addEventListener('click', function() {
       window.location.href = 'src/html/travel-details.html';

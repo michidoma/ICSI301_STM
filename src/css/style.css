@@ -372,12 +372,7 @@ li.menu-bottom a {
 }
 
 .carousel-feedback {
-    position: relative; 
-    height: 200px;
-    width: 100%; 
-    margin :0 auto ; 
-    margin-bottom: 5vw; 
-    align-items: center;
+    margin: 5vw 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -385,7 +380,7 @@ li.menu-bottom a {
 
 
 .feedback {
-    width: 80%;
+    width: 90%;
     display: flex;
     word-wrap: break-word;
     font-size: 20px;
@@ -393,8 +388,6 @@ li.menu-bottom a {
 }
 
 .c_slide-content-feedback {
-    /* width: 100%;
-    height: 100%; */
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -421,47 +414,22 @@ li.menu-bottom a {
 }
 .c_track-container{
     height: fit-content;
-    align-content: center;
     width: 80%;
-    /* position: relative;
-    overflow: hidden; */
+    overflow: hidden;
 }
 .c_track {
     padding:0; 
     margin:0; 
     list-style: none;
-    /* position: relative;
-    height: 100%; */
+    display: flex;
+    width: 100%;
     transition: transform 250ms ease-in;
 }
-/* .c_slide{
-    position: absolute;
-    top : 0; 
-    bottom: 0; 
-    width:100%;
-} */
-
-/* .right-arrow {
-    position: absolute;
-    bottom: 50%;
-    transform: translateY(50%);
-    right: 0;
+.c_slide{
+    width: 100%;
+    flex: 1 0 100%; 
+    position: relative;
 }
-
-.left-arrow {
-    position: absolute;
-    bottom: 50%;
-    transform: translateY(50%);
-    left: 0;
-}
-
-.left-arrow.prev-btn, .left-arrow.prev-btn-2 {
-    transform: none;
-}
-
-.right-arrow.next-btn, .right-arrow.next-btn-2 {
-    transform: none;
-} */
 
 /* .travel-cat-1 {
     background-color: grey;
@@ -699,6 +667,7 @@ section.blogs {
 /* information-box {
     width: 25%;
 } */
+
 
 custom-card {
     margin-right: 3.5rem;
@@ -972,6 +941,13 @@ footer p {
     /* .blog-info p {
         height: 96px;
     } */
+
+    .feedback {
+        font-size: 16px;
+    }
+    .author {        
+        font-size: 16px;
+    }
     .footer-content {
         flex-wrap: wrap;
     }
@@ -1037,6 +1013,15 @@ footer p {
     .blog-info p {
         height: 60px;
     }*/
+    .information {
+        padding: 0 3rem 1.4rem 3rem;
+    }
+    .feedback {
+        font-size: 14px;
+    }
+    .author {        
+        font-size: 14px;
+    }
 }
 
 @media only screen and (max-width: 365px) {
