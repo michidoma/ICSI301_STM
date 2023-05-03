@@ -349,8 +349,18 @@ custom-card {
     position: relative;
 }
 
+.card:hover {
+    cursor: pointer;
+}
+
+.card:hover img {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
 .card img {
     width: 100%;
+    border-radius: var(--border-size);
+    transition: box-shadow 0.3s ease-in-out;
 }
 
 .card span {

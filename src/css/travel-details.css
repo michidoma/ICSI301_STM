@@ -1,52 +1,5 @@
 @import 'variables.css';
 
-:root {
-    /* colors */
-    --primary-green: rgb(5, 72, 34);
-    --primary-orange: #FC7E08;
-    --primary-text: #000000;
-    --gray-light: #A0A2A6;
-    --gray-background: #E6E8EE;
-    --gray-input: #F5F7FB;
-    --text-color-white: white;
-    --dot-color: #bbb;
-    --dot-hover-color: #717171;
-    --green-hover-color: #186b4e;
-
-    /* font family  */
-    --font-family-main: 'Open Sans', sans-serif;
-    --font-family-montserrat: 'Montserrat', sans-serif;
-    --font-family-kursivc: 'KursivC', sans-serif;
-
-    /* size */
-    --font-size-top-bar: 0.9em;
-    --font-size-menu: 12px;
-    --font-size-slideshow: 1.7em;
-    --font-size-main: 14px;
-    --font-size-header: 2rem;
-    --font-size-header-card: 1.5em;
-    --font-size-comment: 20px;
-    --font-size-header-blog: 20px;
-    --article-line-height: 2.5;
-
-    --img-large: 200px;
-    --arrow-size: 96px;
-    --border-size: 20px;
-    --icon-size: 16px;
-    --icon-size-big: 24px;
-    --icon-margin: 8px;
-    --size-root: 1rem;
-    --gap-horizontal: 5vw;
-    --top-bar-height: 20px;
-    --nav-bar-height: 65px;
-    --banner-height-desktop: 140px;
-    --banner-height-mobile: 100px;
-    --sidemenu-width: 270px;
-
-    /* animation */
-    --transition-time: 0.6s
-}
-
 body {
     padding: 0;
     margin: 0;
@@ -552,8 +505,18 @@ form input[type="submit"]:hover {
     position: relative;
 }
 
+.card:hover {
+    cursor: pointer;
+}
+
+.card:hover img {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
 .card img {
     width: 100%;
+    border-radius: var(--border-size);
+    transition: box-shadow 0.3s ease-in-out;
 }
 
 .prev-btn-1, .next-btn-1, .prev-btn-2, .next-btn-2, .prev-btn-3, .next-btn-3 {
