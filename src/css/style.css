@@ -309,80 +309,14 @@ li.menu-bottom a {
     animation-name: fade;
     animation-duration: 1.5s;
 }
-  
-@keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
-}
 
 section h1 {
     text-align: center;
     color: var(--primary-green);
     font-size: var(--font-size-header);
 }
-.carousel-feedback {
-    margin: 5vw 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
 
-
-.feedback {
-    width: 90%;
-    display: flex;
-    word-wrap: break-word;
-    font-size: 20px;
-    font-weight: 550;
-}
-
-.c_slide-content-feedback {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    color: var(--primary-green);
-    font-size: var(--font-size-header);
-}
-.author {
-    width: 80%;
-    text-align: end;
-    font-size: 20px;
-    font-weight: 550;
-}
-.carousel {
-    position: relative; 
-    height: 700px;
-    width: 100% ; 
-    margin :0 auto ; 
-    margin-bottom: 5vw; 
-    align-items: center;
-}
-.c_image {
-    width:100%;
-    height: 100%;
-}
-.c_track-container{
-    height: fit-content;
-    width: 80%;
-    overflow: hidden;
-}
-.c_track {
-    padding:0; 
-    margin:0; 
-    list-style: none;
-    display: flex;
-    width: 100%;
-    transition: transform 250ms ease-in;
-}
-.c_slide{
-    width: 100%;
-    flex: 1 0 100%; 
-    position: relative;
-}
-
-/* .travel-cat-1 {
-    background-color: grey;
-} */
+/* Аяллын кардууд */
 
 .card-slider {
     display: flex;
@@ -447,7 +381,7 @@ custom-card {
     width: var(--arrow-size);
 }
 
-/* Блог */
+/* Мэдээ мэдээлэл */
 
 section.blogs {
     margin: 0 auto;
@@ -456,7 +390,6 @@ section.blogs {
 .blog-container {
     display: flex;
     flex-wrap: wrap;
-    /* padding: 0 5vw; */
     justify-content: space-between;
 }
 
@@ -517,31 +450,47 @@ section.blogs {
 /* Сэтгэгдлүүд */
 
 .carousel-feedback {
-    position: relative; 
-    height: 200px;
-    width: 100%; 
-    margin :0 auto ; 
-    margin-bottom: var(--gap-horizontal); 
-    align-items: center;
+    margin: var(--gap-horizontal) 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.feedback {
+.c_track-container{
+    height: fit-content;
     width: 80%;
+    overflow: hidden;
+}
+
+.c_track {
+    padding:0; 
+    margin:0; 
+    list-style: none;
     display: flex;
-    word-wrap: break-word;
-    font-size: var(--font-size-comment);
-    font-weight: 550;
+    width: 100%;
+    transition: transform 250ms ease-in;
+}
+
+.c_slide{
+    width: 100%;
+    flex: 1 0 100%; 
+    position: relative;
 }
 
 .c_slide-content-feedback {
     display: flex;
     flex-direction: column;
     text-align: center;
-    align-items: center;
-    justify-content: center;
+    color: var(--primary-green);
+    font-size: var(--font-size-header);
+}
+
+.feedback {
+    width: 90%;
+    display: flex;
+    word-wrap: break-word;
+    font-size: var(--font-size-comment);
+    font-weight: 550;
 }
 
 .author {
@@ -549,19 +498,6 @@ section.blogs {
     text-align: end;
     font-size: var(--font-size-comment);
     font-weight: 550;
-}
-
-.c_track-container{
-    height: fit-content;
-    align-content: center;
-    width: 80%;
-}
-
-.c_track {
-    padding:0; 
-    margin:0; 
-    list-style: none;
-    transition: transform 250ms ease-in;
 }
 
 /* Статистик мэдээллүүд */
@@ -575,11 +511,6 @@ section.blogs {
 }
 
 /* Footer */
-
-custom-card {
-    margin-right: 3.5rem;
-    background-color: #fff;
-}
 
 footer {
     background-image: url('../../assets/webp/footer-background.webp');
