@@ -521,15 +521,6 @@ footer {
     text-align: center;
 }
 
-.footer {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding: var(--size-root) 0;
-    cursor: default;
-    white-space: nowrap;
-}
-
 .footer-content {
     width: 100%;
     display: flex;
@@ -595,6 +586,8 @@ footer p {
         padding: 8px 15px;
     }
 }
+
+/* Tablet */
 
 @media only screen and (max-width: 1024px) {
     .top-bar .left {
@@ -708,6 +701,8 @@ footer p {
     }
 
 }
+
+/* Mobile */
 
 @media only screen and (max-width: 768px) {
     .top-bar .right div:first-child, .top-bar .right div:nth-child(2) {

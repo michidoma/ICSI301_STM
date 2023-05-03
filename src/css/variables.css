@@ -18,10 +18,12 @@
     --text-color-white: white;
     --dot-color: #bbb;
     --dot-hover-color: #717171;
+
     /* font family  */
     --font-family-main: 'Open Sans', sans-serif;
     --font-family-montserrat: 'Montserrat', sans-serif;
     --font-family-kursivc: 'KursivC', sans-serif;
+
     /* size */
     --font-size-top-bar: 0.9em;
     --font-size-menu: 12px;
@@ -30,6 +32,9 @@
     --font-size-header: 2rem;
     --font-size-header-card: 1.5em;
     --font-size-comment: 20px;
+    --font-size-header-blog: 20px;
+    --article-line-height: 2.5;
+
     --img-large: 200px;
     --arrow-size: 96px;
     --icon-size: 16px;
@@ -38,7 +43,10 @@
     --gap-horizontal: 5vw;
     --top-bar-height: 20px;
     --nav-bar-height: 65px;
+    --banner-height-desktop: 140px;
+    --banner-height-mobile: 100px;
     --sidemenu-width: 270px;
+
     /* animation */
     --transition-time: 0.6s
 }
