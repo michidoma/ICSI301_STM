@@ -58,7 +58,7 @@ header .top-bar {
 
 .top-bar .left a {
   text-decoration: none;
-  color: var(--white);
+  color: var(--text-color-white);
 }
 
 /* Navigation bar */
