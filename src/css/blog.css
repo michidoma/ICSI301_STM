@@ -1,14 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans&display=swap');
-
-:root {
-  --primary-green: rgb(5, 72, 34);
-  --gray-light: #A0A2A6;
-  --gray-background: #E6E8EE;
-  --gray-input: #F5F7FB;
-  --primary-orange: #FC7E08;
-  --primary-text: #000000;
-  --gray: #6E6D70;
-}
+@import 'variables.css';
 
 body {
   font-family: 'Open Sans', sans-serif;
