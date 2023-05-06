@@ -2,7 +2,7 @@
 
 @font-face {
     font-family: 'KursivC';
-    src: url('assets/fonts/kursivc_[allfont.net].ttf') format('truetype');
+    src: url('../../assets/fonts/kursivc_[allfont.net].ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -526,7 +526,8 @@ section.blogs {
 .blog-container {
     display: flex;
     flex-wrap: wrap;
-    padding: 0 5vw;
+    /* padding: 0 5vw; */
+    justify-content: space-between;
 }
 
 /* Блог */
@@ -885,4 +886,4 @@ footer p {
 .c_slide-content p {
     font-size: large;
     color: black;
-}
+} 
