@@ -44,8 +44,8 @@ setTimeout(() => {
         window.location.href = 'travel-details.html';
       })
     })
+    
   }, 100);
-  
   $(window).scroll(function () {
     if ($(window).scrollTop()) {
       $("nav").addClass("green");

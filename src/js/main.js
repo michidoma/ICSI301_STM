@@ -57,6 +57,13 @@ setTimeout(() => {
       window.location.href = 'src/html/travel-details.html';
     })
   })
+
+  document.querySelectorAll('.custom-card').forEach(function(customCard) {
+    console.log("IRSEN")
+    customCard.addEventListener('click', function() {
+      window.location.href = 'src/html/travel-details.html';
+    })
+  })
 }, 100);
 
 $(window).scroll(function () {
@@ -118,3 +125,9 @@ function showSlides(n) {
   // console.log('i, n, slideIndex :>> ', i, n, slideIndex);
   // setInterval(showSlides(slideIndex), 2000);
 }
+
+let loader = document.getElementById("loader");
+
+window.addEventListener("load", function() {
+  loader.style.display = "none"
+});

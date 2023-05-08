@@ -37,8 +37,12 @@
     <script defer src="src/components/information-box.js"></script>
     <script defer src="src/components/custom-header.js"></script>
     <script defer src="src/js/main.js"></script>
+    <!-- <script type="module" src="./src/modules/CardModule.js"></script>
+    <script type="module" src="./src/modules/CardNewsModule.js"></script> -->
+    <script type="module" src="./src/modules/CommentsModule.js"></script>
   </head>
   <body>
+    <div id="loader"></div>
     <custom-header current="home"></custom-header>
     <main>
       <!-- Slideshow -->
@@ -134,8 +138,8 @@
       <section class="wrapper travel-cat 2">
         <h1>Захиалгын аяллууд</h1>
         <div class="card-slider">
-          <div class="card-slider-container">
-            <!-- <custom-card
+          <div id="card-container" class="card-slider-container">
+            <custom-card
               title="Япон"
               date="2 өдөр / 1 шөнө"
               picture="assets/img/card-1-tokyo.png"
@@ -170,7 +174,7 @@
               date="1 өдөр / 1 шөнө"
               picture="assets/img/card-2-seoul.png"
               price="750,000₮"
-            ></custom-card> -->
+            ></custom-card>
           </div>
           <img
             alt="left arrow btn"
@@ -187,7 +191,7 @@
       <!-- Блог -->
       <section class="blogs wrapper">
         <h1>Мэдээ мэдээлэл</h1>
-        <div class="blog-container">
+        <div id="blog-container" class="blog-container">
           <news-card
             image="assets/webp/blog-1.webp"
             altText="Алтан овоо"
@@ -220,16 +224,7 @@
           <div class="c_track-container">
             <ul class="c_track">
               <li class="c_slide current-slide">
-                <div class="c_slide-content-feedback">
-                  <div class="feedback">
-                    <i>
-                      “ Олон хүн ардынхаа төлөө гэсэн сэтгэлтэй, зохион байгуулалт
-                      сайтай, сайхан аялуулдаг гэдгийг өөрийн биеэр мэдэрлээ.
-                      Сэтгэл ханамж 100% байлаа. Монгол аяллын хамт олонд ажлын
-                      өндөр амжилт, сайн сайхан бүхнийг хүсэн ерөөе. “
-                    </i>
-                  </div>
-                  <div class="author"><p><i>Б. Энгүүлэн</i></p></div>
+                <div id="feedback-container" class="c_slide-content-feedback">
                 </div>
               </li>
             </ul>

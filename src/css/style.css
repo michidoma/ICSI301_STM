@@ -28,6 +28,18 @@ body {
     overflow-x: hidden;
 }
 
+#loader {
+    display: none;
+    background-color: #fff;
+    background-image: url('../../assets/img/loader.gif');
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
+
 .wrapper {
     --max-width: 1400px;
     --min-gap: 25px;
@@ -490,10 +502,9 @@ li.menu-bottom a {
 
 .card {
   flex: 1 0 25%;
-  margin: .6rem;
   padding: 1.3rem;
   text-align: center;
-  background-color: #eee;
+  /* background-color: #eee; */
 }
 
 section h1 {
@@ -548,12 +559,12 @@ section.blogs {
     width: 25%;
 } */
 
-custom-card {
+custom-card, .custom-card {
     margin-right: 3.5rem;
     background-color: #fff;
 }
 
-news-card {
+news-card, .news-card {
     width: calc(50% - 2vw);
 }
 
