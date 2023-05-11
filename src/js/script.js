@@ -1,35 +1,4 @@
 setTimeout(() => {
-    // const cardSlider = document.querySelectorAll(".card-slider-container");
-    // console.log(cardSlider);
-    // const cardSliderWidth = cardSlider[0].offsetWidth;
-    // const cards = document.querySelector("custom-card");
-    // const cardWidth = cards.offsetWidth;
-    // const cardMarginRight = parseInt(
-    //   window.getComputedStyle(document.querySelector("custom-card")).marginRight
-    // );
-    // const cardMarginLeft = parseInt(
-    //   window.getComputedStyle(document.querySelector("custom-card")).marginLeft
-    // );
-    // const cardCount = 6;
-    // let offset = 0,
-    //   offset2 = 0;
-    // const maxX = -((cardWidth + cardMarginRight) * (cardCount - 4));
-    // console.log("HMM ", cardWidth);
-  
-    // document.querySelector(".prev-btn").addEventListener("click", () => {
-    //   if (offset !== 0) {
-    //     offset += cardWidth + cardMarginRight;
-    //     cardSlider[0].style.transform = `translateX(${offset}px)`;
-    //   }
-    // });
-  
-    // document.querySelector(".next-btn").addEventListener("click", () => {
-    //   if (offset > maxX) {
-    //     offset -= cardWidth + cardMarginRight;
-    //     cardSlider[0].style.transform = `translateX(${offset}px)`;
-    //   }
-    // });
-
     const cardSliderContent = document.querySelectorAll(".card-slider-content");
 
     const cards = document.querySelectorAll(".travel-cat .card");
@@ -71,7 +40,7 @@ setTimeout(() => {
         navbar.classList.toggle('open');
     }
 
-    document.querySelectorAll('custom-card').forEach(function(customCard) {
+    document.querySelectorAll('.card').forEach(function(customCard) {
       customCard.addEventListener('click', function() {
         window.location.href = 'travel-details.html';
       })

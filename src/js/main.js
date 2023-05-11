@@ -74,7 +74,7 @@ setTimeout(() => {
     }
   });
 
-  document.querySelectorAll('custom-card').forEach(function(customCard) {
+  document.querySelectorAll('.card').forEach(function(customCard) {
     customCard.addEventListener('click', function() {
       window.location.href = 'src/html/travel-details.html';
     })

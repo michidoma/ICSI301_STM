@@ -260,6 +260,7 @@ section h1 {
 	color: var(--primary-green);
 	font-size: var(--font-size-header);
 	text-align: center;
+	margin: 7vh 0 5vh 0;
 }
 /* Аяллын кардууд */
 .card-slider {
