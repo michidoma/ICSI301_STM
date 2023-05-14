@@ -8,14 +8,6 @@ class Card extends HTMLElement {
   constructor() {
     super();
     this.attachShadow({ mode: "open" });
-
-    // shadowRoot.innerHTML = `
-    //   <div class="custome-card">
-    //     <h2>My post title </h2>
-    //     <p>Lorem ipsum dolor sit amet</p>
-    //     <a href=""> learn more </a>
-    //   </div>
-    // `
     this.render();
   }
 
@@ -28,8 +20,6 @@ class Card extends HTMLElement {
   }
 
   attributeChangedCallback(name, oldValue, newValue) {
-    const card = this.shadowRoot.querySelector(".card");
-
     switch (name) {
       case 'title':
         this.title = newValue || '';
@@ -50,73 +40,57 @@ class Card extends HTMLElement {
   render() {
     this.shadowRoot.innerHTML = `
     <style>
-      .card {
-        flex: 1 0 25%;
+      .card img {
+        border-radius: var(--border-size);
+        transition: box-shadow 0.3s ease-in-out;
         width: 100%;
-        padding: 20px;
-        text-align: center;
       }
-      .card-container {
-        cursor: pointer;
-      }
-      .picture {
-        width: 250px;
-        height: 320px;
-        border-radius: 25px;
-        background-image: url(${this.picture});
-        background-repeat: no-repeat;
-        background-size: cover;
-        color: #fff;
-        font-size: 20px;
-        display: flex;
-        justify-content: flex-end;
-      }
-      .price {
-        margin: .8rem;
+      .card span {
+        color: var(--text-color-white);
+        font-size: 1.3em;
         font-weight: bold;
+        margin: .8em;
+        position: absolute;
+        right: 0;
         text-shadow: #000 1px 0 10px;
       }
-      .bottom {
-        text-align: start;
+      .card h2 {
+        font-size: var(--font-size-header-card);
+        margin-bottom: 0;
       }
-      p {
-        margin: 5px 0px;
-      }
-      .title {
-        font-size: 24px;
-        font-weight: bold;
-      }
-      .date {
+      .card p {
+        font-size: 1em;
+        margin: 0;
         opacity: .6;
       }
-      @media only screen and (max-width: 1430px) {
-        .picture {
-          width: 220px;
-          height: 290px;
-          transition: .5s;
+      .card:hover {
+        cursor: pointer;
+      }
+      .card:hover img {
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+      }
+      @media only screen and (max-width: 1024px) {
+        .card span {
+          font-size: 1.2em;
+        }
+      }
+      @media only screen and (max-width: 768px) {
+        .card span {
+          font-size: 1em;
+        }
+        .card h2 {
+          font-size: 1.2em;
         }
       }
     </style>
-    <div class="card">
-      <div class="card-container">
-        <div class="picture">
-          <div class="price">${this.price}</div>
-        </div>
-        <div class="bottom">
-          <p class="title">${this.title}</p>
-          <p class="date">${this.date}</p>
-        </div>
-      </div>
-    </div>
+    <section class="card">
+      <img src="${this.picture}" alt="${this.title}">
+      <span>${this.price}</span>
+      <h2>${this.title}</h2>
+      <p>${this.date}</p>
+    </section>
   `;
   }
 }
 
 customElements.define("custom-card", Card);
-
-{
-  const cardContainer = document.querySelector("custom-card");
-  console.log("ELLLL => ", cardContainer.shadowRoot);
-}
-// customElements.whenDefined('custom-card').then(() => {
-// } )

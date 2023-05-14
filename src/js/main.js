@@ -1,10 +1,10 @@
 setTimeout(() => {
   const cardSliderContent = document.querySelectorAll(".card-slider-content");
 
-  const cards1 = document.querySelectorAll(".travel-cat-1 .card");
+  const cards1 = document.querySelectorAll(".travel-cat-1 custom-card");
   const cardCount1 = cards1.length;
 
-  const cards2 = document.querySelectorAll(".travel-cat-2 .card");
+  const cards2 = document.querySelectorAll(".travel-cat-2 custom-card");
   const cardCount2 = cards2.length;
 
   const cardSliderContainerWidth = document.querySelector(".card-slider-container").offsetWidth;
@@ -74,7 +74,7 @@ setTimeout(() => {
     }
   });
 
-  document.querySelectorAll('.card').forEach(function(customCard) {
+  document.querySelectorAll('custom-card').forEach(function(customCard) {
     customCard.addEventListener('click', function() {
       window.location.href = 'src/html/travel-details.html';
     })

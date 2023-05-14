@@ -32,6 +32,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">  
     <script defer src="https://code.jquery.com/jquery-3.6.4.js"></script>
+    <script defer src="src/components/card.js"></script>
+    <script defer src="src/components/card-news.js"></script>
     <script defer src="src/components/information-box.js"></script>
     <script defer src="src/js/main.js"></script>
   </head>
@@ -170,43 +172,43 @@
         <div class="card-slider">
         <svg class="prev-btn-1" xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 96 960 960" width="48" fill="#054822"><path d="M561.615 811.153 324.847 574.385l236.768-237.153 41.615 41.614-195.154 195.539L603.23 769.538l-41.615 41.615Z"/></svg>
           <div class="card-slider-container"> 
-            <div class="card-slider-content"> 
-              <section class="card">
-                <img src="assets/webp/card-5-great-britain.webp" alt="Их Британи">
-                <span>3,335,000₮</span>
-                <h2>Их Британи</h2>
-                <p>10 өдөр / 9 шөнө</p>
-              </section>
-              <section class="card">
-                <img src="assets/webp/card-6-prague.webp" alt="Прага">
-                <span>750,000₮</span>
-                <h2>Прага</h2>
-                <p>7 өдөр / 6 шөнө</p>
-              </section>
-              <section class="card">
-                <img src="assets/webp/card-7-california.webp" alt="Калифорни">
-                <span>3,335,000₮</span>
-                <h2>Калифорни</h2>
-                <p>8 өдөр / 7 шөнө</p>
-              </section>
-              <section class="card">
-                <img src="assets/webp/card-8-singapore.webp" alt="Сингапур">
-                <span>600,000₮</span>
-                <h2>Сингапур</h2>
-                <p>6 өдөр / 5 шөнө</p>
-              </section>
-              <section class="card">
-                <img src="assets/webp/card-6-prague.webp" alt="Прага">
-                <span>750,000₮</span>
-                <h2>Прага</h2>
-                <p>7 өдөр / 6 шөнө</p>
-              </section>
-              <section class="card">
-                <img src="assets/webp/card-5-great-britain.webp" alt="Их Британи">
-                <span>3,335,000₮</span>
-                <h2>Их Британи</h2>
-                <p>10 өдөр / 9 шөнө</p>
-              </section>
+            <div class="card-slider-content">
+              <custom-card
+                title="Их Британи"
+                picture="assets/webp/card-5-great-britain.webp"
+                price="3,335,000₮"
+                date="10 өдөр / 9 шөнө"
+              ></custom-card> 
+              <custom-card
+                title="Прага"
+                picture="assets/webp/card-6-prague.webp"
+                price="750,000₮"
+                date="7 өдөр / 6 шөнө"
+              ></custom-card> 
+              <custom-card
+                title="Калифорни"
+                picture="assets/webp/card-7-california.webp"
+                price="3,335,000₮"
+                date="8 өдөр / 7 шөнө"
+              ></custom-card> 
+              <custom-card
+                title="Сингапур"
+                picture="assets/webp/card-8-singapore.webp"
+                price="600,000₮"
+                date="6 өдөр / 5 шөнө"
+              ></custom-card> 
+              <custom-card
+                title="Прага"
+                picture="assets/webp/card-6-prague.webp"
+                price="750,000₮"
+                date="7 өдөр / 6 шөнө"
+              ></custom-card> 
+              <custom-card
+                title="Их Британи"
+                picture="assets/webp/card-5-great-britain.webp"
+                price="3,335,000₮"
+                date="10 өдөр / 9 шөнө"
+              ></custom-card> 
             </div>
           </div>
           <svg class="next-btn-1" xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 96 960 960" width="48" fill="#054822"><path d="m375.385 811.153-41.615-41.615 195.154-195.153L333.77 378.846l41.615-41.614 236.768 237.153-236.768 236.768Z"/></svg>
@@ -219,48 +221,48 @@
         <svg class="prev-btn-2" xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 96 960 960" width="48" fill="#054822"><path d="M561.615 811.153 324.847 574.385l236.768-237.153 41.615 41.614-195.154 195.539L603.23 769.538l-41.615 41.615Z"/></svg>
           <div class="card-slider-container"> 
             <div class="card-slider-content"> 
-              <section class="card">
-                <img src="assets/webp/card-1-tokyo.webp" alt="Япон">
-                <span>900,000₮</span>
-                <h2>Япон</h2>
-                <p>2 өдөр / 1 шөнө</p>
-              </section>
-              <section class="card">
-                <img src="assets/webp/card-2-seoul.webp" alt="Сөүл">
-                <span>750,000₮</span>
-                <h2>Сөүл</h2>
-                <p>1 өдөр / 1 шөнө</p>
-              </section>
-              <section class="card">
-                <img src="assets/webp/card-3-paris.webp" alt="Парис">
-                <span>3,335,000₮</span>
-                <h2>Парис</h2>
-                <p>4 өдөр / 3 шөнө</p>
-              </section>
-              <section class="card">
-                <img src="assets/webp/card-4-london.webp" alt="Лондон">
-                <span>6,000,000₮</span>
-                <h2>Лондон</h2>
-                <p>3 өдөр / 2 шөнө</p>
-              </section>
-              <section class="card">
-                <img src="assets/webp/card-1-tokyo.webp" alt="Япон">
-                <span>900,000₮</span>
-                <h2>Япон</h2>
-                <p>2 өдөр / 1 шөнө</p>
-              </section>
-              <section class="card">
-                <img src="assets/webp/card-2-seoul.webp" alt="Сөүл">
-                <span>750,000₮</span>
-                <h2>Сөүл</h2>
-                <p>1 өдөр / 1 шөнө</p>
-              </section>
-              <section class="card">
-                <img src="assets/webp/card-3-paris.webp" alt="Парис">
-                <span>3,335,000₮</span>
-                <h2>Парис</h2>
-                <p>4 өдөр / 3 шөнө</p>
-              </section>
+              <custom-card
+                title="Япон"
+                picture="assets/webp/card-1-tokyo.webp"
+                price="900,000₮"
+                date="2 өдөр / 1 шөнө"
+              ></custom-card>
+              <custom-card
+                title="Сөүл"
+                picture="assets/webp/card-2-seoul.webp"
+                price="750,000₮"
+                date="1 өдөр / 1 шөнө"
+              ></custom-card>
+              <custom-card
+                title="Парис"
+                picture="assets/webp/card-3-paris.webp"
+                price="3,335,000₮"
+                date="4 өдөр / 3 шөнө"
+              ></custom-card>
+              <custom-card
+                title="Лондон"
+                picture="assets/webp/card-4-london.webp"
+                price="6,000,000₮"
+                date="3 өдөр / 2 шөнө"
+              ></custom-card>
+              <custom-card
+                title="Япон"
+                picture="assets/webp/card-1-tokyo.webp"
+                price="900,000₮"
+                date="2 өдөр / 1 шөнө"
+              ></custom-card>
+              <custom-card
+                title="Сөүл"
+                picture="assets/webp/card-2-seoul.webp"
+                price="750,000₮"
+                date="1 өдөр / 1 шөнө"
+              ></custom-card>
+              <custom-card
+                title="Парис"
+                picture="assets/webp/card-3-paris.webp"
+                price="3,335,000₮"
+                date="4 өдөр / 3 шөнө"
+              ></custom-card>
             </div>
           </div>
           <svg class="next-btn-2" xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 96 960 960" width="48" fill="#054822"><path d="m375.385 811.153-41.615-41.615 195.154-195.153L333.77 378.846l41.615-41.614 236.768 237.153-236.768 236.768Z"/></svg>
@@ -270,44 +272,30 @@
       <section class="blogs wrapper">
         <h1>Мэдээ мэдээлэл</h1>
         <div class="blog-container">
-          <article>
-            <img src="assets/webp/blog-1.webp" alt="Алтан овоо">
-            <section class="blog-info">
-              <div>
-                <h2>Алтан овооны тухай</h2>
-                <p>Дарь-Овоо гэж нэрлэх нь ч бий. Дарьгангын галт уулсын нэг бөгөөд далайн төвшнөөс дээш 1354 метр өндөр. Дарьганга сумын...</p>
-              </div>
-              <button><a href="src/html/blog.html">Цааш унших<i class="material-icons">arrow_forward</i></a></button>
-            </section>
-          </article>
-          <article>
-            <img src="assets/webp/blog-2.webp" alt="Бүргэд">
-            <section class="blog-info">
-              <div>
-                <h2>Бүргэдийн баяр</h2>
-                <p>Энэ жилийн наадам Улаанбаатар хот, Түргэний ам "Монгол Кувейтийн байгаль хамгаалах төв"-д болно хэмээн зохион байгуулагчид...</p>
-              </div>
-              <button><a href="src/html/blog.html">Цааш унших<i class="material-icons">arrow_forward</i></a></button>
-            </section>
-          </article>
-          <article>
-            <img src="assets/webp/blog-3.webp" alt="Аялал">
-            <section class="blog-info">
-              <div>
-                <h2>Аялагчдын зөвлөмж</h2>
-                <p>Та гадаад улс руу аялахаар төлөвлөж байгаа бол юу шаардлагатайг энэхүү нийтлэлээс хараарай. Хамгийн түрүүнд гадаад пасспортоо...</p>
-              </div>
-              <button><a href="src/html/blog.html">Цааш унших<i class="material-icons">arrow_forward</i></a></button>
-            </section>
-          </article>
-          <article>
-            <img src="assets/webp/blog-4.webp" alt="Хустайн цогцолбор">
-            <section class="blog-info">
-              <h2>Хустайн цогцолбор</h2>
-              <p>Хустайн байгалийн цогцолборт газрын үйл ажиллагаатай БОАЖ-ын сайд Б.Бат-Эрдэнэ танилцаж, байгаль хамгаалагчдын төлөөлөлтэй...</p>
-              <button><a href="src/html/blog.html">Цааш унших<i class="material-icons">arrow_forward</i></a></button>
-            </section>
-          </article>
+          <news-card
+            image="assets/webp/blog-1.webp"
+            altText="Алтан овоо"
+            title="Алтан овооны тухай"
+            description="Дарь-Овоо гэж нэрлэх нь ч бий. Дарьгангын галт уулсын нэг бөгөөд далайн төвшнөөс дээш 1354 метр өндөр. Дарьганга сумын..."
+          ></news-card>
+          <news-card
+            image="assets/webp/blog-2.webp"
+            altText="Бүргэд"
+            title="Бүргэдийн баяр"
+            description="Энэ жилийн наадам Улаанбаатар хот, Түргэний ам 'Монгол Кувейтийн байгаль хамгаалах төв'-д болно хэмээн зохион байгуулагчид..."
+          ></news-card>
+          <news-card
+            image="assets/webp/blog-3.webp"
+            altText="Аялалд явах"
+            title="Аялагчдын зөвлөмж"
+            description="Та гадаад улс руу аялахаар төлөвлөж байгаа бол юу шаардлагатайг энэхүү нийтлэлээс хараарай. Хамгийн түрүүнд гадаад пасспортоо..."
+          ></news-card>
+          <news-card
+            image="assets/webp/blog-4.webp"
+            altText="Хустайн цогцолбор"
+            title="Хустайн цогцолбор"
+            description="Хустайн байгалийн цогцолборт газрын үйл ажиллагаатай БОАЖ-ын сайд Б.Бат-Эрдэнэ танилцаж, байгаль хамгаалагчдын төлөөлөлтэй..."
+          ></news-card>
         </div>
       </section>
       <!-- Сэтгэгдлүүд хэсэг -->
