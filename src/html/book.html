@@ -33,11 +33,11 @@
     <link rel="stylesheet" href="../css/book.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script defer src="https://code.jquery.com/jquery-3.6.4.js"></script>
-    <script defer src="../components/card.js"></script>
     <script defer src="../js/script.js"></script>
   </head>
   <body>
     <header>
+      <!-- Top green bar -->
       <section class="top-bar">
         <div class="right">
           <div>
@@ -105,6 +105,7 @@
           </a>
         </div>
       </section>
+      <!-- Navigation bar -->
       <nav class="wrapper">
         <a href="../../index.html" class="logo">
           <img
@@ -191,6 +192,7 @@
       </nav>
     </header>
     <main>
+      <!-- Page banner -->
       <section class="banner">
         <img
           src="../../assets/webp/header_background_terelj.webp"
@@ -199,8 +201,10 @@
         <h1>Захиалах</h1>
       </section>
       <div class="main">
+        <!-- Захиалгын форм бөглүүлэх хэсэг -->
         <form class="form-group" action="">
           <div class="top-green"></div>
+          <!-- Аялагчийн хувийн мэдээлэл авах хэсэг -->
           <section class="info-personal">
             <h2>Хувийн мэдээлэл</h2>
             <div>
@@ -250,22 +254,23 @@
               </div>
             </div>
           </section>
+          <!-- Аялагчийн сонирхож буй аяллын мэдээллийг авах хэсэг -->
           <section class="info-travel">
             <h2>Аяллын мэдээлэл</h2>
             <div class="travel-type-select">
               <div class="image-select">
                 <input type="radio" id="int-travel" name="travel-type">
-                <img src="../../assets/img/select-image-1.png"/>
+                <img src="../../assets/img/select-image-1.png" alt="international travel"/>
                 <label for="int-travel">Гадаад аялал</label>
               </div>
               <div class="image-select">
                 <input type="radio" id="local-travel" name="travel-type">
-                <img src="../../assets/img/select-image-2.png"/>
+                <img src="../../assets/img/select-image-2.png" alt="local travel"/>
                 <label for="local-travel">Дотоод аялал</label>
               </div>
               <div class="image-select">
                 <input type="radio" id="special-travel" name="travel-type">
-                <img src="../../assets/img/select-image-3.png"/>
+                <img src="../../assets/img/select-image-3.png" alt="special travel"/>
                 <label for="special-travel">Тусгай аялал</label>
               </div>
             </div>
@@ -303,60 +308,56 @@
           </section>
         </form>
       </div>
+      <!-- Аяллууд санал болгох хэсэг -->
       <section class="travel-cat">
         <h1>Санал болгож буй аяллууд</h1>
         <div class="card-slider">
-            <div class="card-slider-container">
-                <custom-card
-                    title="Их Британи"
-                    date="10 өдөр / 9 шөнө"
-                    picture="../../assets/img/card-5-great-britain.png"
-                    price="3,335,000₮ "
-                ></custom-card>
-                <custom-card
-                    title="Прага"
-                    date="7 өдөр / 6 шөнө"
-                    picture="../../assets/img/card-6-prague.png"
-                    price="750,000₮"
-                ></custom-card>
-                <custom-card
-                    title="Калифорни"
-                    date="8 өдөр / 7 шөнө"
-                    picture="../../assets/img/card-7-california.png"
-                    price="3,350,000₮"
-                ></custom-card>
-                <custom-card
-                    title="Сингапур"
-                    date="6 өдөр / 5 шөнө"
-                    picture="../../assets/img/card-8-singapore.png"
-                    price="600,000₮"
-                ></custom-card>
-                <custom-card
-                    title="Их Британи"
-                    date="10 өдөр / 9 шөнө"
-                    picture="../../assets/img/card-5-great-britain.png"
-                    price="3,335,000₮ "
-                ></custom-card>
-                <custom-card
-                    title="Прага"
-                    date="7 өдөр / 6 шөнө"
-                    picture="../../assets/img/card-6-prague.png"
-                    price="750,000₮"
-                ></custom-card>
+        <svg class="prev-btn" xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 96 960 960" width="48" fill="#054822"><path d="M561.615 811.153 324.847 574.385l236.768-237.153 41.615 41.614-195.154 195.539L603.23 769.538l-41.615 41.615Z"/></svg>
+          <div class="card-slider-container"> 
+            <div class="card-slider-content"> 
+              <section class="card">
+                <img src="../../assets/webp/card-5-great-britain.webp" alt="Их Британи">
+                <span>3,335,000₮</span>
+                <h2>Их Британи</h2>
+                <p>10 өдөр / 9 шөнө</p>
+              </section>
+              <section class="card">
+                <img src="../../assets/webp/card-6-prague.webp" alt="Прага">
+                <span>750,000₮</span>
+                <h2>Прага</h2>
+                <p>7 өдөр / 6 шөнө</p>
+              </section>
+              <section class="card">
+                <img src="../../assets/webp/card-7-california.webp" alt="Калифорни">
+                <span>3,335,000₮</span>
+                <h2>Калифорни</h2>
+                <p>8 өдөр / 7 шөнө</p>
+              </section>
+              <section class="card">
+                <img src="../../assets/webp/card-8-singapore.webp" alt="Сингапур">
+                <span>600,000₮</span>
+                <h2>Сингапур</h2>
+                <p>6 өдөр / 5 шөнө</p>
+              </section>
+              <section class="card">
+                <img src="../../assets/webp/card-6-prague.webp" alt="Прага">
+                <span>750,000₮</span>
+                <h2>Прага</h2>
+                <p>7 өдөр / 6 шөнө</p>
+              </section>
+              <section class="card">
+                <img src="../../assets/webp/card-5-great-britain.webp" alt="Их Британи">
+                <span>3,335,000₮</span>
+                <h2>Их Британи</h2>
+                <p>10 өдөр / 9 шөнө</p>
+              </section>
             </div>
-            <img
-                alt="previous"
-                class="arrow left-arrow prev-btn"
-                src="../../assets/icons/black-left-arrow.svg"
-            />
-            <img
-                alt="next"
-                class="arrow right-arrow next-btn"
-                src="../../assets/icons/black-right-arrow.svg"
-            />
-        </div>
+          </div>
+          <svg class="next-btn" xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 96 960 960" width="48" fill="#054822"><path d="m375.385 811.153-41.615-41.615 195.154-195.153L333.77 378.846l41.615-41.614 236.768 237.153-236.768 236.768Z"/></svg>
+        </div>  
       </section>
     </main>
+    <!-- Footer -->
     <footer>
       <div class="footer-content">
         <section>
