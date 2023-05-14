@@ -48,8 +48,7 @@ class CardNews extends HTMLElement {
     }
     this.render();
   }
-
-
+  
   render() {
     this.shadowRoot.innerHTML = `
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">  
