@@ -17,8 +17,6 @@ $(window).scroll(function () {
     }
 });
 
-document.cookie = "cookie_name=cookie_value; SameSite=Strict";
-
 // button animation
 const submitButton = document.getElementById("submitButton");
 

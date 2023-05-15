@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="../css/travel-details.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script defer src="https://code.jquery.com/jquery-3.6.4.js"></script>
-    <script defer src="../components/card.js"></script>
+    <!-- <script defer src="../components/card.js"></script> -->
     <script defer src="../js/script.js"></script>
     <script src="../components/clock-component.js"></script>
     <script defer src="../components/custom-header.js"></script>
@@ -32,10 +32,12 @@
 <body>
     <custom-header current="travels"></custom-header>
     <main>
+        <!-- Page banner -->
         <section class="banner">
             <img src="../../assets/webp/header-tengeriin-haalga.webp" alt="Тэнгэрийн хаалга">
             <h1>Тэнгэрийн хаалганы аялал</h1>
         </section>
+        <!-- Аяллын тухай товч мэдээлэл хүргэх хэсэг -->
         <section class="pre-content">
             <section class="top-brief">
                 <div class="brief-info">
@@ -75,6 +77,7 @@
                     </div>
                 </div>
             </section>
+            <!-- Tab navigation -->
             <ul class="tabs-nav">
                 <li id="selected-tab">
                     <a href="#"><b>Дэлгэрэнгүй</b></a>
@@ -94,6 +97,7 @@
             </ul>
         </section>
         <section class="main-content">
+            <!-- Аяллын тухай дэлгэрэнгүй мэдээллүүд -->
             <section class="content">
                 <h1>Танилцуулга</h1>
                 <p>Хятадын Хунань мужид Тиэнмэн хэмээх нэгэн уул буй. Энэ газар өдгөө аялал жуулчлалын томоохон цогцолбор болон хөгжжээ. Энэ уулыг оройд нь байх Тэнгэрийн хаалга ихэд алдаршуулсан юм. Тэнгэрийн хаалга болвоос хамгийн өндөрт байдаг нуман хаалга билээ. Энэ хаалга нь (нуман хаалга) өргөөшөө 57 м, уртаашаа 60 м, өндрөөшөө 136 м. <br><br> Байгалийн жамаар үүссэн энэ нуман хаалга МЭӨ 263 онд бий болжээ. Тэр үед энэ хадны хэсэг өгөршиж элэгдэн нурж унасныг Хятадын судар бичигт тэмдэглэн үлдээсэн юм. Чингээд тэр цагаас хойш нуман хаалгыг Тэнгэрийн хаалга гэх болов. <br><br> Нар жаргах цагаар энэ замаар зорчиход эргэн тойрон алган дээр тавьсан мэт ил харагдаж, нар өндөр уулсын цаагуур орж гарахыг ажих боломжтой.
@@ -119,12 +123,12 @@
                         <th>Аяллын үнэд багтсан зүйлс</th>
                         <td>
                             <ul>
-                                <li><img src="../../assets/icons/check.png" alt="Check">2 талын галт тэрэг</li>
-                                <li><img src="../../assets/icons/check.png" alt="Check">Автобус, онгоцны билет</li>
-                                <li><img src="../../assets/icons/check.png" alt="Check">Тосох үдэх унаа</li>
-                                <li><img src="../../assets/icons/check.png" alt="Check">Буудал</li>
-                                <li><img src="../../assets/icons/check.png" alt="Check">Хөтөлбөрт орсон хоол</li>
-                                <li><img src="../../assets/icons/check.png" alt="Check">Хөтөлбөрт багтсан үзвэр, хөтөч</li>
+                                <li><i class="fa-regular fa-circle-check" style="color: #16c016;"></i>2 талын галт тэрэг</li>
+                                <li><i class="fa-regular fa-circle-check" style="color: #16c016;"></i>Автобус, онгоцны билет</li>
+                                <li><i class="fa-regular fa-circle-check" style="color: #16c016;"></i>Тосох үдэх унаа</li>
+                                <li><i class="fa-regular fa-circle-check" style="color: #16c016;"></i>Буудал</li>
+                                <li><i class="fa-regular fa-circle-check" style="color: #16c016;"></i>Хөтөлбөрт орсон хоол</li>
+                                <li><i class="fa-regular fa-circle-check" style="color: #16c016;"></i>Хөтөлбөрт багтсан үзвэр, хөтөч</li>
                             </ul>
                         </td>
                     </tr>
@@ -132,13 +136,14 @@
                         <th>Аяллын үнэд багтаагүй зүйлс</th>
                         <td>
                             <ul>
-                                <li><img src="../../assets/icons/remove.png" alt="Cross sign">PCR шинжилгээний төлбөр</li>
+                                <li><i class="fa-regular fa-circle-xmark" style="color: #F44336;"></i>PCR шинжилгээний төлбөр</li>
                             </ul>
                         </td>
                     </tr>
                 </table>
             </section>
             <aside id="booking-section">
+                <!-- Аяллын бүртгэл хаагдахад үлдсэн хугацаа -->
                 <section class="timer">
                     <div class="days">
                         <h2>6</h2>
@@ -158,6 +163,7 @@
                     </div>
                     <!-- <clock-component days="6"></clock-component> -->
                 </section>
+                <!-- Аяллын захиалгын форм бөглөх хэсэг -->
                 <section class="booking-form">
                     <div class="form-top"></div>
                     <h3>Энэ аяллыг захиалах</h3>
@@ -174,63 +180,60 @@
                 </section>
             </aside>
         </section>
+        <!-- Төстэй аяллууд санал болгох хэсэг -->
         <section class="travel-cat">
             <h1>Төстэй аяллууд</h1>
             <div class="card-slider">
-                <div class="card-slider-container">
-                    <custom-card
-                        title="Их Британи"
-                        date="10 өдөр / 9 шөнө"
-                        picture="../../assets/img/card-5-great-britain.png"
-                        price="3,335,000₮ "
-                    ></custom-card>
-                    <custom-card
-                        title="Прага"
-                        date="7 өдөр / 6 шөнө"
-                        picture="../../assets/img/card-6-prague.png"
-                        price="750,000₮"
-                    ></custom-card>
-                    <custom-card
-                        title="Калифорни"
-                        date="8 өдөр / 7 шөнө"
-                        picture="../../assets/img/card-7-california.png"
-                        price="3,350,000₮"
-                    ></custom-card>
-                    <custom-card
-                        title="Сингапур"
-                        date="6 өдөр / 5 шөнө"
-                        picture="../../assets/img/card-8-singapore.png"
-                        price="600,000₮"
-                    ></custom-card>
-                    <custom-card
-                        title="Их Британи"
-                        date="10 өдөр / 9 шөнө"
-                        picture="../../assets/img/card-5-great-britain.png"
-                        price="3,335,000₮ "
-                    ></custom-card>
-                    <custom-card
-                        title="Прага"
-                        date="7 өдөр / 6 шөнө"
-                        picture="../../assets/img/card-6-prague.png"
-                        price="750,000₮"
-                    ></custom-card>
+            <svg class="prev-btn" xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 96 960 960" width="48" fill="#054822"><path d="M561.615 811.153 324.847 574.385l236.768-237.153 41.615 41.614-195.154 195.539L603.23 769.538l-41.615 41.615Z"/></svg>
+              <div class="card-slider-container"> 
+                <div class="card-slider-content"> 
+                  <section class="card">
+                    <img src="../../assets/webp/card-5-great-britain.webp" alt="Их Британи">
+                    <span>3,335,000₮</span>
+                    <h2>Их Британи</h2>
+                    <p>10 өдөр / 9 шөнө</p>
+                  </section>
+                  <section class="card">
+                    <img src="../../assets/webp/card-6-prague.webp" alt="Прага">
+                    <span>750,000₮</span>
+                    <h2>Прага</h2>
+                    <p>7 өдөр / 6 шөнө</p>
+                  </section>
+                  <section class="card">
+                    <img src="../../assets/webp/card-7-california.webp" alt="Калифорни">
+                    <span>3,335,000₮</span>
+                    <h2>Калифорни</h2>
+                    <p>8 өдөр / 7 шөнө</p>
+                  </section>
+                  <section class="card">
+                    <img src="../../assets/webp/card-8-singapore.webp" alt="Сингапур">
+                    <span>600,000₮</span>
+                    <h2>Сингапур</h2>
+                    <p>6 өдөр / 5 шөнө</p>
+                  </section>
+                  <section class="card">
+                    <img src="../../assets/webp/card-6-prague.webp" alt="Прага">
+                    <span>750,000₮</span>
+                    <h2>Прага</h2>
+                    <p>7 өдөр / 6 шөнө</p>
+                  </section>
+                  <section class="card">
+                    <img src="../../assets/webp/card-5-great-britain.webp" alt="Их Британи">
+                    <span>3,335,000₮</span>
+                    <h2>Их Британи</h2>
+                    <p>10 өдөр / 9 шөнө</p>
+                  </section>
                 </div>
-                <img
-                    alt="previous"
-                    class="arrow left-arrow prev-btn"
-                    src="../../assets/icons/black-left-arrow.svg"
-                />
-                <img
-                    alt="next"
-                    class="arrow right-arrow next-btn"
-                    src="../../assets/icons/black-right-arrow.svg"
-                />
-            </div>
+              </div>
+              <svg class="next-btn" xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 96 960 960" width="48" fill="#054822"><path d="m375.385 811.153-41.615-41.615 195.154-195.153L333.77 378.846l41.615-41.614 236.768 237.153-236.768 236.768Z"/></svg>
+            </div>  
         </section>
+        <!-- mobile version дээр захиалах товч байнга доод хэсэгт гарч ирэх -->
         <button class="book-now">
             <a href="#booking-section">Одоо захиал</a>
         </button>
     </main>
+    <!-- footer -->
     <footer>
         <div class="footer-content">
             <section> 
