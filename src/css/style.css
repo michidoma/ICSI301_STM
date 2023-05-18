@@ -541,6 +541,54 @@ section.blogs {
     justify-content: space-between;
 }
 
+.blog-card {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    margin: 2em 0;
+    padding: 0 1vw;
+  }
+  .blog-card img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 15%;
+  }
+  .blog-info {
+      padding: 1em;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+  }
+  .blog-info h2 {
+      margin: 0;
+      font-family: 'PT Sans';
+  }
+  .blog-info p {
+      height: 78px;
+      text-align: justify;
+      overflow: hidden;
+      text-overflow: ellipsis;
+  }  
+  .blog-info button {
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 0;
+  }
+  .blog-info button a {
+    text-decoration: none;
+    color: var(--primary-orange);
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+  }
+  .blog-info button i {
+      font-size: 1.5em;
+      margin-left: 8px;
+  }
+
 /* Блог */
 
 .information {
