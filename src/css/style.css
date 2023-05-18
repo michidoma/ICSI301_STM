@@ -1,31 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&family=PT+Sans&display=swap');
-
-@font-face {
-    font-family: 'KursivC';
-    src: url('../../assets/fonts/kursivc_[allfont.net].ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-:root {
-    font-size: 16px;
-    /* colors */
-    --primary-green: rgb(5, 72, 34);
-    --primary-orange: #FC7E08;
-    --gray-light: #A0A2A6;
-    --gray-background: #E6E8EE;
-    --gray-input: #F5F7FB;
-    /* fonts  */
-    --main-font-family :font-family:  Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    --text-header-size: 2rem;
-}
-
+@import 'variables.css';
 body {
-    padding: 0;
-    margin: 0;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 14px;
-    overflow-x: hidden;
+    font-family: var(--font-family-main);
+	font-size: var(--font-size-main);
+	margin: 0;
+	overflow-x: hidden;
+	padding: 0;
 }
 
 #loader {
@@ -510,7 +489,7 @@ li.menu-bottom a {
 section h1 {
     text-align: center;
     color: var(--primary-green);
-    font-size: var(--text-header-size);
+    font-size: var(--font-size-header);
 }
 
 .card-slider {
@@ -537,57 +516,54 @@ section.blogs {
 .blog-container {
     display: flex;
     flex-wrap: wrap;
-    /* padding: 0 5vw; */
     justify-content: space-between;
 }
-
-.blog-card {
-    width: 100%;
-    height: 200px;
-    display: flex;
-    margin: 2em 0;
-    padding: 0 1vw;
-  }
-  .blog-card img {
-      width: 200px;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 15%;
-  }
-  .blog-info {
-      padding: 1em;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-  }
-  .blog-info h2 {
-      margin: 0;
-      font-family: 'PT Sans';
-  }
-  .blog-info p {
-      height: 78px;
-      text-align: justify;
-      overflow: hidden;
-      text-overflow: ellipsis;
-  }  
-  .blog-info button {
-    border: 0;
-    background-color: transparent;
-    cursor: pointer;
-    padding: 0;
-  }
-  .blog-info button a {
-    text-decoration: none;
-    color: var(--primary-orange);
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-  }
-  .blog-info button i {
-      font-size: 1.5em;
-      margin-left: 8px;
-  }
+.blog-container article {
+	display: flex;
+	height: var(--img-large);
+	margin: 2rem 0;
+	padding: 0 1vw;
+	width: calc(50% - 2vw);
+}
+.blog-container img {
+	border-radius: 15%;
+	height: var(--img-large);
+	object-fit: cover;
+	width: var(--img-large);
+}
+.blog-info {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 1em;
+}
+.blog-info h2 {
+	margin: 0;
+}
+.blog-info p {
+	height: 78px;
+	overflow: hidden;
+	text-align: justify;
+	text-overflow: ellipsis;
+}
+.blog-info button {
+	background-color: transparent;
+	border: 0;
+	cursor: pointer;
+	padding: 0;
+}
+.blog-info button a {
+	align-items: center;
+	color: var(--primary-orange);
+	display: flex;
+	font-family: var(--font-family-main);
+	font-weight: 600;
+	text-decoration: none;
+}
+.blog-info button i {
+	font-size: var(--font-size-header-card);
+	margin-left: var(--icon-margin);
+}
 
 /* Блог */
 
@@ -765,7 +741,9 @@ footer p {
         height: 500px;
         transition: .2s;
     }
-
+    .blog-info h2 {
+		font-size: var(--size-root);
+	}
     information-box {
         width: calc(50% - 8vw);
         display: flex;
@@ -804,7 +782,16 @@ footer p {
     .menu li {
         margin: 10px 0px;
     }
-
+    .blog-container article img {
+		height: 150px;
+		width: 150px;
+	}
+	.blog-container article {
+		height: 150px;
+	}
+	section.blog-info {
+		padding: 0.5em 1em;
+	}
     .footer {
         flex-wrap: wrap;
     }
@@ -835,15 +822,17 @@ footer p {
     news-card {
         width: 100%;
     }
-    /* .blog-info h2 {
-        font-size: 1.5em;
-    }
-    .blog-info p {
-        height: 96px;
-    }
-    section h1 {
-        font-size: 20px;
-    } */
+    .blog-container article img {
+		height: var(--img-large);
+		width: var(--img-large);
+	}
+	.blog-container article {
+		height: var(--img-large);
+		width: 100%;
+	}
+	.blog-info h2 {
+		font-size: var(--font-size-header-card);
+	}
     .feedback {
         font-size: 16px;
     }
