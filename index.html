@@ -33,9 +33,15 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">  
     <script defer src="https://code.jquery.com/jquery-3.6.4.js"></script>
     <script defer src="src/components/information-box.js"></script>
+    <script defer src="src/components/custom-header.js"></script>
     <script defer src="src/js/main.js"></script>
+    <!-- <script type="module" src="./src/modules/CardModule.js"></script> -->
+    <!-- <script type="module" src="./src/modules/CardNewsModule.js"></script> -->
+    <script type="module" src="src/js/module.js"></script>
+    <!-- <script type="module" src="./src/modules/CommentsModule.js"></script> -->
   </head>
   <body>
+    <div id="loader"></div>
     <header>
       <!-- Top green bar -->
       <section class="top-bar">
@@ -269,45 +275,8 @@
       <!-- Мэдээ мэдээлэл хэсэг -->
       <section class="blogs wrapper">
         <h1>Мэдээ мэдээлэл</h1>
-        <div class="blog-container">
-          <article>
-            <img src="assets/webp/blog-1.webp" alt="Алтан овоо">
-            <section class="blog-info">
-              <div>
-                <h2>Алтан овооны тухай</h2>
-                <p>Дарь-Овоо гэж нэрлэх нь ч бий. Дарьгангын галт уулсын нэг бөгөөд далайн төвшнөөс дээш 1354 метр өндөр. Дарьганга сумын...</p>
-              </div>
-              <button><a href="src/html/blog.html">Цааш унших<i class="material-icons">arrow_forward</i></a></button>
-            </section>
-          </article>
-          <article>
-            <img src="assets/webp/blog-2.webp" alt="Бүргэд">
-            <section class="blog-info">
-              <div>
-                <h2>Бүргэдийн баяр</h2>
-                <p>Энэ жилийн наадам Улаанбаатар хот, Түргэний ам "Монгол Кувейтийн байгаль хамгаалах төв"-д болно хэмээн зохион байгуулагчид...</p>
-              </div>
-              <button><a href="src/html/blog.html">Цааш унших<i class="material-icons">arrow_forward</i></a></button>
-            </section>
-          </article>
-          <article>
-            <img src="assets/webp/blog-3.webp" alt="Аялал">
-            <section class="blog-info">
-              <div>
-                <h2>Аялагчдын зөвлөмж</h2>
-                <p>Та гадаад улс руу аялахаар төлөвлөж байгаа бол юу шаардлагатайг энэхүү нийтлэлээс хараарай. Хамгийн түрүүнд гадаад пасспортоо...</p>
-              </div>
-              <button><a href="src/html/blog.html">Цааш унших<i class="material-icons">arrow_forward</i></a></button>
-            </section>
-          </article>
-          <article>
-            <img src="assets/webp/blog-4.webp" alt="Хустайн цогцолбор">
-            <section class="blog-info">
-              <h2>Хустайн цогцолбор</h2>
-              <p>Хустайн байгалийн цогцолборт газрын үйл ажиллагаатай БОАЖ-ын сайд Б.Бат-Эрдэнэ танилцаж, байгаль хамгаалагчдын төлөөлөлтэй...</p>
-              <button><a href="src/html/blog.html">Цааш унших<i class="material-icons">arrow_forward</i></a></button>
-            </section>
-          </article>
+        <div id="blog-container" class="blog-container">
+
         </div>
       </section>
       <!-- Сэтгэгдлүүд хэсэг -->
@@ -367,14 +336,14 @@
           logo="assets/img/travelers.png"
         ></information-box>
         <information-box
-          title="Актив аялал"
-          data="10"
-          logo="assets/img/global.png"
-        ></information-box>
-        <information-box
           title="Нийт зохион байгуулсан"
           data="111"
           logo="assets/img/document.png"
+        ></information-box>
+        <information-box
+          title="Актив аялал"
+          data="10"
+          logo="assets/img/global.png"
         ></information-box>
         <information-box
           title="Нийт чиглэл"

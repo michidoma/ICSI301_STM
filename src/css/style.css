@@ -6,6 +6,17 @@ body {
 	overflow-x: hidden;
 	padding: 0;
 }
+#loader {
+    display: none;
+    background-color: #fff;
+    background-image: url('../../assets/img/loader.gif');
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
 .wrapper {
 	--max-width: 1400px;
 	--min-gap: 25px;
@@ -253,9 +264,8 @@ li.menu-bottom a {
 	background-color: var(--dot-hover-color);
 }
 .fade {
-	animation-duration: 1.5s;
+	animation-duration: 3s;
 	animation-name: fade;
-}
 section h1 {
 	color: var(--primary-green);
 	font-size: var(--font-size-header);

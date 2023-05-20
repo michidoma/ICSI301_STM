@@ -116,7 +116,7 @@ function currentSlide(n) {
 // Autoplay animation
 let slideInterval = setInterval(() => {
   plusSlides(1);
-}, 3000);
+}, 5000);
 
 // Pause autoplay animation when user hovers over the slideshow
 let slideshowContainer = document.querySelector('.slideshow-container');
@@ -149,6 +149,12 @@ function showSlides(n) {
   // console.log('i, n, slideIndex :>> ', i, n, slideIndex);
   // setInterval(showSlides(slideIndex), 2000);
 }
+
+let loader = document.getElementById("loader");
+
+window.addEventListener("load", function() {
+  loader.style.display = "none"
+});
 
 function roundToNearest(num) {
   if (num - Math.floor(num) >= 0.5) {
