@@ -1,4 +1,4 @@
-class NewsItem {
+class News {
   constructor(news) {
     this.id = news.id;
     this.title = news.title;
@@ -23,12 +23,13 @@ class NewsItem {
   }
 }
 
-export default class CardNews {
-  constructor(recentNewsUrl) {
+export default class LatestNews {
+  constructor(recentNewsUrl, count) {
     this._recentNewsList = [];
     this._recentNewsURL = recentNewsUrl;
     this._lastUpdated = Date.now();
     this._hasChanged = false;
+    this.count = count;
   }
 
   fetchAndRender(targetElement) {
@@ -39,14 +40,14 @@ export default class CardNews {
           console.log("RESULT", jsonObject);
           // json record -> news болгосон
           const filteredArray = jsonObject.news.sort((a, b) => new Date(b.date) - new Date(a.date))
-          .filter((_, index) => index < 4);
+          .filter((_, index) => index < this.count);
 
           if (filteredArray.length > 0) {
             document.getElementById(targetElement).insertAdjacentHTML(
               "afterbegin",
               filteredArray
                 .map((travelItem) => {
-                  const _newsItem = new NewsItem(travelItem);
+                  const _newsItem = new News(travelItem);
                   this._recentNewsList.push(_newsItem);
                   return _newsItem.Render();
                 })
@@ -60,11 +61,6 @@ export default class CardNews {
       });
   }
 }
-
-const activeTravels = new CardNews(
-  "../../db.json"
-);
-activeTravels.fetchAndRender("blog-container");
 
 // setInterval(() => {
 //   activeTravels.fetchAndRenderNews("blog-container")
