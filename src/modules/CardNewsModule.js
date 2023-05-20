@@ -24,30 +24,31 @@ class News {
 }
 
 export default class LatestNews {
-  constructor(recentNewsUrl, count) {
+  constructor(jsonUrl, count) {
     this._recentNewsList = [];
-    this._recentNewsURL = recentNewsUrl;
+    this._jsonUrl = jsonUrl;
     this._lastUpdated = Date.now();
     this._hasChanged = false;
-    this.count = count;
+    this._displayCount = count;
   }
 
   fetchAndRender(targetElement) {
-    console.log("this._activeTravelsURL", this._recentNewsURL);
-    fetch(this._recentNewsURL)
+    console.log("this._activeTravelsURL", this._jsonUrl);
+    fetch(this._jsonUrl)
       .then((result) => {
         result.json().then((jsonObject) => {
           console.log("RESULT", jsonObject);
           // json record -> news болгосон
+          // Хамгийн сүүлд нийтлэгдсэн _displayCount ширхэг мэдээг шүүж авах
           const filteredArray = jsonObject.news.sort((a, b) => new Date(b.date) - new Date(a.date))
-          .filter((_, index) => index < this.count);
+          .filter((_, index) => index < this._displayCount);
 
           if (filteredArray.length > 0) {
             document.getElementById(targetElement).insertAdjacentHTML(
               "afterbegin",
               filteredArray
-                .map((travelItem) => {
-                  const _newsItem = new News(travelItem);
+                .map((newsItem) => {
+                  const _newsItem = new News(newsItem);
                   this._recentNewsList.push(_newsItem);
                   return _newsItem.Render();
                 })

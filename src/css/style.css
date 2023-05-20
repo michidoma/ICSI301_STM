@@ -266,6 +266,7 @@ li.menu-bottom a {
 .fade {
 	animation-duration: 3s;
 	animation-name: fade;
+}
 section h1 {
 	color: var(--primary-green);
 	font-size: var(--font-size-header);
