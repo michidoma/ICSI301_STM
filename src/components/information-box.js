@@ -40,6 +40,7 @@ class InformationBox extends HTMLElement {
     <style>
     .box {
       // width: 100%;
+      width: fit-content;
       display: flex;
       align-items: center;
       margin-bottom: 2vh;
