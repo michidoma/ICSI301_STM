@@ -298,7 +298,7 @@ custom-card {
 	margin: 0 var(--margin-one-side);
 	--margin-one-side: 2vw;
 	position: relative;
-	width: calc(25% - var(--margin-one-side) * 2);
+	max-width: calc(25% - var(--margin-one-side) * 2);
 }
 .card:hover {
 	cursor: pointer;
@@ -528,7 +528,7 @@ footer p {
 	}
 	.card {
 		flex: 1 0 calc(100% / 3 - 4vw);
-		width: calc(100% / 3 - 4vw);
+		max-width: calc(100% / 3 - 4vw);
 	}
 	#menu-icon {
 		display: block;
@@ -687,7 +687,7 @@ footer p {
 	}
 	.card {
 		flex: 1 0 calc(50% - 4vw);
-		width: calc(50% - 4vw);
+		max-width: calc(50% - 4vw);
 	}
 	.information {
 		padding: 0 3rem 1.4rem 3rem;

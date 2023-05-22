@@ -33,11 +33,9 @@ export default class LatestNews {
   }
 
   fetchAndRender(targetElement) {
-    console.log("this._activeTravelsURL", this._jsonUrl);
     fetch(this._jsonUrl)
       .then((result) => {
         result.json().then((jsonObject) => {
-          console.log("RESULT", jsonObject);
           // json record -> news болгосон
           // Хамгийн сүүлд нийтлэгдсэн _displayCount ширхэг мэдээг шүүж авах
           const filteredArray = jsonObject.news.sort((a, b) => new Date(b.date) - new Date(a.date))
