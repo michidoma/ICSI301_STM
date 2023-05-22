@@ -444,6 +444,29 @@ section.blogs {
 	justify-content: space-between;
 	padding: 0 5rem 1.4rem 5rem;
 }
+.box {
+    /* width: 100%; */
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    margin-bottom: 2vh;
+    gap: 20px;
+}
+.box img {
+    width: 50px;
+    height: 50px;
+}
+.info p, .info  h1 {
+    margin: 5px 0px;
+}
+@media only screen and (max-width: 520px) {
+    .box {
+      flex-wrap: wrap;
+      justify-content: center;
+      text-align: center;
+    }
+}
+
 /* Footer */
 footer {
 	background-image: url('../../assets/webp/footer-background.webp');
@@ -579,7 +602,7 @@ footer p {
 	.blog-info h2 {
 		font-size: var(--size-root);
 	}
-	information-box {
+	.information-box {
 		display: flex;
 		justify-content: center;
 		width: 50%;

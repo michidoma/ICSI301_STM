@@ -20,4 +20,9 @@ reviews.fetchAndRender("review-container");
 
 // setInterval(() => {
 //   activeTravels.upload()
-// }, 15000);
+// }, 15000);'
+
+// Information Module
+import Information from "../modules/InformationModule.js";
+const newInfo = new Information("../../db.json");
+newInfo.fetchAndRenderInfo("information");
