@@ -1,17 +1,22 @@
 import LatestNews from '../modules/CardNewsModule.js';
 import ActiveTravels from '../modules/CardModule.js';
+import Reviews from '../modules/ReviewsModule.js';
 
 // News module
 const latestNews = new LatestNews("../../db.json", 4);
 latestNews.fetchAndRender("blog-container");
 
-// Upcoming Travels
+// Travels
 const activeTravels = new ActiveTravels("../../db.json");
-activeTravels.renderUpcomingTravels("upcoming-travels");
+activeTravels.renderUpcomingTravels("upcoming-travels-container");
+activeTravels.renderSpecialTravels("special-travels-container");
 // setInterval(() => {
 //   activeTravels.renderUpcomingTravels("upcoming-travels")
 // }, 2000);
 
+// Review module
+const reviews = new Reviews("../../db.json");
+reviews.fetchAndRender("review-container");
 
 // setInterval(() => {
 //   activeTravels.upload()

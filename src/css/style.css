@@ -299,6 +299,7 @@ custom-card {
 	--margin-one-side: 2vw;
 	position: relative;
 	max-width: calc(25% - var(--margin-one-side) * 2);
+	width: calc(25% - var(--margin-one-side) * 2);
 }
 .card:hover {
 	cursor: pointer;
