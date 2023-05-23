@@ -427,7 +427,7 @@ section.blogs {
 	display: flex;
 	font-size: var(--font-size-comment);
 	font-weight: 550;
-	width: 90%;
+	width: 100%;
 	word-wrap: break-word;
 }
 .author {

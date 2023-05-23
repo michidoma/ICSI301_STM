@@ -31,7 +31,6 @@ export default class LastestInfo {
     fetchAndRenderInfo(targetElement) {
       fetch(this._jsonUrl)
         .then((result) => {
-  console.log("aldaa");
           result.json().then((jsonObject) => {
             const filteredArray = jsonObject.information.filter(
               (info) => info.id >= 1

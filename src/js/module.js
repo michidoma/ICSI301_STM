@@ -1,6 +1,7 @@
 import LatestNews from '../modules/CardNewsModule.js';
 import ActiveTravels from '../modules/CardModule.js';
 import Reviews from '../modules/ReviewsModule.js';
+import Information from "../modules/InformationModule.js";
 
 // News module
 const latestNews = new LatestNews("../../db.json", 4);
@@ -23,6 +24,5 @@ reviews.fetchAndRender("review-container");
 // }, 15000);'
 
 // Information Module
-import Information from "../modules/InformationModule.js";
 const newInfo = new Information("../../db.json");
-newInfo.fetchAndRenderInfo("information");
+newInfo.fetchAndRenderInfo("information-container");

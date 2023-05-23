@@ -15,7 +15,7 @@ class Review {
             “${this.reviewContent}“
           </i>
         </div>
-        <div class="author"><p><i>Б. Энгүүлэн</i></p></div>
+        <div class="author"><p><i>${this.author}</i></p></div>
       </div>
     </li>
     `;

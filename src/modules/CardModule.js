@@ -10,7 +10,7 @@ class Travel {
 
   Render() {
     return `
-    <section class="card">
+    <section travelid="${this.id}" class="card">
       <img src="${this.image}" alt="${this.altText}">
       <span>${this.price}</span>
       <h2>${this.title}</h2>
