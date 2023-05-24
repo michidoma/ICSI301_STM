@@ -356,16 +356,16 @@ input:not([id="message"]) {
 input::placeholder {
 	color: var(--primary-text);
 }
-input:nth-child(1) {
+order-input:nth-child(1) input, order-input:nth-child(2) input {
 	background-image: url('../../assets/icons/edit.png');
 }
-input:nth-child(2), input:nth-child(3) {
+order-input:nth-child(3) input, order-input:nth-child(4) input {
 	background-image: url('../../assets/icons/mail.png');
 }
-input:nth-child(4) {
+order-input:nth-child(5) input {
 	background-image: url('../../assets/icons/phone.png');
 }
-input:nth-child(5) {
+order-input:nth-child(6) input, order-input:nth-child(7) input {
 	background-image: url('../../assets/icons/group-black.png');
 }
 form span {

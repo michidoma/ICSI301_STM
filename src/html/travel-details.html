@@ -28,6 +28,7 @@
     <script defer src="../js/script.js"></script>
     <script src="../components/clock-component.js"></script>
     <script defer src="../components/custom-header.js"></script>
+    <script src="../components/order-input.js" defer></script>
 </head>
 <body>
     <custom-header current="travels"></custom-header>
@@ -168,11 +169,13 @@
                     <div class="form-top"></div>
                     <h3>Энэ аяллыг захиалах</h3>
                     <form action="">
-                        <input type="text" id="name" name="name" placeholder="Нэр" required>
-                        <input type="email" id="email" name="email" placeholder="Имэйл" required>
-                        <input type="email" id="email_verify" name="email_verify" placeholder="Имэйл баталгаажуулах" required>
-                        <input type="tel" id="phone" name="phone" placeholder="Утасны дугаар" required>
-                        <input type="number" id="num_tickets" name="num_tickets" placeholder="Билетийн тоо" required>
+                        <order-input type="text" id="last_name" name="last_name" placeholder="Овог"></order-input>
+                        <order-input type="text" id="first_name" name="first_name" placeholder="Нэр"></order-input>
+                        <order-input type="email" id="email" name="email" placeholder="Имэйл"></order-input>
+                        <order-input type="email" id="email_verify" name="email_verify" placeholder="Имэйл баталгаажуулах"></order-input>
+                        <order-input type="tel" id="phone" name="phone" placeholder="Утасны дугаар"></order-input>
+                        <order-input type="number" id="num_adults" name="num_adults" placeholder="Том хүний тоо"></order-input>
+                        <order-input type="number" id="num_children" name="num_children" placeholder="Хүүхдийн тоо"></order-input>
                         <span>Нийт дүн: 2,400,000₮</span>
                         <textarea id="message" name="message" rows="5" cols="50" placeholder="Мессеж"></textarea>
                         <input type="submit" value="Илгээх">
