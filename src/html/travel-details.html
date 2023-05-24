@@ -26,6 +26,8 @@
     <script defer src="https://code.jquery.com/jquery-3.6.4.js"></script>
     <!-- <script defer src="../components/card.js"></script> -->
     <script defer src="../js/script.js"></script>
+    <script defer src="../js/travel-details.js"></script>
+    <script defer src="../components/travel-details.js"></script>
     <!-- <script src="../components/clock-component.js"></script> -->
 </head>
 <body>
@@ -120,7 +122,7 @@
         <!-- Page banner -->
         <section class="banner">
             <img src="../../assets/webp/header-tengeriin-haalga.webp" alt="Тэнгэрийн хаалга">
-            <h1>Тэнгэрийн хаалганы аялал</h1>
+            <h1 id="travel-title"></h1>
         </section>
         <!-- Аяллын тухай товч мэдээлэл хүргэх хэсэг -->
         <section class="pre-content">
@@ -183,7 +185,7 @@
         </section>
         <section class="main-content">
             <!-- Аяллын тухай дэлгэрэнгүй мэдээллүүд -->
-            <section class="content">
+            <!-- <section class="content">
                 <h1>Танилцуулга</h1>
                 <p>Хятадын Хунань мужид Тиэнмэн хэмээх нэгэн уул буй. Энэ газар өдгөө аялал жуулчлалын томоохон цогцолбор болон хөгжжээ. Энэ уулыг оройд нь байх Тэнгэрийн хаалга ихэд алдаршуулсан юм. Тэнгэрийн хаалга болвоос хамгийн өндөрт байдаг нуман хаалга билээ. Энэ хаалга нь (нуман хаалга) өргөөшөө 57 м, уртаашаа 60 м, өндрөөшөө 136 м. <br><br> Байгалийн жамаар үүссэн энэ нуман хаалга МЭӨ 263 онд бий болжээ. Тэр үед энэ хадны хэсэг өгөршиж элэгдэн нурж унасныг Хятадын судар бичигт тэмдэглэн үлдээсэн юм. Чингээд тэр цагаас хойш нуман хаалгыг Тэнгэрийн хаалга гэх болов. <br><br> Нар жаргах цагаар энэ замаар зорчиход эргэн тойрон алган дээр тавьсан мэт ил харагдаж, нар өндөр уулсын цаагуур орж гарахыг ажих боломжтой.
                     Харин газраар хүрэх бол Тунтиэний авто замаар явдаг. Энэ зам Хятадын хамгийн их бартаатай замд тооцогддог. Нийтдээ 99 эргэлттэй, 11 км-ийн урттай.</p>
@@ -226,7 +228,8 @@
                         </td>
                     </tr>
                 </table>
-            </section>
+            </section> -->
+            <travel-info></travel-info>
             <aside id="booking-section">
                 <!-- Аяллын бүртгэл хаагдахад үлдсэн хугацаа -->
                 <section class="timer">
