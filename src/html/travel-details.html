@@ -26,8 +26,8 @@
     <script defer src="https://code.jquery.com/jquery-3.6.4.js"></script>
     <!-- <script defer src="../components/card.js"></script> -->
     <script defer src="../js/script.js"></script>
-    <script defer src="../js/travel-details.js"></script>
     <script defer src="../components/travel.js"></script>
+    <script type="module" src="../js/recommendModule.js"></script>
     <!-- <script src="../components/clock-component.js"></script> -->
 </head>
 <body>
@@ -122,49 +122,14 @@
         <travel-details></travel-details>
         <!-- Төстэй аяллууд санал болгох хэсэг -->
         <section class="travel-cat">
-            <h1>Төстэй аяллууд</h1>
+          <h1>Төстэй аяллууд</h1> 
             <div class="card-slider">
-            <svg class="prev-btn" xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 96 960 960" width="48" fill="#054822"><path d="M561.615 811.153 324.847 574.385l236.768-237.153 41.615 41.614-195.154 195.539L603.23 769.538l-41.615 41.615Z"/></svg>
-              <div class="card-slider-container"> 
-                <div class="card-slider-content"> 
-                  <section class="card">
-                    <img src="../../assets/webp/card-5-great-britain.webp" alt="Их Британи">
-                    <span>3,335,000₮</span>
-                    <h2>Их Британи</h2>
-                    <p>10 өдөр / 9 шөнө</p>
-                  </section>
-                  <section class="card">
-                    <img src="../../assets/webp/card-6-prague.webp" alt="Прага">
-                    <span>750,000₮</span>
-                    <h2>Прага</h2>
-                    <p>7 өдөр / 6 шөнө</p>
-                  </section>
-                  <section class="card">
-                    <img src="../../assets/webp/card-7-california.webp" alt="Калифорни">
-                    <span>3,335,000₮</span>
-                    <h2>Калифорни</h2>
-                    <p>8 өдөр / 7 шөнө</p>
-                  </section>
-                  <section class="card">
-                    <img src="../../assets/webp/card-8-singapore.webp" alt="Сингапур">
-                    <span>600,000₮</span>
-                    <h2>Сингапур</h2>
-                    <p>6 өдөр / 5 шөнө</p>
-                  </section>
-                  <section class="card">
-                    <img src="../../assets/webp/card-6-prague.webp" alt="Прага">
-                    <span>750,000₮</span>
-                    <h2>Прага</h2>
-                    <p>7 өдөр / 6 шөнө</p>
-                  </section>
-                  <section class="card">
-                    <img src="../../assets/webp/card-5-great-britain.webp" alt="Их Британи">
-                    <span>3,335,000₮</span>
-                    <h2>Их Британи</h2>
-                    <p>10 өдөр / 9 шөнө</p>
-                  </section>
+              <svg class="prev-btn" xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 96 960 960" width="48" fill="#054822"><path d="M561.615 811.153 324.847 574.385l236.768-237.153 41.615 41.614-195.154 195.539L603.23 769.538l-41.615 41.615Z"/></svg>
+                <div class="card-slider-container"> 
+                  <div id="recommending-travels-container" class="card-slider-content"> 
+    
+                  </div>
                 </div>
-              </div>
               <svg class="next-btn" xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 96 960 960" width="48" fill="#054822"><path d="m375.385 811.153-41.615-41.615 195.154-195.153L333.77 378.846l41.615-41.614 236.768 237.153-236.768 236.768Z"/></svg>
             </div>  
         </section>

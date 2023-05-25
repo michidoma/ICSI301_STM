@@ -9,7 +9,6 @@ class Travel extends HTMLElement {
 
         const urlParams = new URLSearchParams(window.location.search);
         this.travelId = urlParams.get('travelid');
-        console.log(this.travelId);
 
         // Fetch and render the travel details based on the travel ID
         
@@ -22,7 +21,6 @@ class Travel extends HTMLElement {
           .then(response => response.json())
           .then(data => {
             const travel = data.travels.find(travel => travel.id === parseInt(this.travelId));
-            console.log("travel");
             // Render the travel details content
             this.render(travel);
           })

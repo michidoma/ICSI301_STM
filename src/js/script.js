@@ -41,12 +41,13 @@ setTimeout(() => {
     }
 
     document.querySelectorAll('.card').forEach(function(customCard) {
-      customCard.addEventListener('click', function() {
-        window.location.href = 'travel-details.html';
+      customCard.addEventListener('click', function(event) {
+        const productId = event.currentTarget.getAttribute('travelid');
+        window.location.href = '../../src/html/travel-details.html?travelid=' + encodeURIComponent(productId);
       })
     })
     
-  }, 100);
+  }, 1000);
   $(window).scroll(function () {
     if ($(window).scrollTop()) {
       $("nav").addClass("green");

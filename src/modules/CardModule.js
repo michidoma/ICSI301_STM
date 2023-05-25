@@ -19,6 +19,17 @@ class Travel {
     `;
   }
 
+  RenderRecommending() {
+    return `
+    <section travelid="${this.id}" class="card">
+      <img src="../../${this.image}" alt="${this.altText}">
+      <span>${this.price}</span>
+      <h2>${this.title}</h2>
+      <p>${this.duration}</p>
+    </section>
+    `;
+  }
+
   // Bind(eventType, element, property) {
   //   document.getElementById(`${element}_${this.id}`).addEventListener(eventType, (event) => {
   //     this[property] = event.target.innerHTML;
@@ -116,7 +127,52 @@ export default class ActiveTravels {
         console.log(err);
       });
   }
+
+  renderRecommendingTravels(targetElement) {
+    fetch(this._jsonUrl)
+      .then((result) => {
+        result.json().then((jsonObject) => {
+          // Захиалгын аяллуудыг шүүх
+          const getRandomTravelObjects = (jsonObject, count) => {
+            const randomIndexes = [];
+          
+            while (randomIndexes.length < count) {
+              const randomIndex = Math.floor(Math.random() * jsonObject.travels.length);
+              if (!randomIndexes.includes(randomIndex)) {
+                randomIndexes.push(randomIndex);
+              }
+            }
+          
+            const randomTravels = randomIndexes.map(index => jsonObject.travels[index]);
+          
+            return randomTravels.filter(travel => travel.status === "active");
+          };
+          
+          const randomTravels = getRandomTravelObjects(jsonObject, 3);
+          
+          if (randomTravels.length > 0) {
+            document.getElementById(targetElement).insertAdjacentHTML(
+              "afterbegin",
+              randomTravels
+                .map((travelItem) => {
+                  const _travelItem = new Travel(travelItem);
+                  this._specialTravelsList.push(_travelItem);
+                  return _travelItem.RenderRecommending();
+                })
+                .reduce((prevVal, curVal) => prevVal + curVal, "")
+            );
+
+            // this._specialTravelsList.forEach(travelItem => travelItem.Bind("input", "recentnews_title", "title"));
+          }
+        });
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }
 }
+
+
 
 // setInterval(() => {
 //   activeTravels.fetchAndRenderNews("blog-container")
