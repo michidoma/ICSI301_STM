@@ -250,7 +250,7 @@ ul.tabs-nav {
 .main-content {
 	display: flex;
 }
-travel-info {
+.content {
 	margin-left: var(--gap-horizontal);
 	width: calc(60% - 3vw);
 }
