@@ -423,10 +423,12 @@ form input[type="submit"]:hover {
 	width: 100%;
 }
 .card {
-	flex: 1 0 calc(25% - 4vw);
-	margin: 0 2vw;
+	flex: 1 0 calc(25% - var(--margin-one-side) * 2);
+	margin: 0 var(--margin-one-side);
+	--margin-one-side: 2vw;
 	position: relative;
-	width: calc(25% - 4vw);
+	max-width: calc(25% - var(--margin-one-side) * 2);
+	width: calc(25% - var(--margin-one-side) * 2);
 }
 .card:hover {
 	cursor: pointer;
@@ -549,7 +551,7 @@ footer p {
 	}
 	.card {
 		flex: 1 0 calc(100% / 3 - 4vw);
-		width: calc(100% / 3 - 4vw);
+		max-width: calc(100% / 3 - 4vw);
 	}
 	#menu-icon {
 		color: var(--primary-green);
@@ -727,6 +729,6 @@ footer p {
 	}
 	.card {
 		flex: 1 0 calc(50% - 4vw);
-		width: calc(50% - 4vw);
+		max-width: calc(50% - 4vw);
 	}
 }

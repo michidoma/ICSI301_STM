@@ -56,7 +56,7 @@ class Header extends HTMLElement {
         </div>
     </section>
     <nav class="wrapper">
-        <a href="#" class="logo">
+        <a href="../../index.html" class="logo">
             ${
               this.current == "home"
                 ? `<img src="assets/img/logo-no-background.png" width="163" height="56" alt="logo-mongol-ayalal" />`

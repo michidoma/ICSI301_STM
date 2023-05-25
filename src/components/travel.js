@@ -106,7 +106,7 @@ class Travel extends HTMLElement {
             <section class="content">
                 <h1>Танилцуулга</h1>
                 <p>${description}</p>
-                <table>
+                <table style="width: 100%;">
                     <tr class="first-row">
                         <th>Чиглэл</th>
                         <td>
