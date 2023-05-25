@@ -37,8 +37,10 @@
     <script defer src="src/components/information-box.js"></script>
     <script defer src="src/components/custom-header.js"></script>
     <script defer src="src/js/main.js"></script>
+    <script type="module" src="src/js/module.js"></script>
   </head>
   <body>
+    <div id="loader"></div>
     <custom-header current="home"></custom-header>
     <main>
       <!-- Slideshow -->
@@ -84,43 +86,8 @@
         <div class="card-slider">
         <svg class="prev-btn-1" xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 96 960 960" width="48" fill="#054822"><path d="M561.615 811.153 324.847 574.385l236.768-237.153 41.615 41.614-195.154 195.539L603.23 769.538l-41.615 41.615Z"/></svg>
           <div class="card-slider-container"> 
-            <div class="card-slider-content">
-              <custom-card
-                title="Их Британи"
-                picture="assets/webp/card-5-great-britain.webp"
-                price="3,335,000₮"
-                date="10 өдөр / 9 шөнө"
-              ></custom-card> 
-              <custom-card
-                title="Прага"
-                picture="assets/webp/card-6-prague.webp"
-                price="750,000₮"
-                date="7 өдөр / 6 шөнө"
-              ></custom-card> 
-              <custom-card
-                title="Калифорни"
-                picture="assets/webp/card-7-california.webp"
-                price="3,335,000₮"
-                date="8 өдөр / 7 шөнө"
-              ></custom-card> 
-              <custom-card
-                title="Сингапур"
-                picture="assets/webp/card-8-singapore.webp"
-                price="600,000₮"
-                date="6 өдөр / 5 шөнө"
-              ></custom-card> 
-              <custom-card
-                title="Прага"
-                picture="assets/webp/card-6-prague.webp"
-                price="750,000₮"
-                date="7 өдөр / 6 шөнө"
-              ></custom-card> 
-              <custom-card
-                title="Их Британи"
-                picture="assets/webp/card-5-great-britain.webp"
-                price="3,335,000₮"
-                date="10 өдөр / 9 шөнө"
-              ></custom-card> 
+            <div id="upcoming-travels-container" class="card-slider-content"> 
+
             </div>
           </div>
           <svg class="next-btn-1" xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 96 960 960" width="48" fill="#054822"><path d="m375.385 811.153-41.615-41.615 195.154-195.153L333.77 378.846l41.615-41.614 236.768 237.153-236.768 236.768Z"/></svg>
@@ -132,49 +99,8 @@
         <div class="card-slider">
         <svg class="prev-btn-2" xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 96 960 960" width="48" fill="#054822"><path d="M561.615 811.153 324.847 574.385l236.768-237.153 41.615 41.614-195.154 195.539L603.23 769.538l-41.615 41.615Z"/></svg>
           <div class="card-slider-container"> 
-            <div class="card-slider-content"> 
-              <custom-card
-                title="Япон"
-                picture="assets/webp/card-1-tokyo.webp"
-                price="900,000₮"
-                date="2 өдөр / 1 шөнө"
-              ></custom-card>
-              <custom-card
-                title="Сөүл"
-                picture="assets/webp/card-2-seoul.webp"
-                price="750,000₮"
-                date="1 өдөр / 1 шөнө"
-              ></custom-card>
-              <custom-card
-                title="Парис"
-                picture="assets/webp/card-3-paris.webp"
-                price="3,335,000₮"
-                date="4 өдөр / 3 шөнө"
-              ></custom-card>
-              <custom-card
-                title="Лондон"
-                picture="assets/webp/card-4-london.webp"
-                price="6,000,000₮"
-                date="3 өдөр / 2 шөнө"
-              ></custom-card>
-              <custom-card
-                title="Япон"
-                picture="assets/webp/card-1-tokyo.webp"
-                price="900,000₮"
-                date="2 өдөр / 1 шөнө"
-              ></custom-card>
-              <custom-card
-                title="Сөүл"
-                picture="assets/webp/card-2-seoul.webp"
-                price="750,000₮"
-                date="1 өдөр / 1 шөнө"
-              ></custom-card>
-              <custom-card
-                title="Парис"
-                picture="assets/webp/card-3-paris.webp"
-                price="3,335,000₮"
-                date="4 өдөр / 3 шөнө"
-              ></custom-card>
+            <div id="special-travels-container" class="card-slider-content"> 
+  
             </div>
           </div>
           <svg class="next-btn-2" xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 96 960 960" width="48" fill="#054822"><path d="m375.385 811.153-41.615-41.615 195.154-195.153L333.77 378.846l41.615-41.614 236.768 237.153-236.768 236.768Z"/></svg>
@@ -183,31 +109,8 @@
       <!-- Мэдээ мэдээлэл хэсэг -->
       <section class="blogs wrapper">
         <h1>Мэдээ мэдээлэл</h1>
-        <div class="blog-container">
-          <news-card
-            image="assets/webp/blog-1.webp"
-            altText="Алтан овоо"
-            title="Алтан овооны тухай"
-            description="Дарь-Овоо гэж нэрлэх нь ч бий. Дарьгангын галт уулсын нэг бөгөөд далайн төвшнөөс дээш 1354 метр өндөр. Дарьганга сумын..."
-          ></news-card>
-          <news-card
-            image="assets/webp/blog-2.webp"
-            altText="Бүргэд"
-            title="Бүргэдийн баяр"
-            description="Энэ жилийн наадам Улаанбаатар хот, Түргэний ам 'Монгол Кувейтийн байгаль хамгаалах төв'-д болно хэмээн зохион байгуулагчид..."
-          ></news-card>
-          <news-card
-            image="assets/webp/blog-3.webp"
-            altText="Аялалд явах"
-            title="Аялагчдын зөвлөмж"
-            description="Та гадаад улс руу аялахаар төлөвлөж байгаа бол юу шаардлагатайг энэхүү нийтлэлээс хараарай. Хамгийн түрүүнд гадаад пасспортоо..."
-          ></news-card>
-          <news-card
-            image="assets/webp/blog-4.webp"
-            altText="Хустайн цогцолбор"
-            title="Хустайн цогцолбор"
-            description="Хустайн байгалийн цогцолборт газрын үйл ажиллагаатай БОАЖ-ын сайд Б.Бат-Эрдэнэ танилцаж, байгаль хамгаалагчдын төлөөлөлтэй..."
-          ></news-card>
+        <div id="blog-container" class="blog-container">
+
         </div>
       </section>
       <!-- Сэтгэгдлүүд хэсэг -->
@@ -216,71 +119,16 @@
         <div class="carousel-feedback">
           <svg class="prev-btn-3" xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 96 960 960" width="48" fill="#054822"><path d="M561.615 811.153 324.847 574.385l236.768-237.153 41.615 41.614-195.154 195.539L603.23 769.538l-41.615 41.615Z"/></svg>
           <div class="c_track-container">
-            <ul class="c_track">
-              <li class="c_slide">
-                <div class="c_slide-content-feedback">
-                  <div class="feedback">
-                    <i>
-                      “ Олон хүн ардынхаа төлөө гэсэн сэтгэлтэй, зохион байгуулалт
-                      сайтай, сайхан аялуулдаг гэдгийг өөрийн биеэр мэдэрлээ.
-                      Сэтгэл ханамж 100% байлаа. Монгол аяллын хамт олонд ажлын
-                      өндөр амжилт, сайн сайхан бүхнийг хүсэн ерөөе. “
-                    </i>
-                  </div>
-                  <div class="author"><p><i>Б. Энгүүлэн</i></p></div>
-                </div>
-              </li>
-              <li class="c_slide">
-                <div class="c_slide-content-feedback">
-                  <div class="feedback">
-                    <i>
-                      “ Аялал эхлэхээс дуусах хүртэл хамтдаа нандин дурсамжай түүхийг 
-                      бүтээлцсэн аяллын хөтөч, жолооч болон аяллын багийн найзууддаа 
-                      мөн “Монгол аялал” ХХК-ны хамт олонд аз жаргал, амжилт бүтээл, 
-                      сайн сайхан бүхнийг хүсэе. “
-                    </i>
-                  </div>
-                  <div class="author"><p><i>Б. Ариунаа</i></p></div>
-                </div>
-              </li>
-              <li class="c_slide">
-                <div class="c_slide-content-feedback">
-                  <div class="feedback">
-                    <i>
-                      “ Амьдралд минь нэгэн сайхан дурсамж үлдээсэн Монгол аяллын хамт 
-                      олондоо баярлалаа. Дараагын аялалд танай хамт олонтой байх болно баярлалаа. “
-                    </i>
-                  </div>
-                  <div class="author"><p><i>А. Зориг</i></p></div>
-                </div>
-              </li>
+            <ul id="review-container" class="c_track">
+ 
             </ul>
           </div>
           <svg class="next-btn-3" xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 96 960 960" width="48" fill="#054822"><path d="m375.385 811.153-41.615-41.615 195.154-195.153L333.77 378.846l41.615-41.614 236.768 237.153-236.768 236.768Z"/></svg>
         </div>
       </section>
       <!-- Статистик мэдээллийн хэсэг -->
-      <section class="wrapper information">
-        <information-box
-          title="Аялагчдын тоо"
-          data="1500"
-          logo="assets/img/travelers.png"
-        ></information-box>
-        <information-box
-          title="Нийт зохион байгуулсан"
-          data="111"
-          logo="assets/img/document.png"
-        ></information-box>
-        <information-box
-          title="Актив аялал"
-          data="10"
-          logo="assets/img/global.png"
-        ></information-box>
-        <information-box
-          title="Нийт чиглэл"
-          data="20"
-          logo="assets/img/destination.png"
-        ></information-box>
+      <section id="information-container" class="wrapper information">
+        
       </section>
     </main>
     <!-- Footer -->

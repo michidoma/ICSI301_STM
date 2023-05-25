@@ -13,25 +13,45 @@
 
 class CardNews extends HTMLElement {
 
-  image = '';
-  altText = '';
-  title = '';
-  description = '';
-
   constructor() {
     super();
+
+    /*this.image = '';
+    this.altText = '';
+    this.title = '';
+    this.description = '';*/
+  
     this.attachShadow({ mode: "open" });
+    this.addEventListener('click', this.handleClick.bind(this));
+
     this.render();
 
     // const shadowRoot = this.attachShadow({ mode: "open" });
     // shadowRoot.append(newsTemplate.content.cloneNode(true));
   }
 
-  static get observedAttributes() {
+  /*static get observedAttributes() {
     return ["image", "altText", "title", "description"];
+  }*/
+
+  static get observedAttributes() {
+    return ['travel-id'];
   }
 
   attributeChangedCallback(name, oldValue, newValue) {
+    if (name === 'travel-id') {
+      this.render();
+    }
+  }
+
+  handleClick() {
+    const travelId = this.getAttribute('travel-id');
+
+    // Navigate to the travel-details page with the corresponding travel ID
+    window.location.href = `travel-details.html?travelid=${travelId}`;
+  }
+
+  /*attributeChangedCallback(name, oldValue, newValue) {
     switch (name) {
       case 'image':
         this.image = newValue || '';
@@ -47,8 +67,8 @@ class CardNews extends HTMLElement {
         break;
     }
     this.render();
-  }
-  
+  }*/
+
   render() {
     this.shadowRoot.innerHTML = `
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">  

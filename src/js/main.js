@@ -74,9 +74,10 @@ setTimeout(() => {
     }
   });
 
-  document.querySelectorAll('custom-card').forEach(function(customCard) {
-    customCard.addEventListener('click', function() {
-      window.location.href = 'src/html/travel-details.html';
+  document.querySelectorAll('.card').forEach(function(customCard) {
+    customCard.addEventListener('click', function(event) {
+      const productId = event.currentTarget.getAttribute('travelid');
+      window.location.href = 'src/html/travel-details.html?travelid=' + encodeURIComponent(productId);
     })
   });
 
@@ -88,7 +89,7 @@ setTimeout(() => {
       menu.classList.toggle('bx-x');
       navbar.classList.toggle('open');
   }
-}, 100);
+}, 1000);
 
 $(window).scroll(function () {
   if ($(window).scrollTop()) {
@@ -116,7 +117,7 @@ function currentSlide(n) {
 // Autoplay animation
 let slideInterval = setInterval(() => {
   plusSlides(1);
-}, 3000);
+}, 5000);
 
 // Pause autoplay animation when user hovers over the slideshow
 let slideshowContainer = document.querySelector('.slideshow-container');
@@ -149,6 +150,12 @@ function showSlides(n) {
   // console.log('i, n, slideIndex :>> ', i, n, slideIndex);
   // setInterval(showSlides(slideIndex), 2000);
 }
+
+let loader = document.getElementById("loader");
+
+window.addEventListener("load", function() {
+  loader.style.display = "none"
+});
 
 function roundToNearest(num) {
   if (num - Math.floor(num) >= 0.5) {
