@@ -2,6 +2,9 @@ class OrderInput extends HTMLElement {
 
     constructor() {
         super();
+
+        this.attachShadow({mode: 'open'});
+
         this.type = this.getAttribute('type');
         this.id = this.getAttribute('id');
         this.name = this.getAttribute('name');
@@ -10,14 +13,13 @@ class OrderInput extends HTMLElement {
         this.render();
     }
 
-    connectedCallback() {
-    }
-
     render() {
-        this.innerHTML = `  
-        <style> input {width: calc(100% - 50px); display: flex;} </style>
+        this.shadowRoot.innerHTML = `  
+        <style>
+            
+        </style>
         <input type="${this.type}" id="${this.id}" name="${this.name}" placeholder="${this.placeholder}" required></input>
-        `;
+    `;
     }
 }
 
