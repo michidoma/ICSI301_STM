@@ -9,10 +9,8 @@ class Header extends HTMLElement {
   }
 
   attributeChangedCallback(name, oldValue, newValue) {
-    switch (name) {
-      case "current":
-        this.current = newValue || "";
-        break;
+    if (name == "current") {
+      this.current = newValue || "";
     }
     if (this.current == "home") {
       this.route = "src";
@@ -26,7 +24,8 @@ class Header extends HTMLElement {
     <header>
     <section class="top-bar">
         <div class="right">
-            <div>USD <img src="assets/icons/usd.webp" width="16" height="16" alt="US currency"/> 3,527.29</div>
+            <div>USD <img src="${this.current == "home" ? `assets` : `../../assets`}/icons/usd.webp" width="16" height="16" alt="US currency"/>
+             3,527.29</div>
             <div>Улаанбаатар -13.9°C</div>
             <div>
                 <svg width="1rem" height="1rem" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -63,7 +62,6 @@ class Header extends HTMLElement {
                 ? `<img src="assets/img/logo-no-background.png" width="163" height="56" alt="logo-mongol-ayalal" />`
                 : `<img src="../../assets/img/logo.png" width="193" height="56" alt="logo-mongol-ayalal" />`
             }
-            
         </a>
         <ul class="menu">
             <li>
@@ -126,6 +124,5 @@ class Header extends HTMLElement {
   `;
   }
 }
-console.log("NAME", this.current);
 
 customElements.define("custom-header", Header);
