@@ -28,10 +28,8 @@ const inputs = [
 ];
 
 submitButton.addEventListener("click", (event) => {
-  // Prevent the page from refreshing
   event.preventDefault();
 
-  // Check if all the inputs are filled
   let isAllFilled = true;
   for (const input of inputs) {
     if (input.value.trim() === "") {
@@ -40,27 +38,22 @@ submitButton.addEventListener("click", (event) => {
     }
   }
 
-  // If all the inputs are filled, show the animation
   if (isAllFilled) {
-    // Disable the button to prevent multiple clicks
     submitButton.disabled = true;
-
-    // Show the loading animation
     submitButton.innerHTML = "<div class='loader'></div>";
 
-    // Simulate a 2-second loading animation
     setTimeout(() => {
-      // Change the text to "Successfully sent"
       submitButton.innerHTML = "Илгээгдлээ";
-      submitButton.style = "background: #186b4e; color: #ffffff; pointer-events: noene;"
+      submitButton.style = "background: #186b4e; color: #ffffff; pointer-events: none;";
 
-      // Enable the button again
-      // submitButton.disabled = false;
-
-      // Save the data
       for (const i = 0; i < inputs.length; i++) {
         localStorage.setItem(inputs[i].name, inputs[i].value);
       }
+    }, 3000);
+  } else {
+    submitButton.innerHTML = "Талбаруудыг зөв, гүйцэт бөглөнө үү";
+    setTimeout(() => {
+      submitButton.innerHTML = "Илгээх";
     }, 3000);
   }
 });

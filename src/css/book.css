@@ -341,6 +341,26 @@ form input[type="submit"]:hover {
 	cursor: pointer;
 }
 
+
+button {
+	width: 100%;
+}
+button {
+	background-color: var(--primary-green);
+	border: 0;
+	color: var(--text-color-white);
+	display: flex;
+	font-size: 1.2rem;
+	font-weight: 600;
+	justify-content: center;
+	margin: 50px 0px 25px 0px;
+	padding: 10px 0px;
+	border-radius: 20px;
+}
+button:hover {
+	background-color: var(--green-hover-color);
+	cursor: pointer;
+}
 /* Санал болгож буй аяллууд */
 
 .travel-cat {
@@ -594,5 +614,25 @@ footer p {
 	}
 	.input-group {
 		width: 100%;
+	}
+}
+
+/* Button load animation */
+.loader {
+	animation: load 2s ease infinite;
+	border: 3px solid transparent;
+	border-radius: 50%;
+	border-top-color: var(--text-color-white);
+	height: 15px;
+	pointer-events: none;
+	width: 15px;
+}
+
+@keyframes load {
+	0% {
+		transform: rotate(0turn);
+	}
+	100% {
+		transform: rotate(1turn);
 	}
 }
