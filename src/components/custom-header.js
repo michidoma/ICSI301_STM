@@ -63,7 +63,6 @@ class Header extends HTMLElement {
                 ? `<img src="assets/img/logo-no-background.png" width="163" height="56" alt="logo-mongol-ayalal" />`
                 : `<img src="../../assets/img/logo.png" width="193" height="56" alt="logo-mongol-ayalal" />`
             }
-            
         </a>
         <ul class="menu">
             <li>
@@ -126,6 +125,5 @@ class Header extends HTMLElement {
   `;
   }
 }
-console.log("NAME", this.current);
 
 customElements.define("custom-header", Header);
