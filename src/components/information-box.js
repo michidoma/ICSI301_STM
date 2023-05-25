@@ -1,18 +1,10 @@
 class InformationBox extends HTMLElement {
 
-  title = '';
-  logo = '';
-  data = '';
-
   constructor() {
     super();
     this.attachShadow({ mode: "open" });
     
     this.render();
-  }
-
-  connectedCallBack() {
-    console.log("mounted");
   }
 
   static get observedAttributes() {

@@ -346,7 +346,7 @@ form {
 input::placeholder {
 	color: var(--primary-text);
 }
-form span {
+form custom-total {
 	font-weight: bold;
 	margin: 15px 0px;
 }

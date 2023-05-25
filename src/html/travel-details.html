@@ -23,12 +23,13 @@
     <link rel="icon" href="../../assets/icons/logo-mongol-ayalal.png" type="image/png">
     <link rel="stylesheet" href="../css/travel-details.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script defer src="https://code.jquery.com/jquery-3.6.4.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.js" defer></script>
     <!-- <script defer src="../components/card.js"></script> -->
-    <script defer src="../js/script.js"></script>
-    <script src="../components/clock-component.js"></script>
-    <script defer src="../components/custom-header.js"></script>
+    <script src="../js/script.js" defer></script>
+    <!-- <script src="../components/clock-component.js" defer></script> -->
+    <script src="../components/custom-header.js" defer></script>
     <script src="../components/order-input.js" defer></script>
+    <script src="../components/custom-total.js" defer></script>
 </head>
 <body>
     <custom-header current="travels"></custom-header>
@@ -169,14 +170,14 @@
                     <div class="form-top"></div>
                     <h3>Энэ аяллыг захиалах</h3>
                     <form action="">
-                        <order-input type="text" id="last_name" name="last_name" placeholder="Овог"></order-input>
-                        <order-input type="text" id="first_name" name="first_name" placeholder="Нэр"></order-input>
-                        <order-input type="email" id="email" name="email" placeholder="Имэйл"></order-input>
-                        <order-input type="email" id="email_verify" name="email_verify" placeholder="Имэйл баталгаажуулах"></order-input>
-                        <order-input type="tel" id="phone" name="phone" placeholder="Утасны дугаар"></order-input>
-                        <order-input type="number" id="num_adults" name="num_adults" placeholder="Том хүний тоо"></order-input>
-                        <order-input type="number" id="num_children" name="num_children" placeholder="Хүүхдийн тоо"></order-input>
-                        <span>Нийт дүн: 2,400,000₮</span>
+                        <input is="order-input" type="text" id="last_name" name="last_name" placeholder="Овог"></input>
+                        <input is="order-input" type="text" id="first_name" name="first_name" placeholder="Нэр"></input>
+                        <input is="order-input" type="email" id="email" name="email" placeholder="Имэйл"></input>
+                        <input is="order-input" type="email" id="email_verify" name="email_verify" placeholder="Имэйл баталгаажуулах"></input>
+                        <input is="order-input" type="tel" id="phone" name="phone" placeholder="Утасны дугаар"></input>
+                        <input is="order-input" type="number" id="num_adults" name="num_adults" placeholder="Том хүний тоо"></order-input>
+                        <input is="order-input" type="number" id="num_children" name="num_children" placeholder="Хүүхдийн тоо"></order-input>
+                        <custom-total></custom-total>
                         <textarea id="message" name="message" rows="5" cols="50" placeholder="Мессеж"></textarea>
                         <input type="submit" value="Илгээх">
                     </form>

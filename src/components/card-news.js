@@ -1,30 +1,9 @@
-// const newsTemplate = document.createElement("template");
-// newsTemplate.innerHTML = `
-//     <div class="card">
-//         <img class="picture" src="" alt="">
-//         <div class="title"></div>
-//         <div class="description"></div>
-//         <button> 
-//             Цааш унших
-//             <img src="../assets/images/svg/right-arrow-long.svg" />
-//         </button>
-//     </div>
-// `;
-
 class CardNews extends HTMLElement {
-
-  image = '';
-  altText = '';
-  title = '';
-  description = '';
 
   constructor() {
     super();
     this.attachShadow({ mode: "open" });
     this.render();
-
-    // const shadowRoot = this.attachShadow({ mode: "open" });
-    // shadowRoot.append(newsTemplate.content.cloneNode(true));
   }
 
   static get observedAttributes() {

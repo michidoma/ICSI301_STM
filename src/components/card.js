@@ -1,18 +1,9 @@
 class Card extends HTMLElement {
 
-  title = '';
-  picture = '';
-  price = '';
-  date = '';
-
   constructor() {
     super();
     this.attachShadow({ mode: "open" });
     this.render();
-  }
-
-  connectedCallBack() {
-    console.log("mounted");
   }
 
   static get observedAttributes() {
