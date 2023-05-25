@@ -343,30 +343,8 @@ form {
 	display: flex;
 	flex-direction: column;
 }
-input:not([id="message"]) {
-	background-color: var(--gray-input);
-	background-position: 15px;
-	background-repeat: no-repeat;
-	background-size: var(--icon-size);
-	border: 0px;
-	border-radius: 10px;
-	margin: 10px 0px;
-	padding: 15px 0px 15px 50px;
-}
 input::placeholder {
 	color: var(--primary-text);
-}
-order-input:nth-child(1) input, order-input:nth-child(2) input {
-	background-image: url('../../assets/icons/edit.png');
-}
-order-input:nth-child(3) input, order-input:nth-child(4) input {
-	background-image: url('../../assets/icons/mail.png');
-}
-order-input:nth-child(5) input {
-	background-image: url('../../assets/icons/phone.png');
-}
-order-input:nth-child(6) input, order-input:nth-child(7) input {
-	background-image: url('../../assets/icons/group-black.png');
 }
 form span {
 	font-weight: bold;
@@ -387,6 +365,8 @@ form textarea::placeholder {
 }
 form input[type="submit"] {
 	background-color: var(--primary-green);
+	border: 0px;
+	border-radius: 10px;
 	color: var(--text-color-white);
 	font-weight: bold;
 	margin: 25px 0px;

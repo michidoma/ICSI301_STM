@@ -16,7 +16,21 @@ class OrderInput extends HTMLElement {
     render() {
         this.shadowRoot.innerHTML = `  
         <style>
-            
+        input {
+            background-color: var(--gray-input);
+            background-image: url('../../assets/icons/${this.type}.png');
+            background-position: 15px;
+            background-repeat: no-repeat;
+            background-size: var(--icon-size);
+            border: 0px;
+            border-radius: 10px;
+            margin: 10px 0px;
+            padding: 15px 0px 15px 50px;
+            width: calc(100% - 50px);
+        }
+        input::placeholder {
+            color: var(--primary-text);
+        }
         </style>
         <input type="${this.type}" id="${this.id}" name="${this.name}" placeholder="${this.placeholder}" required></input>
     `;
