@@ -259,8 +259,8 @@ h2.sub-title {
 }
 input,
 textarea {
-	border: 1px solid var(--gray-light);
-	border-radius: 0px;
+	border: 1.5px solid var(--primary-green);
+	border-radius: 20px;
 	font-family: var(--font-family-main);
 	font-size: var(--font-size-main);
 	height: 30px;

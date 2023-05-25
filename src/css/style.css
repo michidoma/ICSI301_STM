@@ -290,45 +290,12 @@ section h1 {
 	width: 100%;
 }
 custom-card {
-	background-color: #fff;
-	margin-right: 3.5rem;
-}
-.card {
 	flex: 1 0 calc(25% - var(--margin-one-side) * 2);
 	margin: 0 var(--margin-one-side);
 	--margin-one-side: 2vw;
 	position: relative;
 	max-width: calc(25% - var(--margin-one-side) * 2);
 	width: calc(25% - var(--margin-one-side) * 2);
-}
-.card:hover {
-	cursor: pointer;
-}
-.card:hover img {
-	box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
-}
-.card img {
-	border-radius: var(--border-size);
-	transition: box-shadow 0.3s ease-in-out;
-	width: 100%;
-}
-.card span {
-	color: var(--text-color-white);
-	font-size: 1.3em;
-	font-weight: bold;
-	margin: .8em;
-	position: absolute;
-	right: 0;
-	text-shadow: #000 1px 0 10px;
-}
-.card h2 {
-	font-size: var(--font-size-header-card);
-	margin-bottom: 0;
-}
-.card p {
-	font-size: 1em;
-	margin: 0;
-	opacity: .6;
 }
 .prev-btn-1, .next-btn-1, .prev-btn-2, .next-btn-2, .prev-btn-3, .next-btn-3 {
 	cursor: pointer;
@@ -345,51 +312,11 @@ section.blogs {
 	flex-wrap: wrap;
 	justify-content: space-between;
 }
-.blog-container article {
-	display: flex;
+news-card {
 	height: var(--img-large);
 	margin: 2rem 0;
 	padding: 0 1vw;
 	width: calc(50% - 2vw);
-}
-.blog-container img {
-	border-radius: 15%;
-	height: var(--img-large);
-	object-fit: cover;
-	width: var(--img-large);
-}
-.blog-info {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	padding: 1em;
-}
-.blog-info h2 {
-	margin: 0;
-}
-.blog-info p {
-	height: 78px;
-	overflow: hidden;
-	text-align: justify;
-	text-overflow: ellipsis;
-}
-.blog-info button {
-	background-color: transparent;
-	border: 0;
-	cursor: pointer;
-	padding: 0;
-}
-.blog-info button a {
-	align-items: center;
-	color: var(--primary-orange);
-	display: flex;
-	font-family: var(--font-family-main);
-	font-weight: 600;
-	text-decoration: none;
-}
-.blog-info button i {
-	font-size: var(--font-size-header-card);
-	margin-left: var(--icon-margin);
 }
 /* Сэтгэгдлүүд */
 .carousel-feedback {
@@ -547,10 +474,7 @@ footer p {
 	section h1 {
 		font-size: 24px;
 	}
-	.card span {
-		font-size: 1.2em;
-	}
-	.card {
+	custom-card {
 		flex: 1 0 calc(100% / 3 - 4vw);
 		max-width: calc(100% / 3 - 4vw);
 	}
@@ -615,15 +539,8 @@ footer p {
 	.menu {
 		top: -14px;
 	}
-	.blog-container article img {
+	news-card {
 		height: 150px;
-		width: 150px;
-	}
-	.blog-container article {
-		height: 150px;
-	}
-	section.blog-info {
-		padding: 0.5em 1em;
 	}
 	.footer {
 		flex-wrap: wrap;
@@ -647,25 +564,12 @@ footer p {
 		height: 60px;
 		width: 60px;
 	}
-	.card span {
-		font-size: 1em;
-	}
-	.card h2 {
-		font-size: 1.2em;
-	}
 	.blog-container {
 		flex-direction: column;
 	}
-	.blog-container article img {
-		height: var(--img-large);
-		width: var(--img-large);
-	}
-	.blog-container article {
+	news-card {
 		height: var(--img-large);
 		width: 100%;
-	}
-	.blog-info h2 {
-		font-size: var(--font-size-header-card);
 	}
 	.feedback {
 		font-size: 16px;
@@ -709,10 +613,14 @@ footer p {
 	.prev, .next, .prev-btn-1, .next-btn-1, .prev-btn-2, .next-btn-2, .prev-btn-3, .next-btn-3 {
 		width: 36px;
 	}
-	.card {
+	custom-card {
 		flex: 1 0 calc(50% - 4vw);
 		max-width: calc(50% - 4vw);
 	}
+	news-card {
+        margin: 1rem 0;
+        height: 150px;
+    }
 	.information {
 		padding: 0 3rem 1.4rem 3rem;
 	}
