@@ -1,10 +1,10 @@
 setTimeout(() => {
   const cardSliderContent = document.querySelectorAll(".card-slider-content");
 
-  const cards1 = document.querySelectorAll(".travel-cat-1 custom-card");
+  const cards1 = document.querySelectorAll(".travel-cat-1 .card");
   const cardCount1 = cards1.length;
 
-  const cards2 = document.querySelectorAll(".travel-cat-2 custom-card");
+  const cards2 = document.querySelectorAll(".travel-cat-2 .card");
   const cardCount2 = cards2.length;
 
   const cardSliderContainerWidth = document.querySelector(".card-slider-container").offsetWidth;
