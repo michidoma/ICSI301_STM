@@ -51,7 +51,7 @@ class Travel extends HTMLElement {
                     </div>
                     <div>
                         <p><b>Үнэ</b></p>
-                        <span>${price}</span>
+                        <span>${price.toLocaleString()+'₮'}</span>
                     </div>
                 </div>
                 <div class="brief-info">
@@ -179,12 +179,14 @@ class Travel extends HTMLElement {
                     <div class="form-top"></div>
                     <h3>Энэ аяллыг захиалах</h3>
                     <form action="">
-                        <input type="text" id="name" name="name" placeholder="Нэр" required>
-                        <input type="email" id="email" name="email" placeholder="Имэйл" required>
-                        <input type="email" id="email_verify" name="email_verify" placeholder="Имэйл баталгаажуулах" required>
-                        <input type="tel" id="phone" name="phone" placeholder="Утасны дугаар" required>
-                        <input type="number" id="num_tickets" name="num_tickets" placeholder="Билетийн тоо" required>
-                        <span>Нийт дүн: 2,400,000₮</span>
+                        <input is="order-input" type="text" id="last_name" name="last_name" placeholder="Овог" required></input>
+                        <input is="order-input" type="text" id="first_name" name="first_name" placeholder="Нэр" required></input>
+                        <input is="order-input" type="email" id="email" name="email" placeholder="Имэйл" required></input>
+                        <input is="order-input" type="email" id="email_verify" name="email_verify" placeholder="Имэйл баталгаажуулах" required></input>
+                        <input is="order-input" type="tel" pattern="[0-9]*" id="phone" name="phone" placeholder="Утасны дугаар" required></input>
+                        <input is="order-input" type="number" id="num_adults" name="num_adults" placeholder="Том хүний тоо" min="0" required></order-input>
+                        <input is="order-input" type="number" id="num_children" name="num_children" placeholder="Хүүхдийн тоо" min="0" required></order-input>
+                        <custom-total price=${price}></custom-total>
                         <textarea id="message" name="message" rows="5" cols="50" placeholder="Мессеж"></textarea>
                         <input type="submit" value="Илгээх">
                     </form>

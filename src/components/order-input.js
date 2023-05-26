@@ -5,16 +5,7 @@ class OrderInput extends HTMLInputElement {
 
         // this.attachShadow({mode: 'open'});
         
-        this.style.backgroundColor = '#F5F7FB';
         this.style.backgroundImage = `url("../../assets/icons/${this.getAttribute('type')}.png")`;
-        this.style.backgroundPosition = '15px';
-        this.style.backgroundRepeat = 'no-repeat';
-        this.style.backgroundSize = '16px';
-        this.style.border = '0px';
-        this.style.borderRadius = '10px';
-        this.style.margin = '10px 0px';
-        this.style.padding = '15px 0px 15px 50px';
-        this.style.width = 'calc(100% - 50px)';
 
 
         // this.type = this.getAttribute('type');
