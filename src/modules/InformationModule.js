@@ -18,6 +18,11 @@ class Information {
         </section>
       </div>
       `;
+      // <information-box
+      //   title="${this.title}"
+      //   data="${this.data}"
+      //   logo="${this.image}"
+      // ></information-box>
     }
 }
   
