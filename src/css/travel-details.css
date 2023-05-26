@@ -223,7 +223,8 @@ main {
 	margin: 0;
 }
 .brief-info span {
-	color: var(--gray-light);
+	color: var(--primary-green);
+	font-weight: bold;
 }
 ul.tabs-nav {
 	display: flex;

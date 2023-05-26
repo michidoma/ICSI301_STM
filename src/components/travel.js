@@ -91,7 +91,7 @@ class Travel extends HTMLElement {
                         <img class="icon-1" src="../../assets/icons/coin.png" alt="Мөнгөн тэмдэгт">
                     </div>
                     <div>
-                        <p><b>Үнэ</b></p>
+                        <p>Үнэ</p>
                         <span>${price.toLocaleString()+'₮'}</span>
                     </div>
                 </div>
@@ -100,7 +100,7 @@ class Travel extends HTMLElement {
                         <img class="icon-1" src="../../assets/icons/clock.png" alt="Цаг">
                     </div>
                     <div>
-                        <p><b>Хугацаа</b></p>
+                        <p>Хугацаа</p>
                         <span>${duration}</span>
                     </div>
                 </div>
@@ -109,7 +109,7 @@ class Travel extends HTMLElement {
                         <img class="icon-1" src="../../assets/icons/group-green.png" alt="Хүмүүс">
                     </div>
                     <div>
-                        <p><b>Хүний тоо</b></p>
+                        <p>Хүний тоо</p>
                         <span>${totalPassengers}</span>
                     </div>
                 </div>
@@ -118,7 +118,7 @@ class Travel extends HTMLElement {
                         <img class="icon-1" src="../../assets/icons/navigator.png" alt="Зай">
                     </div>
                     <div>
-                        <p><b>Зай</b></p>
+                        <p>Зай</p>
                         <span>${distance}</span>
                     </div>
                 </div>
