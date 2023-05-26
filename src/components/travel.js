@@ -1,31 +1,23 @@
 function countdown(endDate) {
   let countdown = setInterval(function () {
-    // Get current date and time
-    var now = new Date().getTime();
-
-    // Calculate the remaining time
-    var remainingTime = endDate - now;
-
+    let now = new Date().getTime();
+    let remainingTime = endDate - now;
     console.log("now", endDate);
 
-    // Calculate days, hours, minutes, and seconds
-    var days = Math.floor(remainingTime / (1000 * 60 * 60 * 24));
-    var hours = Math.floor(
+    let days = Math.floor(remainingTime / (1000 * 60 * 60 * 24));
+    let hours = Math.floor(
       (remainingTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
     );
-    var minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
-    var seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
+    let minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
+    let seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
 
-    // Display the countdown in the HTML elements
     $("#days").text(days);
     $("#hours").text(hours);
     $("#minutes").text(minutes);
     $("#seconds").text(seconds);
 
-    // If the countdown is finished, clear the interval
     if (remainingTime <= 0) {
       clearInterval(countdown);
-      $("#countdown").text("Countdown has ended");
     }
   }, 1000);
 }
