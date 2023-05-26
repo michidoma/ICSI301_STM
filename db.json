@@ -64,7 +64,7 @@
   "travels": [
     {
       "id": 1,
-      "image": "assets/img/card-1-tokyo.png",
+      "image": "assets/webp/card-1-tokyo.webp",
       "altText": "Япон улс, Токио хот",
       "title": "Япон",
       "price": 2790000,
@@ -149,7 +149,7 @@
     },
     {
       "id": 2,
-      "image": "assets/img/card-2-seoul.png",
+      "image": "assets/webp/card-2-seoul.webp",
       "altText": "Солонгос улс, Сөүл хот",
       "title": "Солонгос",
       "price": 2490000,
@@ -232,7 +232,7 @@
     },
     {
       "id": 3,
-      "image": "assets/img/card-3-paris.png",
+      "image": "assets/webp/card-3-paris.webp",
       "altText": "Франц улс, Парис хот",
       "title": "Франц",
       "price": 4090000,
@@ -324,7 +324,7 @@
     },
     {
       "id": 4,
-      "image": "assets/img/card-4-london.png",
+      "image": "assets/webp/card-4-london.webp",
       "altText": "Их Британи, Умард Ирландын Нэгдсэн Вант Улс, Лондон хот",
       "title": "Лондон",
       "price": 4990000,
@@ -442,7 +442,7 @@
     },
     {
       "id": 5,
-      "image": "assets/img/card-5-great-britain.png",
+      "image": "assets/webp/card-5-great-britain.webp",
       "altText": "Их Британи, Умард Ирландын Нэгдсэн Вант Улс",
       "title": "Их Британи",
       "price": 4990000,
@@ -560,7 +560,7 @@
     },
     {
       "id": 6,
-      "image": "assets/img/card-6-prague.png",
+      "image": "assets/webp/card-6-prague.webp",
       "altText": "Чех улс, Прага хот",
       "title": "Прага",
       "price": 2290000,
@@ -628,7 +628,7 @@
     },
     {
       "id": 7,
-      "image": "assets/img/card-7-california.png",
+      "image": "assets/webp/card-7-california.webp",
       "altText": "Америкийн Нэгдсэн улс, Калифорни муж",
       "title": "Калифорни",
       "price": 2590000,
@@ -702,7 +702,7 @@
     },
     {
       "id": 8,
-      "image": "assets/img/card-8-singapore.png",
+      "image": "assets/webp/card-8-singapore.webp",
       "altText": "Сингапур улс, Сингапур хот",
       "title": "Сингапур",
       "price": 2090000,
