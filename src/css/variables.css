@@ -22,6 +22,8 @@
     --green-hover-color: #186b4e;
     --hr: #D8D8D8;
     --background-color: white;
+    --selected-tab: white;
+    --text-color: black;
 
     /* font family  */
     --font-family-main: 'Open Sans', sans-serif;

@@ -6,7 +6,8 @@ body {
 	min-height: 100vh;
 	overflow-x: hidden;
 	padding: 0;
-	color: #000;
+	color: var(--text-color);
+	background-color: var(--background-color);
 }
 
 /* Top bar */
@@ -231,7 +232,7 @@ ul.tabs-nav {
 	width: 100%;
 }
 #selected-tab {
-	background-color: white;
+	background-color: var(--selected-tab);
 	border-bottom: 1px solid var(--gray-input);
 }
 .tabs-nav li {
@@ -325,7 +326,7 @@ aside {
 	font-size: 12px;
 }
 .booking-form {
-	background-color: white;
+	background-color: var(--selected-tab);
 	border-radius: var(--border-size);
 	box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
 	padding: 0px 10%;
@@ -357,7 +358,7 @@ input:not([id="message"]) {
 	padding: 15px 0px 15px 50px;
 }
 input::placeholder {
-	color: var(--primary-text);
+	color: var(--text-color);
 }
 input:nth-child(1) {
 	background-image: url('../../assets/icons/edit.png');
@@ -386,7 +387,7 @@ form textarea {
 	width: calc(100% - 40px);
 }
 form textarea::placeholder {
-	color: var(--primary-text);
+	color: var(--text-color);
 }
 form input[type="submit"] {
 	background-color: var(--primary-green);
@@ -403,7 +404,7 @@ form input[type="submit"]:hover {
 /* Төстэй аяллууд */
 
 .travel-cat {
-	color: var(--primary-green);
+	color: var(--primary-text);
 	margin: 5vh var(--gap-horizontal);
 }
 .travel-cat h1 {
@@ -738,14 +739,14 @@ footer p {
 
 @media (prefers-color-scheme: dark){
 	:root{
-	   --primary-orange: brown;
-	   --gray-input: #E2D2C0;
+	   /* --primary-orange: brown; */
+	   --gray-input: #cad2c5;
 	   --gray-light: black;
-	   --background-color: #6d4337;
-	   /* --text-color-white: #747577; */
-	   /* --secondary-text: white; */
-	   /* --gray-background: #6E6D70; */
+	   --background-color: #354252;
+	   --secondary-text: white;
+	   --gray-background: #2f3e46;
 	   --primary-text: white;
+	   --selected-tab: #52795f;
 
 	   /* --primary-text: white; */
    }
