@@ -89,7 +89,7 @@ nav.green {
 	list-style-type: none;
 }
 .menu li a {
-	color: var(--primary-text);
+	color: var(--header-text-color);
 	display: inline-block;
 	font-size: var(--font-size-menu);
 	padding: .6rem 1.8rem;
