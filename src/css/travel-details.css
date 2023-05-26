@@ -343,32 +343,10 @@ form {
 	display: flex;
 	flex-direction: column;
 }
-input:not([id="message"]) {
-	background-color: var(--gray-input);
-	background-position: 15px;
-	background-repeat: no-repeat;
-	background-size: var(--icon-size);
-	border: 0px;
-	border-radius: 10px;
-	margin: 10px 0px;
-	padding: 15px 0px 15px 50px;
-}
 input::placeholder {
 	color: var(--primary-text);
 }
-input:nth-child(1) {
-	background-image: url('../../assets/icons/edit.png');
-}
-input:nth-child(2), input:nth-child(3) {
-	background-image: url('../../assets/icons/mail.png');
-}
-input:nth-child(4) {
-	background-image: url('../../assets/icons/phone.png');
-}
-input:nth-child(5) {
-	background-image: url('../../assets/icons/group-black.png');
-}
-form span {
+form custom-total {
 	font-weight: bold;
 	margin: 15px 0px;
 }
@@ -387,6 +365,8 @@ form textarea::placeholder {
 }
 form input[type="submit"] {
 	background-color: var(--primary-green);
+	border: 0px;
+	border-radius: 10px;
 	color: var(--text-color-white);
 	font-weight: bold;
 	margin: 25px 0px;

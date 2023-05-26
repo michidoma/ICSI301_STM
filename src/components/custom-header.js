@@ -1,6 +1,4 @@
 class Header extends HTMLElement {
-  current = "";
-  route = "";
   constructor() {
     super();
   }
