@@ -25,213 +25,31 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://code.jquery.com/jquery-3.6.4.js" defer></script>
     <!-- <script defer src="../components/card.js"></script> -->
-    <script src="../js/script.js" defer></script>
-    <!-- <script src="../components/clock-component.js" defer></script> -->
-    <script src="../components/custom-header.js" defer></script>
+    <script defer src="../js/script.js"></script>
+    <script defer src="../components/custom-header.js"></script>
+    <script defer src="../components/travel.js"></script>
+    <script type="module" src="../js/recommendModule.js"></script>
     <script src="../components/order-input.js" defer></script>
     <script src="../components/custom-total.js" defer></script>
+  
 </head>
 <body>
     <custom-header current="travels"></custom-header>
     <main>
-        <!-- Page banner -->
-        <section class="banner">
-            <img src="../../assets/webp/header-tengeriin-haalga.webp" alt="Тэнгэрийн хаалга">
-            <h1>Тэнгэрийн хаалганы аялал</h1>
-        </section>
-        <!-- Аяллын тухай товч мэдээлэл хүргэх хэсэг -->
-        <section class="pre-content">
-            <section class="top-brief">
-                <div class="brief-info">
-                    <div>
-                        <img class="icon-1" src="../../assets/icons/coin.png" alt="Мөнгөн тэмдэгт">
-                    </div>
-                    <div>
-                        <p><b>Үнэ</b></p>
-                        <span>₮3,250,000</span>
-                    </div>
-                </div>
-                <div class="brief-info">
-                    <div>
-                        <img class="icon-1" src="../../assets/icons/clock.png" alt="Цаг">
-                    </div>
-                    <div>
-                        <p><b>Хугацаа</b></p>
-                        <span>9өдөр/8шөнө</span>
-                    </div>
-                </div>
-                <div class="brief-info">
-                    <div>
-                        <img class="icon-1" src="../../assets/icons/group-green.png" alt="Хүмүүс">
-                    </div>
-                    <div>
-                        <p><b>Хүний тоо</b></p>
-                        <span>40</span>
-                    </div>
-                </div>
-                <div class="brief-info">
-                    <div>
-                        <img class="icon-1" src="../../assets/icons/navigator.png" alt="Зай">
-                    </div>
-                    <div>
-                        <p><b>Зай</b></p>
-                        <span>2100км</span>
-                    </div>
-                </div>
-            </section>
-            <!-- Tab navigation -->
-            <ul class="tabs-nav">
-                <li id="selected-tab">
-                    <a href="#"><b>Дэлгэрэнгүй</b></a>
-                </li>
-                <li>
-                    <a href="#"><b>Төлөвлөгөө</b></a>
-                </li>
-                <li>
-                    <a href="#"><b>Байршил</b></a>
-                </li>
-                <li>
-                    <a href="#"><b>Зургийн цомог</b></a>
-                </li>
-                <li>
-                    <a href="#"><b>Нэмэлт мэдээлэл</b></a>
-                </li>
-            </ul>
-        </section>
-        <section class="main-content">
-            <!-- Аяллын тухай дэлгэрэнгүй мэдээллүүд -->
-            <section class="content">
-                <h1>Танилцуулга</h1>
-                <p>Хятадын Хунань мужид Тиэнмэн хэмээх нэгэн уул буй. Энэ газар өдгөө аялал жуулчлалын томоохон цогцолбор болон хөгжжээ. Энэ уулыг оройд нь байх Тэнгэрийн хаалга ихэд алдаршуулсан юм. Тэнгэрийн хаалга болвоос хамгийн өндөрт байдаг нуман хаалга билээ. Энэ хаалга нь (нуман хаалга) өргөөшөө 57 м, уртаашаа 60 м, өндрөөшөө 136 м. <br><br> Байгалийн жамаар үүссэн энэ нуман хаалга МЭӨ 263 онд бий болжээ. Тэр үед энэ хадны хэсэг өгөршиж элэгдэн нурж унасныг Хятадын судар бичигт тэмдэглэн үлдээсэн юм. Чингээд тэр цагаас хойш нуман хаалгыг Тэнгэрийн хаалга гэх болов. <br><br> Нар жаргах цагаар энэ замаар зорчиход эргэн тойрон алган дээр тавьсан мэт ил харагдаж, нар өндөр уулсын цаагуур орж гарахыг ажих боломжтой.
-                    Харин газраар хүрэх бол Тунтиэний авто замаар явдаг. Энэ зам Хятадын хамгийн их бартаатай замд тооцогддог. Нийтдээ 99 эргэлттэй, 11 км-ийн урттай.</p>
-                <table>
-                    <tr class="first-row">
-                        <th>Чиглэл</th>
-                        <td>УБ – Замын-Үүд - Эрээн –Хөх хот - Чангша - Жанжиажэ (Тэнгэрийн хаалга) -Чангша –Хөх хот- Эрээн – Замын-Үүд - УБ</td>
-                    </tr>
-                    <tr>
-                        <th>Хаанаас хөдлөх</th>
-                        <td>Улаанбаатар возкал</td>
-                    </tr>
-                    <tr>
-                        <th>Хэзээ</th>
-                        <td>16:00</td>
-                    </tr>
-                    <tr>
-                        <th>Унаа</th>
-                        <td>Онгоц, автобус, галт тэрэг</td>
-                    </tr>
-                    <tr>
-                        <th>Аяллын үнэд багтсан зүйлс</th>
-                        <td>
-                            <ul>
-                                <li><i class="fa-regular fa-circle-check" style="color: #16c016;"></i>2 талын галт тэрэг</li>
-                                <li><i class="fa-regular fa-circle-check" style="color: #16c016;"></i>Автобус, онгоцны билет</li>
-                                <li><i class="fa-regular fa-circle-check" style="color: #16c016;"></i>Тосох үдэх унаа</li>
-                                <li><i class="fa-regular fa-circle-check" style="color: #16c016;"></i>Буудал</li>
-                                <li><i class="fa-regular fa-circle-check" style="color: #16c016;"></i>Хөтөлбөрт орсон хоол</li>
-                                <li><i class="fa-regular fa-circle-check" style="color: #16c016;"></i>Хөтөлбөрт багтсан үзвэр, хөтөч</li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>Аяллын үнэд багтаагүй зүйлс</th>
-                        <td>
-                            <ul>
-                                <li><i class="fa-regular fa-circle-xmark" style="color: #F44336;"></i>PCR шинжилгээний төлбөр</li>
-                            </ul>
-                        </td>
-                    </tr>
-                </table>
-            </section>
-            <aside id="booking-section">
-                <!-- Аяллын бүртгэл хаагдахад үлдсэн хугацаа -->
-                <section class="timer">
-                    <div class="days">
-                        <h2>6</h2>
-                        <span>өдөр</span>
-                    </div>
-                    <div class="hours">
-                        <h2>10</h2>
-                        <span>цаг</span>
-                    </div>
-                    <div class="minutes">
-                        <h2>23</h2>
-                        <span>мин</span>
-                    </div>
-                    <div class="seconds">
-                        <h2>17</h2>
-                        <span>сек</span>
-                    </div>
-                    <!-- <clock-component days="6"></clock-component> -->
-                </section>
-                <!-- Аяллын захиалгын форм бөглөх хэсэг -->
-                <section class="booking-form">
-                    <div class="form-top"></div>
-                    <h3>Энэ аяллыг захиалах</h3>
-                    <form action="">
-                        <input is="order-input" type="text" id="last_name" name="last_name" placeholder="Овог"></input>
-                        <input is="order-input" type="text" id="first_name" name="first_name" placeholder="Нэр"></input>
-                        <input is="order-input" type="email" id="email" name="email" placeholder="Имэйл"></input>
-                        <input is="order-input" type="email" id="email_verify" name="email_verify" placeholder="Имэйл баталгаажуулах"></input>
-                        <input is="order-input" type="tel" id="phone" name="phone" placeholder="Утасны дугаар"></input>
-                        <input is="order-input" type="number" id="num_adults" name="num_adults" placeholder="Том хүний тоо"></order-input>
-                        <input is="order-input" type="number" id="num_children" name="num_children" placeholder="Хүүхдийн тоо"></order-input>
-                        <custom-total></custom-total>
-                        <textarea id="message" name="message" rows="5" cols="50" placeholder="Мессеж"></textarea>
-                        <input type="submit" value="Илгээх">
-                    </form>
-                </section>
-            </aside>
-        </section>
+        <travel-details></travel-details>
         <!-- Төстэй аяллууд санал болгох хэсэг -->
         <section class="travel-cat">
-            <h1>Төстэй аяллууд</h1>
-            <div class="card-slider">
-            <svg class="prev-btn" xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 96 960 960" width="48" fill="#054822"><path d="M561.615 811.153 324.847 574.385l236.768-237.153 41.615 41.614-195.154 195.539L603.23 769.538l-41.615 41.615Z"/></svg>
-              <div class="card-slider-container"> 
-                <div class="card-slider-content"> 
-                  <section class="card">
-                    <img src="../../assets/webp/card-5-great-britain.webp" alt="Их Британи">
-                    <span>3,335,000₮</span>
-                    <h2>Их Британи</h2>
-                    <p>10 өдөр / 9 шөнө</p>
-                  </section>
-                  <section class="card">
-                    <img src="../../assets/webp/card-6-prague.webp" alt="Прага">
-                    <span>750,000₮</span>
-                    <h2>Прага</h2>
-                    <p>7 өдөр / 6 шөнө</p>
-                  </section>
-                  <section class="card">
-                    <img src="../../assets/webp/card-7-california.webp" alt="Калифорни">
-                    <span>3,335,000₮</span>
-                    <h2>Калифорни</h2>
-                    <p>8 өдөр / 7 шөнө</p>
-                  </section>
-                  <section class="card">
-                    <img src="../../assets/webp/card-8-singapore.webp" alt="Сингапур">
-                    <span>600,000₮</span>
-                    <h2>Сингапур</h2>
-                    <p>6 өдөр / 5 шөнө</p>
-                  </section>
-                  <section class="card">
-                    <img src="../../assets/webp/card-6-prague.webp" alt="Прага">
-                    <span>750,000₮</span>
-                    <h2>Прага</h2>
-                    <p>7 өдөр / 6 шөнө</p>
-                  </section>
-                  <section class="card">
-                    <img src="../../assets/webp/card-5-great-britain.webp" alt="Их Британи">
-                    <span>3,335,000₮</span>
-                    <h2>Их Британи</h2>
-                    <p>10 өдөр / 9 шөнө</p>
-                  </section>
-                </div>
-              </div>
-              <svg class="next-btn" xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 96 960 960" width="48" fill="#054822"><path d="m375.385 811.153-41.615-41.615 195.154-195.153L333.77 378.846l41.615-41.614 236.768 237.153-236.768 236.768Z"/></svg>
-            </div>  
-        </section>
+            <h1>Төстэй аяллууд</h1> 
+              <div class="card-slider">
+                <svg class="prev-btn" xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 96 960 960" width="48" fill="#054822"><path d="M561.615 811.153 324.847 574.385l236.768-237.153 41.615 41.614-195.154 195.539L603.23 769.538l-41.615 41.615Z"/></svg>
+                  <div class="card-slider-container"> 
+                    <div id="recommending-travels-container" class="card-slider-content"> 
+      
+                    </div>
+                  </div>
+                <svg class="next-btn" xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 96 960 960" width="48" fill="#054822"><path d="m375.385 811.153-41.615-41.615 195.154-195.153L333.77 378.846l41.615-41.614 236.768 237.153-236.768 236.768Z"/></svg>
+              </div>  
+          </section>
         <!-- mobile version дээр захиалах товч байнга доод хэсэгт гарч ирэх -->
         <button class="book-now">
             <a href="#booking-section">Одоо захиал</a>
