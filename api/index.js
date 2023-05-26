@@ -6,7 +6,7 @@ const Pool = require("pg").Pool;
 
 const pool = new Pool({
   user: "postgres",
-  password: "1234",
+  password: "20020710",
   host: "localhost",
   port: 5432,
   database: "mongol_aylal_db",
@@ -33,6 +33,13 @@ const UIoptions = {
 app.use(express.json());
 app.use('/api-docs', swaggerUI.serve, swaggerUI.setup(openapiSpec, UIoptions));
 
+
+app.use(function (req, res, next) {
+  res.header('Access-Control-Allow-Origin', 'http://127.0.0.1:5500');
+  res.header('Access-Control-Allow-Headers', 'Content-Type');
+  // Other CORS headers if needed
+  next();
+});
 /** 
  * @openapi
  * /travels:
@@ -399,14 +406,16 @@ app.post("/bookings", async (req, res) => {
       phoneNumber,
       mail,
       t_type,
-      t_id,
+      travel_id,
       numberOfTravelers,
       additionalInfo,
       created_at,
       status,
     } = req.body;
 
-    const query = `INSERT INTO bookings (lastName, firstName, phoneNumber, mail, t_type, t_id, numberOfTravelers, additionalInfo, created_at, status)
+    console.log("req.body", req.body)
+
+    const query = `INSERT INTO bookings (lastName, firstName, phoneNumber, mail, t_type, travel_id, numberOfTravelers, additionalInfo, created_at, status)
                    VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)
                    RETURNING id`;
 
@@ -416,7 +425,7 @@ app.post("/bookings", async (req, res) => {
       phoneNumber,
       mail,
       t_type,
-      t_id,
+      travel_id,
       numberOfTravelers,
       additionalInfo,
       created_at,

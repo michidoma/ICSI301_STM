@@ -18,10 +18,10 @@ class Article extends HTMLElement {
 
     fetchAndRenderBlog() {
         // Make a request to fetch the travel details based on the travel ID
-        fetch(`../../db.json`)
+        fetch(`http://localhost:3000/blogs/${this.blogId}`)
           .then(response => response.json())
-          .then(data => {
-            const blog = data.news.find(blog => blog.id === parseInt(this.blogId));
+          .then(blog => {
+            // const blog = data.find(blog => blog.id === parseInt(this.blogId));
             // Render the travel details content
             this.render(blog);
           })
@@ -31,14 +31,18 @@ class Article extends HTMLElement {
       }
       render(news) {
         // Destructure the travel details object
-        const {id, title, image, altText, content, author, date} = news;
+        const {id, title, image, altText, content, author, publishdate} = news;
+
+        const date = new Date(publishdate); 
+        const options = { year: 'numeric', month: 'short', day: 'numeric' };
+        const shortDate = date.toLocaleDateString(undefined, options);
     
         // Render the travel details content
         this.innerHTML = `
         <section class="wrap-article">
 
                 <div class="text-info">
-                    <div><i class="fa-regular fa-calendar"></i><div class="info">${date}</div></div>
+                    <div><i class="fa-regular fa-calendar"></i><div class="info">${shortDate}</div></div>
                     <div><i class="fa-regular fa-pen-to-square"></i><div class="info">${author}</div></div>
                 </div>
 

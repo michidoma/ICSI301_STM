@@ -31,10 +31,10 @@ export default class Reviews {
   }
 
   fetchAndRender(targetElement) {
-    fetch(this._jsonURL)
+    fetch('http://localhost:3000/reviews')
       .then((result) => {
         result.json().then((jsonObject) => {
-          const reviewsArray = jsonObject.reviews;
+          const reviewsArray = jsonObject;
           if (reviewsArray.length > 0) {
             document.getElementById(targetElement).insertAdjacentHTML(
               "afterbegin",

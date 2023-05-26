@@ -29,7 +29,7 @@ function handleRadioChange(event) {
 
   function handleRadioChange2(event) {
     if (event.target.checked) {
-      selectId2 = event.target.id;
+      selectId2 = event.target.t_id;
       isAnySelected2 = true;
     }
   }
@@ -60,19 +60,21 @@ function changeSecondRadioGroup() {
   let secondGroup = document.getElementById("secondGroup");
   secondGroup.innerHTML = "";
 
+  console.log("secondGroupOptions", secondGroupOptions)
   secondGroupOptions.forEach(function (option) {
+    console.log("option", option)
     var label = document.createElement("label");
     var radio = document.createElement("input");
     var checkBoxContainer = document.createElement("div");
     checkBoxContainer.className = "check-box-container";
     radio.type = "radio";
     radio.name = "travel-name";
-    radio.id = option.id;
-    radio.value = option.value;
+    radio.id = option.t_id;
+    radio.value = option.value || "";
     label.className = "container";
-    label.htmlFor = option.id;
+    label.htmlFor = option.t_id;
     // label.appendChild(radio);
-    label.appendChild(document.createTextNode(option.altText));
+    label.appendChild(document.createTextNode(option.alttext));
     checkBoxContainer.appendChild(radio);
     checkBoxContainer.appendChild(label);
     secondGroup.appendChild(checkBoxContainer);
@@ -105,12 +107,12 @@ const inputs = [
 
 const submitButton = document.getElementById("submit");
 
-window.onbeforeunload = function() {
-  for (let i = 0; i < inputs.length; i++) {
-      bookingData[inputs[i].name] = inputs[i].value;
-  }
-  localStorage.setItem("booking", JSON.stringify(bookingData));
-}
+// window.onbeforeunload = function() {
+//   for (let i = 0; i < inputs.length; i++) {
+//       bookingData[inputs[i].name] = inputs[i].value;
+//   }
+//   localStorage.setItem("booking", JSON.stringify(bookingData));
+// }
 
 document.querySelector("form").addEventListener("submit", (event) => {
   event.preventDefault();
@@ -124,8 +126,22 @@ document.querySelector("form").addEventListener("submit", (event) => {
   }
 
   if (isAllFilled && isAnySelected1 && isAnySelected2) {
-    submitButton.disabled = true;
+    // submitButton.disabled = true;
     submitButton.innerHTML = "<div class='loader'></div>";
+    sendData = {
+      lastName: inputs[0].value,
+      firstName: inputs[1].value,
+      phoneNumber: inputs[2].value,
+      mail: inputs[3].value,
+      t_type: selectId1 == "inter-travel" ? "international" : selectId1 == "local-travel" ? "local" : "special",
+      travel_id: selectId2,
+      numberOfTravelers: inputs[4].value,
+      additionalInfo: inputs[5].value,
+      created_at: '2023/05/26',
+      status: "pending"
+    };
+
+    postBooking('http://localhost:3000/bookings', sendData)
 
     setTimeout(() => {
       submitButton.innerHTML = "Илгээгдлээ";
@@ -133,10 +149,10 @@ document.querySelector("form").addEventListener("submit", (event) => {
         "background: #186b4e; color: #ffffff; pointer-events: none;";
 
       bookingData = {};
-      // for (let i = 0; i < inputs.length; i++) {
-      //   bookingData[inputs[i].name] = inputs[i].value;
-      // }
-      // localStorage.setItem("booking", JSON.stringify(bookingData));
+      for (let i = 0; i < inputs.length; i++) {
+        bookingData[inputs[i].name] = inputs[i].value;
+      }
+      localStorage.setItem("booking", JSON.stringify(bookingData));
     }, 3000);
   } else {
     submitButton.innerHTML = "Талбаруудыг зөв, гүйцэт бөглөнө үү";
@@ -146,20 +162,47 @@ document.querySelector("form").addEventListener("submit", (event) => {
   }
 });
 
+async function postBooking(url, data) {
+    console.log("url", url);
+    console.log("JSON.stringify(data)", JSON.stringify(data));
+  const response = await fetch(url, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(data),
+  });
+
+  console.log("response", response)
+
+
+
+
+
+
+
+  
+  const form = document.querySelector("form");
+  location.reload();
+  localStorage.clear();
+  form.reset();
+  // return response.json();
+}
+
 function retrieveData() {
   const urlParams = new URLSearchParams(window.location.search);
   const travelId = urlParams.get("travelid");
 
-  fetch("../../db.json")
+  fetch('http://localhost:3000/travels')
     .then((result) => {
       result.json().then((jsonObject) => {
-        const allData = jsonObject.travels;
-        interData = allData.filter((travel) => travel.type == "international");
-        localData = allData.filter((travel) => travel.type == "local");
-        specialData = allData.filter((travel) => travel.type == "special");
-        const targetData = allData.find((el) => el.id == travelId);
+        const allData = jsonObject;
+        interData = allData.filter((travel) => travel.t_type == "international");
+        localData = allData.filter((travel) => travel.t_type == "local");
+        specialData = allData.filter((travel) => travel.t_type == "special");
+        const targetData = allData.find((el) => el.t_id == travelId);
         if (targetData) {
-          switch (targetData.type) {
+          switch (targetData.t_type) {
             case "international":
               document.getElementById("inter-travel").checked = true;
               selectId1 = "inter-travel";
@@ -173,7 +216,7 @@ function retrieveData() {
               selectId1 = "special-travel";
               break;
           }
-          selectId2 = targetData.id;
+          selectId2 = targetData.t_id;
           isAnySelected1 = true;
           changeSecondRadioGroup();
           initialSecondRadio();

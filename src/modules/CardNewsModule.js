@@ -33,12 +33,12 @@ export default class LatestNews {
   }
 
   fetchAndRender(targetElement) {
-    fetch(this._jsonUrl)
+    fetch('http://localhost:3000/blogs')
       .then((result) => {
         result.json().then((jsonObject) => {
           // json record -> news болгосон
           // Хамгийн сүүлд нийтлэгдсэн _displayCount ширхэг мэдээг шүүж авах
-          const filteredArray = jsonObject.news.sort((a, b) => new Date(b.date) - new Date(a.date))
+          const filteredArray = jsonObject.sort((a, b) => new Date(b.date) - new Date(a.date))
           .filter((_, index) => index < this._displayCount);
 
           if (filteredArray.length > 0) {

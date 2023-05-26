@@ -41,13 +41,14 @@ class Travel extends HTMLElement {
 
   fetchAndRenderTravelDetails() {
     // Make a request to fetch the travel details based on the travel ID
-    fetch(`../../db.json`)
+    fetch(`http://localhost:3000/travels/${this.travelId}`)
       .then((response) => response.json())
-      .then((data) => {
-        const travel = data.travels.find(
-          (travel) => travel.id === parseInt(this.travelId)
-        );
-        const endDate = new Date(travel.startDate).getTime();
+      .then((travel) => {
+        // const travel = data.find(
+        //   (travel) => travel.t_id == parseInt(this.travelId)
+        // );
+        console.log("TRAVEL", travel)
+        const endDate = new Date(travel.startdate).getTime();
         console.log("travel", travel);
         console.log("endDate", endDate);
         countdown(endDate);
@@ -65,15 +66,15 @@ class Travel extends HTMLElement {
       title,
       price,
       duration,
-      totalPassengers,
+      totalpassengers,
       distance,
       description,
       destination,
-      startDate,
+      startdate,
       vehicle,
       included,
-      notIncluded,
-      fromWhere,
+      notincluded,
+      fromwhere,
     } = travelDetails;
 
     // Render the travel details content
@@ -110,7 +111,7 @@ class Travel extends HTMLElement {
                     </div>
                     <div>
                         <p>Хүний тоо</p>
-                        <span>${totalPassengers}</span>
+                        <span>${totalpassengers}</span>
                     </div>
                 </div>
                 <div class="brief-info">
@@ -156,11 +157,11 @@ class Travel extends HTMLElement {
                     </tr>
                     <tr>
                         <th>Хаанаас хөдлөх</th>
-                        <td>${fromWhere}</td>
+                        <td>${fromwhere}</td>
                     </tr>
                     <tr>
                         <th>Хэзээ</th>
-                        <td>${startDate}</td>
+                        <td>${startdate}</td>
                     </tr>
                     <tr>
                         <th>Унаа</th>
@@ -186,7 +187,7 @@ class Travel extends HTMLElement {
                         <th>Аяллын үнэд багтаагүй зүйлс</th>
                         <td>
                             <ul>
-                                ${notIncluded
+                                ${notincluded
                                   .map(
                                     (item) => `
                                 <li>

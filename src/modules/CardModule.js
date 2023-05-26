@@ -1,14 +1,18 @@
 class Travel {
   constructor(travelItem) {
-    this.id = travelItem.id;
+    this.id = travelItem.t_id;
     this.image = travelItem.image;
-    this.altText = travelItem.altText;
+    this.altText = travelItem.alttext;
     this.price = travelItem.price;
     this.title = travelItem.title;
     this.duration = travelItem.duration;
+    // this.destination= travelItem.destination
   }
 
   Render() {
+    // this.destination.map((item ) => {
+    //   <p>${item}</p>
+    // }})
     return `
     <section travelid="${this.id}" class="card">
       <img src="${this.image}" alt="${this.altText}">
@@ -53,7 +57,7 @@ export default class ActiveTravels {
   // }
 
   renderUpcomingTravels(targetElement) {
-    fetch(this._jsonUrl)
+    fetch('http://localhost:3000/travels')
       .then((result) => {
         result.json().then((jsonObject) => {
           // Удахгүй эхлэх аяллуудыг шүүх
@@ -61,8 +65,8 @@ export default class ActiveTravels {
           const futureDate = new Date();
           // 30 хоногийн доторх аяллуудыг удахгүй эхлэх гэж үзсэн
           futureDate.setDate(dateNow.getDate() + 30);
-          const upcomingTravels = jsonObject.travels.filter(travel => {
-            const travelStartDate = new Date(travel.startDate);
+          const upcomingTravels = jsonObject.filter(travel => {
+            const travelStartDate = new Date(travel.startdate);
             return travel.status == "active" && travelStartDate > dateNow && travelStartDate <= futureDate;
           });
           upcomingTravels.sort((a, b) => new Date(a.startDate) - new Date(b.startDate));
@@ -89,12 +93,12 @@ export default class ActiveTravels {
   }
 
   renderSpecialTravels(targetElement) {
-    fetch(this._jsonUrl)
+    fetch('http://localhost:3000/travels')
       .then((result) => {
         result.json().then((jsonObject) => {
           // Захиалгын аяллуудыг шүүх
-          const specialTravels = jsonObject.travels.filter(travel => {
-            return travel.type == "special" && travel.status == "active"});
+          const specialTravels = jsonObject.filter(travel => {
+            return travel.t_type == "special" && travel.status == "active"});
 
           if (specialTravels.length > 0) {
             document.getElementById(targetElement).insertAdjacentHTML(
@@ -118,7 +122,7 @@ export default class ActiveTravels {
   }
 
   renderRecommendingTravels(targetElement) {
-    fetch(this._jsonUrl)
+    fetch('http://localhost:3000/travels')
       .then((result) => {
         result.json().then((jsonObject) => {
           // Захиалгын аяллуудыг шүүх
@@ -126,13 +130,13 @@ export default class ActiveTravels {
             const randomIndexes = [];
           
             while (randomIndexes.length < count) {
-              const randomIndex = Math.floor(Math.random() * jsonObject.travels.length);
+              const randomIndex = Math.floor(Math.random() * jsonObject.length);
               if (!randomIndexes.includes(randomIndex)) {
                 randomIndexes.push(randomIndex);
               }
             }
           
-            const randomTravels = randomIndexes.map(index => jsonObject.travels[index]);
+            const randomTravels = randomIndexes.map(index => jsonObject[index]);
           
             return randomTravels.filter(travel => travel.status === "active");
           };
