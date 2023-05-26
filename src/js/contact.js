@@ -35,6 +35,13 @@ function retrieveData() {
   }
 }
 
+window.onbeforeunload = function() {
+  for (let i = 0; i < inputs.length; i++) {
+      bookingData[inputs[i].name] = inputs[i].value;
+  }
+  localStorage.setItem("booking", JSON.stringify(bookingData));
+}
+
 submitButton.addEventListener("click", (event) => {
   event.preventDefault();
 
@@ -56,10 +63,10 @@ submitButton.addEventListener("click", (event) => {
         "background: #186b4e; color: #ffffff; pointer-events: none;";
 
       contactData = {};
-      for (let i = 0; i < inputs.length; i++) {
-        contactData[inputs[i].name] = inputs[i].value;
-      }
-      localStorage.setItem("contact", JSON.stringify(contactData));
+      // for (let i = 0; i < inputs.length; i++) {
+      //   contactData[inputs[i].name] = inputs[i].value;
+      // }
+      // localStorage.setItem("contact", JSON.stringify(contactData));
     }, 3000);
   } else {
     submitButton.innerHTML = "Талбаруудыг зөв, гүйцэт бөглөнө үү";

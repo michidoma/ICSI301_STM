@@ -7,18 +7,13 @@ class Information {
     }
   
     Render() {
-      return ` 
-      <information-box
-        mytitle="${this.mytitle}"
-        data="${this.data}"
-        logo="${this.image}"
-      ></information-box>
+            return ` 
+      <information-box>
+        <img slot="image" src="${this.image}" alt="statistics" style="width: 50px; height: 50px;"/>
+        <p slot="title">${this.mytitle}</p>
+        <h1 slot="data">${this.data}</h1>
+     </information-box>
       `;
-      // <information-box
-      //   title="${this.title}"
-      //   data="${this.data}"
-      //   logo="${this.image}"
-      // ></information-box>
     }
 }
   

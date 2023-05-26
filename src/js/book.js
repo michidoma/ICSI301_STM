@@ -105,6 +105,13 @@ const inputs = [
 
 const submitButton = document.getElementById("submit");
 
+window.onbeforeunload = function() {
+  for (let i = 0; i < inputs.length; i++) {
+      bookingData[inputs[i].name] = inputs[i].value;
+  }
+  localStorage.setItem("booking", JSON.stringify(bookingData));
+}
+
 document.querySelector("form").addEventListener("submit", (event) => {
   event.preventDefault();
 
@@ -126,10 +133,10 @@ document.querySelector("form").addEventListener("submit", (event) => {
         "background: #186b4e; color: #ffffff; pointer-events: none;";
 
       bookingData = {};
-      for (let i = 0; i < inputs.length; i++) {
-        bookingData[inputs[i].name] = inputs[i].value;
-      }
-      localStorage.setItem("booking", JSON.stringify(bookingData));
+      // for (let i = 0; i < inputs.length; i++) {
+      //   bookingData[inputs[i].name] = inputs[i].value;
+      // }
+      // localStorage.setItem("booking", JSON.stringify(bookingData));
     }, 3000);
   } else {
     submitButton.innerHTML = "Талбаруудыг зөв, гүйцэт бөглөнө үү";

@@ -41,8 +41,12 @@ class InformationBox extends HTMLElement {
       width: 50px;
       height: 50px;
     }
-    p, h1 {
-      margin: 5px 0px;
+    .box .logo {
+      width: 50px;
+      height: 50px;
+    }
+    .box ::slotted([slot="title"]), .box ::slotted([slot="data"]) {
+      margin: 5px 0px !important;
     }
     @media only screen and (max-width: 520px) {
       .box {
@@ -53,10 +57,10 @@ class InformationBox extends HTMLElement {
     }
     </style>
     <div class="box">
-      <img src="${this.logo}" alt="statistics"/>
+      <slot name="image"></slot>
       <div class="information">
-        <p>${this.mytitle}</p>
-        <h1>${this.data}</h1>
+        <slot name="title"></slot>
+        <slot name="data"></slot>
       </div>
     </div>
   `;
