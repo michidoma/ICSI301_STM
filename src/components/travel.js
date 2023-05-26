@@ -1,42 +1,91 @@
-class Travel extends HTMLElement {
+function countdown(endDate) {
+  let countdown = setInterval(function () {
+    // Get current date and time
+    var now = new Date().getTime();
 
-    constructor() {
-        super();
+    // Calculate the remaining time
+    var remainingTime = endDate - now;
 
-        // this.attachShadow({mode: "open"});
+    console.log("now", endDate);
 
-        /*this.render();*/
+    // Calculate days, hours, minutes, and seconds
+    var days = Math.floor(remainingTime / (1000 * 60 * 60 * 24));
+    var hours = Math.floor(
+      (remainingTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+    );
+    var minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
 
-        const urlParams = new URLSearchParams(window.location.search);
-        this.travelId = urlParams.get('travelid');
-        console.log(this.travelId);
+    // Display the countdown in the HTML elements
+    $("#days").text(days);
+    $("#hours").text(hours);
+    $("#minutes").text(minutes);
+    $("#seconds").text(seconds);
 
-        // Fetch and render the travel details based on the travel ID
-        
-        this.fetchAndRenderTravelDetails();
+    // If the countdown is finished, clear the interval
+    if (remainingTime <= 0) {
+      clearInterval(countdown);
+      $("#countdown").text("Countdown has ended");
     }
+  }, 1000);
+}
 
-      fetchAndRenderTravelDetails() {
-        // Make a request to fetch the travel details based on the travel ID
-        fetch(`../../db.json`)
-          .then(response => response.json())
-          .then(data => {
-            const travel = data.travels.find(travel => travel.id === parseInt(this.travelId));
-            console.log("travel");
-            // Render the travel details content
-            this.render(travel);
-          })
-          .catch(error => {
-            console.error('Error fetching travel details:', error);
-          });
-      }
+class Travel extends HTMLElement {
+  constructor() {
+    super();
 
-      render(travelDetails) {
-        // Destructure the travel details object
-        const {title, price, duration, totalPassengers, distance, description, destination, startDate, vehicle, included, notIncluded, fromWhere} = travelDetails;
-    
+    // this.attachShadow({mode: "open"});
+
+    /*this.render();*/
+
+    const urlParams = new URLSearchParams(window.location.search);
+    this.travelId = urlParams.get("travelid");
+    console.log(this.travelId);
+
+    // Fetch and render the travel details based on the travel ID
+
+    this.fetchAndRenderTravelDetails();
+  }
+
+  fetchAndRenderTravelDetails() {
+    // Make a request to fetch the travel details based on the travel ID
+    fetch(`../../db.json`)
+      .then((response) => response.json())
+      .then((data) => {
+        const travel = data.travels.find(
+          (travel) => travel.id === parseInt(this.travelId)
+        );
+        const endDate = new Date(travel.startDate).getTime();
+        console.log("travel", travel);
+        console.log("endDate", endDate);
+        countdown(endDate);
         // Render the travel details content
-        this.innerHTML = `
+        this.render(travel);
+      })
+      .catch((error) => {
+        console.error("Error fetching travel details:", error);
+      });
+  }
+
+  render(travelDetails) {
+    // Destructure the travel details object
+    const {
+      title,
+      price,
+      duration,
+      totalPassengers,
+      distance,
+      description,
+      destination,
+      startDate,
+      vehicle,
+      included,
+      notIncluded,
+      fromWhere,
+    } = travelDetails;
+
+    // Render the travel details content
+    this.innerHTML = `
         <!-- Page banner -->
         <section class="banner">
             <img src="../../assets/webp/header-tengeriin-haalga.webp" alt="Тэнгэрийн хаалга">
@@ -110,7 +159,7 @@ class Travel extends HTMLElement {
                     <tr class="first-row">
                         <th>Чиглэл</th>
                         <td>
-                        ${destination.map(item => `${item}`).join(" - ")}
+                        ${destination.map((item) => `${item}`).join(" - ")}
                         </td>
                     </tr>
                     <tr>
@@ -129,11 +178,15 @@ class Travel extends HTMLElement {
                         <th>Аяллын үнэд багтсан зүйлс</th>
                         <td>
                             <ul>
-                                ${included.map(item => `
+                                ${included
+                                  .map(
+                                    (item) => `
                                 <li>
                                 <i class="fa-regular fa-circle-check" style="color: #16c016;"></i>${item}
                                 </li>  
-                                `).join("")}
+                                `
+                                  )
+                                  .join("")}
                             </ul>
                         </td>
                     </tr>
@@ -141,11 +194,15 @@ class Travel extends HTMLElement {
                         <th>Аяллын үнэд багтаагүй зүйлс</th>
                         <td>
                             <ul>
-                                ${notIncluded.map(item => `
+                                ${notIncluded
+                                  .map(
+                                    (item) => `
                                 <li>
                                 <i class="fa-regular fa-circle-xmark" style="color: #F44336;"></i>${item}
                                 </li>  
-                                `).join("")}
+                                `
+                                  )
+                                  .join("")}
                             </ul>
                         </td>
                     </tr>
@@ -157,19 +214,19 @@ class Travel extends HTMLElement {
                 <!-- Аяллын бүртгэл хаагдахад үлдсэн хугацаа -->
                 <section class="timer">
                     <div class="days">
-                        <h2>6</h2>
+                        <h2 id="days"></h2>
                         <span>өдөр</span>
                     </div>
                     <div class="hours">
-                        <h2>10</h2>
+                        <h2 id="hours"></h2>
                         <span>цаг</span>
                     </div>
                     <div class="minutes">
-                        <h2>23</h2>
+                        <h2 id="minutes"></h2>
                         <span>мин</span>
                     </div>
                     <div class="seconds">
-                        <h2>17</h2>
+                        <h2 id="seconds"></h2>
                         <span>сек</span>
                     </div>
                     <!-- <clock-component days="6"></clock-component> -->
@@ -192,7 +249,7 @@ class Travel extends HTMLElement {
             </aside>
         </section>
         `;
-    }
+  }
 }
 
 customElements.define("travel-details", Travel);
