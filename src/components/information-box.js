@@ -1,9 +1,5 @@
 class InformationBox extends HTMLElement {
 
-  title = '';
-  logo = '';
-  data = '';
-
   constructor() {
     super();
     this.attachShadow({ mode: "open" });
@@ -11,19 +7,14 @@ class InformationBox extends HTMLElement {
     this.render();
   }
 
-  connectedCallBack() {
-    console.log("mounted");
-  }
-
   static get observedAttributes() {
-    return ["title", "logo", "data"];
+    return ["mytitle", "logo", "data"];
   }
 
   attributeChangedCallback(name, oldValue, newValue) {
-    console.log("new ", name, " ", newValue)
     switch (name) {
-      case 'title':
-        this.title = newValue || '';
+      case 'mytitle':
+        this.mytitle = newValue || '';
         break;
       case 'logo':
         this.logo = newValue || '';
@@ -64,7 +55,7 @@ class InformationBox extends HTMLElement {
     <div class="box">
       <img src="${this.logo}" alt="statistics"/>
       <div class="information">
-        <p>${this.title}</p>
+        <p>${this.mytitle}</p>
         <h1>${this.data}</h1>
       </div>
     </div>

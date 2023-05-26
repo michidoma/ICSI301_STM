@@ -19,17 +19,6 @@ class Travel {
     `;
   }
 
-  RenderRecommending() {
-    return `
-    <section travelid="${this.id}" class="card">
-      <img src="../../${this.image}" alt="${this.altText}">
-      <span>${this.price}</span>
-      <h2>${this.title}</h2>
-      <p>${this.duration}</p>
-    </section>
-    `;
-  }
-
   // Bind(eventType, element, property) {
   //   document.getElementById(`${element}_${this.id}`).addEventListener(eventType, (event) => {
   //     this[property] = event.target.innerHTML;
@@ -127,6 +116,7 @@ export default class ActiveTravels {
         console.log(err);
       });
   }
+
   renderRecommendingTravels(targetElement) {
     fetch(this._jsonUrl)
       .then((result) => {
@@ -154,9 +144,10 @@ export default class ActiveTravels {
               "afterbegin",
               randomTravels
                 .map((travelItem) => {
+                  travelItem.image = '../../' + travelItem.image;
                   const _travelItem = new Travel(travelItem);
                   this._specialTravelsList.push(_travelItem);
-                  return _travelItem.RenderRecommending();
+                  return _travelItem.Render();
                 })
                 .reduce((prevVal, curVal) => prevVal + curVal, "")
             );
