@@ -444,8 +444,7 @@ section.blogs {
 	justify-content: space-between;
 	padding: 0 5rem 1.4rem 5rem;
 }
-.box {
-    /* width: 100%; */
+/* .box {
     width: fit-content;
     display: flex;
     align-items: center;
@@ -465,7 +464,7 @@ section.blogs {
       justify-content: center;
       text-align: center;
     }
-}
+} */
 
 /* Footer */
 footer {
@@ -602,7 +601,7 @@ footer p {
 	.blog-info h2 {
 		font-size: var(--size-root);
 	}
-	.information-box {
+	information-box {
 		display: flex;
 		justify-content: center;
 		width: 50%;

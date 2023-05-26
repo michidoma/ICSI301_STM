@@ -1,22 +1,18 @@
 class Information {
     constructor(info) {
       this.id = info.id;
-      this.title = info.title;
+      this.mytitle = info.title;
       this.data = info.data;
       this.image = info.image;
     }
   
     Render() {
       return ` 
-      <div class="information-box">
-        <section class="box">
-          <img src="${this.image}" alt="statistics"/>
-          <div class="info">
-            <p>${this.title}</p>
-            <h1>${this.data}</h1>
-          </div>
-        </section>
-      </div>
+      <information-box
+        mytitle="${this.mytitle}"
+        data="${this.data}"
+        logo="${this.image}"
+      ></information-box>
       `;
       // <information-box
       //   title="${this.title}"
