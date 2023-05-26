@@ -70,12 +70,12 @@ class Header extends HTMLElement {
             <li>
             <a aria-label="navigate to travels list page" class=${
               this.current == "travels" && "active"
-            } href="${this.route}/html/travel-details.html">Аяллууд</a>
+            } href="${this.route}/html/travel-details.html?travelid=1">Аяллууд</a>
             </li>
             <li>
             <a aria-label="navigate to blog page" class=${
               this.current == "blog" && "active"
-            } href="${this.route}/html/blog.html">Мэдээлэл</a>
+            } href="${this.route}/html/blog.html?blogid=1">Мэдээлэл</a>
             </li>
             <li>
             <a aria-label="navigate to contact page" class=${
