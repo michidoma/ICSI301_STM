@@ -63,7 +63,7 @@ export default class ActiveTravels {
           futureDate.setDate(dateNow.getDate() + 30);
           const upcomingTravels = jsonObject.travels.filter(travel => {
             const travelStartDate = new Date(travel.startDate);
-            return travel.status == "active" && travel.type != "special" && travelStartDate > dateNow && travelStartDate <= futureDate;
+            return travel.status == "active" && travelStartDate > dateNow && travelStartDate <= futureDate;
           });
           upcomingTravels.sort((a, b) => new Date(a.startDate) - new Date(b.startDate));
 

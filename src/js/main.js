@@ -7,17 +7,26 @@ setTimeout(() => {
   const cards2 = document.querySelectorAll(".travel-cat-2 .card");
   const cardCount2 = cards2.length;
 
-  const cardSliderContainerWidth = document.querySelector(".card-slider-container").offsetWidth;
+  const cardSliderContainerWidth = document.querySelector(
+    ".card-slider-container"
+  ).offsetWidth;
 
   const cardWidth = cards1[0].offsetWidth;
 
-  const cardMarginRight = parseFloat(window.getComputedStyle(cards1[0]).marginRight);
-  const cardMarginLeft = parseFloat(window.getComputedStyle(cards1[0]).marginLeft);
+  const cardMarginRight = parseFloat(
+    window.getComputedStyle(cards1[0]).marginRight
+  );
+  const cardMarginLeft = parseFloat(
+    window.getComputedStyle(cards1[0]).marginLeft
+  );
   const cardMargin = cardMarginLeft + cardMarginRight;
 
-  const displayedCount = roundToNearest(cardSliderContainerWidth / (cardWidth + cardMargin));
+  const displayedCount = roundToNearest(
+    cardSliderContainerWidth / (cardWidth + cardMargin)
+  );
 
-  let offset = 0, offset2 = 0;
+  let offset = 0,
+    offset2 = 0;
   const maxX1 = -((cardWidth + cardMargin) * (cardCount1 - displayedCount));
   const maxX2 = -((cardWidth + cardMargin) * (cardCount2 - displayedCount));
 
@@ -74,21 +83,31 @@ setTimeout(() => {
     }
   });
 
-  document.querySelectorAll('.card').forEach(function(customCard) {
-    customCard.addEventListener('click', function(event) {
-      const productId = event.currentTarget.getAttribute('travelid');
-      window.location.href = 'src/html/travel-details.html?travelid=' + encodeURIComponent(productId);
-    })
+  document.querySelectorAll(".card").forEach(function (customCard) {
+    customCard.addEventListener("click", function (event) {
+      const productId = event.currentTarget.getAttribute("travelid");
+      window.location.href =
+        "src/html/travel-details.html?travelid=" +
+        encodeURIComponent(productId);
+    });
+  });
+
+  document.querySelectorAll(".book-button").forEach(function (customButton) {
+    customButton.addEventListener("click", function (event) {
+      const productId = event.currentTarget.getAttribute("id");
+      window.location.href =
+        "src/html/book.html?travelid=" + encodeURIComponent(productId);
+    });
   });
 
   // Side menu
-  let menu = document.querySelector('#menu-icon');
-  let navbar = document.querySelector('.menu');
+  let menu = document.querySelector("#menu-icon");
+  let navbar = document.querySelector(".menu");
 
   menu.onclick = () => {
-      menu.classList.toggle('bx-x');
-      navbar.classList.toggle('open');
-  }
+    menu.classList.toggle("bx-x");
+    navbar.classList.toggle("open");
+  };
 }, 1000);
 
 $(window).scroll(function () {
@@ -106,12 +125,12 @@ showSlides(slideIndex);
 
 // Next/previous controls
 function plusSlides(n) {
-  showSlides(slideIndex += n);
+  showSlides((slideIndex += n));
 }
 
 // Thumbnail image controls
 function currentSlide(n) {
-  showSlides(slideIndex = n);
+  showSlides((slideIndex = n));
 }
 
 // Autoplay animation
@@ -120,13 +139,13 @@ let slideInterval = setInterval(() => {
 }, 5000);
 
 // Pause autoplay animation when user hovers over the slideshow
-let slideshowContainer = document.querySelector('.slideshow-container');
-slideshowContainer.addEventListener('mouseover', () => {
+let slideshowContainer = document.querySelector(".slideshow-container");
+slideshowContainer.addEventListener("mouseover", () => {
   clearInterval(slideInterval);
 });
 
 // Resume autoplay animation when user moves mouse away from the slideshow
-slideshowContainer.addEventListener('mouseout', () => {
+slideshowContainer.addEventListener("mouseout", () => {
   slideInterval = setInterval(() => {
     plusSlides(1);
   }, 3000);
@@ -136,16 +155,20 @@ function showSlides(n) {
   let i;
   let slides = document.getElementsByClassName("mySlides");
   let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
+  if (n > slides.length) {
+    slideIndex = 1;
+  }
+  if (n < 1) {
+    slideIndex = slides.length;
+  }
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
   for (i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" active-slide", "");
   }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active-slide";
+  slides[slideIndex - 1].style.display = "block";
+  dots[slideIndex - 1].className += " active-slide";
   // slideIndex++;
   // console.log('i, n, slideIndex :>> ', i, n, slideIndex);
   // setInterval(showSlides(slideIndex), 2000);
@@ -153,8 +176,8 @@ function showSlides(n) {
 
 let loader = document.getElementById("loader");
 
-window.addEventListener("load", function() {
-  loader.style.display = "none"
+window.addEventListener("load", function () {
+  loader.style.display = "none";
 });
 
 function roundToNearest(num) {

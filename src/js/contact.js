@@ -1,20 +1,19 @@
 setTimeout(() => {
-    let menu = document.querySelector('#menu-icon');
-    let navbar = document.querySelector('.menu');
-  
-    console.log("ICON ", menu);
-    menu.onclick = () => {
-        menu.classList.toggle('bx-x');
-        navbar.classList.toggle('open');
-    }
-  }, 100);
-  
+  let menu = document.querySelector("#menu-icon");
+  let navbar = document.querySelector(".menu");
+
+  menu.onclick = () => {
+    menu.classList.toggle("bx-x");
+    navbar.classList.toggle("open");
+  };
+}, 100);
+
 $(window).scroll(function () {
-    if ($(window).scrollTop()) {
-      $("nav").addClass("green");
-    } else {
-      $("nav").removeClass("green");
-    }
+  if ($(window).scrollTop()) {
+    $("nav").addClass("green");
+  } else {
+    $("nav").removeClass("green");
+  }
 });
 
 // button animation
@@ -24,8 +23,17 @@ const inputs = [
   document.getElementById("name"),
   document.getElementById("phone"),
   document.getElementById("email"),
-  document.getElementById("message")
+  document.getElementById("message"),
 ];
+
+function retrieveData() {
+  const retrievedData = JSON.parse(localStorage.getItem("contact"));
+  const attributeNames = Object.keys(retrievedData);
+  for (let i = 0; i < attributeNames.length; i++) {
+    document.getElementById(`${attributeNames[i]}`).value =
+      retrievedData[attributeNames[i]];
+  }
+}
 
 submitButton.addEventListener("click", (event) => {
   event.preventDefault();
@@ -44,11 +52,14 @@ submitButton.addEventListener("click", (event) => {
 
     setTimeout(() => {
       submitButton.innerHTML = "Илгээгдлээ";
-      submitButton.style = "background: #186b4e; color: #ffffff; pointer-events: none;";
+      submitButton.style =
+        "background: #186b4e; color: #ffffff; pointer-events: none;";
 
-      for (const i = 0; i < inputs.length; i++) {
-        localStorage.setItem(inputs[i].name, inputs[i].value);
+      contactData = {};
+      for (let i = 0; i < inputs.length; i++) {
+        contactData[inputs[i].name] = inputs[i].value;
       }
+      localStorage.setItem("contact", JSON.stringify(contactData));
     }, 3000);
   } else {
     submitButton.innerHTML = "Талбаруудыг зөв, гүйцэт бөглөнө үү";
@@ -57,7 +68,7 @@ submitButton.addEventListener("click", (event) => {
     }, 3000);
   }
 });
-
+window.addEventListener("load", retrieveData);
 
 // form.addEventListener('submit', (event) => {
 //   event.preventDefault();
