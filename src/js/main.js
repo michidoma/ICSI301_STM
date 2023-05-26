@@ -1,63 +1,95 @@
 setTimeout(() => {
-  const cardSlider = document.querySelectorAll(".card-slider-container");
-  console.log(cardSlider);
-  const cardSliderWidth = cardSlider[0].offsetWidth;
-  const cards = document.querySelector("custom-card");
-  const cardWidth = cards.offsetWidth;
-  const cardMarginRight = parseInt(
-    window.getComputedStyle(document.querySelector("custom-card")).marginRight
-  );
-  const cardMarginLeft = parseInt(
-    window.getComputedStyle(document.querySelector("custom-card")).marginLeft
-  );
-  const cardCount = 6;
-  let offset = 0,
-    offset2 = 0;
-  const maxX = -((cardWidth + cardMarginRight) * (cardCount - 4));
-  console.log("HMM ", cardWidth);
+  const cardSliderContent = document.querySelectorAll(".card-slider-content");
 
-  document.querySelector(".prev-btn").addEventListener("click", () => {
-    if (offset !== 0) {
-      offset += cardWidth + cardMarginRight;
-      cardSlider[0].style.transform = `translateX(${offset}px)`;
+  const cards1 = document.querySelectorAll(".travel-cat-1 .card");
+  const cardCount1 = cards1.length;
+
+  const cards2 = document.querySelectorAll(".travel-cat-2 .card");
+  const cardCount2 = cards2.length;
+
+  const cardSliderContainerWidth = document.querySelector(".card-slider-container").offsetWidth;
+
+  const cardWidth = cards1[0].offsetWidth;
+
+  const cardMarginRight = parseFloat(window.getComputedStyle(cards1[0]).marginRight);
+  const cardMarginLeft = parseFloat(window.getComputedStyle(cards1[0]).marginLeft);
+  const cardMargin = cardMarginLeft + cardMarginRight;
+
+  const displayedCount = roundToNearest(cardSliderContainerWidth / (cardWidth + cardMargin));
+
+  let offset = 0, offset2 = 0;
+  const maxX1 = -((cardWidth + cardMargin) * (cardCount1 - displayedCount));
+  const maxX2 = -((cardWidth + cardMargin) * (cardCount2 - displayedCount));
+
+  document.querySelector(".prev-btn-1").addEventListener("click", () => {
+    if (offset < 0) {
+      offset += cardWidth + cardMargin;
+      cardSliderContent[0].style.transform = `translateX(${offset}px)`;
     }
   });
 
-  document.querySelector(".next-btn").addEventListener("click", () => {
-    if (offset > maxX) {
-      offset -= cardWidth + cardMarginRight;
-      cardSlider[0].style.transform = `translateX(${offset}px)`;
+  document.querySelector(".next-btn-1").addEventListener("click", () => {
+    if (offset > maxX1) {
+      offset -= cardWidth + cardMargin;
+      cardSliderContent[0].style.transform = `translateX(${offset}px)`;
     }
   });
 
   document.querySelector(".prev-btn-2").addEventListener("click", () => {
-    if (offset2 !== 0) {
-      offset2 += cardWidth + cardMarginRight;
-      cardSlider[1].style.transform = `translateX(${offset2}px)`;
+    if (offset2 < 0) {
+      offset2 += cardWidth + cardMargin;
+      cardSliderContent[1].style.transform = `translateX(${offset2}px)`;
     }
   });
 
   document.querySelector(".next-btn-2").addEventListener("click", () => {
-    if (offset2 > maxX) {
-      offset2 -= cardWidth + cardMarginRight;
-      cardSlider[1].style.transform = `translateX(${offset2}px)`;
+    if (offset2 > maxX2) {
+      offset2 -= cardWidth + cardMargin;
+      cardSliderContent[1].style.transform = `translateX(${offset2}px)`;
     }
   });
+
+  const feedbackSliderContent = document.querySelectorAll(".c_track");
+  const feedbacks = document.querySelectorAll(".carousel-feedback .c_slide");
+  const feedbackCount = feedbacks.length;
+
+  // const feedbackContainerWidth = document.querySelector(".c_track-container").offsetWidth;
+
+  const feedbackWidth = feedbacks[0].offsetWidth;
+
+  let offset3 = 0;
+  const maxX3 = -(feedbackWidth * (feedbackCount - 1));
+
+  document.querySelector(".prev-btn-3").addEventListener("click", () => {
+    if (offset3 < 0) {
+      offset3 += feedbackWidth;
+      feedbackSliderContent[0].style.transform = `translateX(${offset3}px)`;
+    }
+  });
+
+  document.querySelector(".next-btn-3").addEventListener("click", () => {
+    if (offset3 > maxX3) {
+      offset3 -= feedbackWidth;
+      feedbackSliderContent[0].style.transform = `translateX(${offset3}px)`;
+    }
+  });
+
+  document.querySelectorAll('.card').forEach(function(customCard) {
+    customCard.addEventListener('click', function(event) {
+      const productId = event.currentTarget.getAttribute('travelid');
+      window.location.href = 'src/html/travel-details.html?travelid=' + encodeURIComponent(productId);
+    })
+  });
+
+  // Side menu
   let menu = document.querySelector('#menu-icon');
   let navbar = document.querySelector('.menu');
 
-  console.log("ICON ", menu);
   menu.onclick = () => {
       menu.classList.toggle('bx-x');
       navbar.classList.toggle('open');
   }
-
-  document.querySelectorAll('custom-card').forEach(function(customCard) {
-    customCard.addEventListener('click', function() {
-      window.location.href = 'src/html/travel-details.html';
-    })
-  })
-}, 100);
+}, 1000);
 
 $(window).scroll(function () {
   if ($(window).scrollTop()) {
@@ -82,6 +114,24 @@ function currentSlide(n) {
   showSlides(slideIndex = n);
 }
 
+// Autoplay animation
+let slideInterval = setInterval(() => {
+  plusSlides(1);
+}, 5000);
+
+// Pause autoplay animation when user hovers over the slideshow
+let slideshowContainer = document.querySelector('.slideshow-container');
+slideshowContainer.addEventListener('mouseover', () => {
+  clearInterval(slideInterval);
+});
+
+// Resume autoplay animation when user moves mouse away from the slideshow
+slideshowContainer.addEventListener('mouseout', () => {
+  slideInterval = setInterval(() => {
+    plusSlides(1);
+  }, 3000);
+});
+
 function showSlides(n) {
   let i;
   let slides = document.getElementsByClassName("mySlides");
@@ -96,4 +146,21 @@ function showSlides(n) {
   }
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active-slide";
+  // slideIndex++;
+  // console.log('i, n, slideIndex :>> ', i, n, slideIndex);
+  // setInterval(showSlides(slideIndex), 2000);
+}
+
+let loader = document.getElementById("loader");
+
+window.addEventListener("load", function() {
+  loader.style.display = "none"
+});
+
+function roundToNearest(num) {
+  if (num - Math.floor(num) >= 0.5) {
+    return Math.ceil(num);
+  } else {
+    return Math.floor(num);
+  }
 }

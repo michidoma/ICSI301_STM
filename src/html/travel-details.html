@@ -24,296 +24,36 @@
     <link rel="stylesheet" href="../css/travel-details.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script defer src="https://code.jquery.com/jquery-3.6.4.js"></script>
-    <script defer src="../components/card.js"></script>
+    <!-- <script defer src="../components/card.js"></script> -->
     <script defer src="../js/script.js"></script>
-    <script src="../components/clock-component.js"></script>
+    <script defer src="../components/custom-header.js"></script>
+    <script defer src="../components/travel.js"></script>
+    <script type="module" src="../js/recommendModule.js"></script>
+    <!-- <script src="../components/clock-component.js"></script> -->
 </head>
 <body>
-    <header>
-        <section class="top-bar">
-            <div class="right">
-                <div>USD <img src="../../assets/icons/usd.webp" width="16" height="16" alt="US currency"/> 3,527.29</div>
-                <div>Улаанбаатар -13.9°C</div>
-                <div>
-                    <svg width="1rem" height="1rem" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M21.5 18L14.8571 12M9.14286 12L2.50003 18M2 7L10.1649 12.7154C10.8261 13.1783 11.1567 13.4097 11.5163 13.4993C11.8339 13.5785 12.1661 13.5785 12.4837 13.4993C12.8433 13.4097 13.1739 13.1783 13.8351 12.7154L22 7M6.8 20H17.2C18.8802 20 19.7202 20 20.362 19.673C20.9265 19.3854 21.3854 18.9265 21.673 18.362C22 17.7202 22 16.8802 22 15.2V8.8C22 7.11984 22 6.27976 21.673 5.63803C21.3854 5.07354 20.9265 4.6146 20.362 4.32698C19.7202 4 18.8802 4 17.2 4H6.8C5.11984 4 4.27976 4 3.63803 4.32698C3.07354 4.6146 2.6146 5.07354 2.32698 5.63803C2 6.27976 2 7.11984 2 8.8V15.2C2 16.8802 2 17.7202 2.32698 18.362C2.6146 18.9265 3.07354 19.3854 3.63803 19.673C4.27976 20 5.11984 20 6.8 20Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                    <a href="mailto:info@mongolayalal.mn" rel="nofollow">info@mongolayalal.mn</a>
-                </div>
-                <div>
-                    <svg width="1rem" height="1rem" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M14.5 6.5C15.2372 6.64382 15.9689 6.96892 16.5 7.5C17.0311 8.03108 17.3562 8.76284 17.5 9.5M15 3C16.5315 3.17014 17.9097 3.91107 19 5C20.0903 6.08893 20.8279 7.46869 21 9M20.9995 16.4767V19.1864C21.0037 20.2223 20.0723 21.0873 19.0265 20.9929C10.0001 21 3.00006 13.935 3.00713 4.96919C2.91294 3.92895 3.77364 3.00106 4.80817 3.00009H7.52331C7.96253 2.99577 8.38835 3.151 8.72138 3.43684C9.66819 4.24949 10.2772 7.00777 10.0429 8.10428C9.85994 8.96036 8.99696 9.55929 8.41026 10.1448C9.69864 12.4062 11.5747 14.2785 13.8405 15.5644C14.4272 14.9788 15.0274 14.1176 15.8851 13.935C16.9855 13.7008 19.7615 14.3106 20.5709 15.264C20.858 15.6021 21.0105 16.0337 20.9995 16.4767Z" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                    <a href="tel:(+976) 7570 - 7779" rel="nofollow">(+976) 7570 - 7779</a>
-                </div>
-            </div>
-            <div class="left">
-                <a aria-label="Facebook" target="_blank" rel="noopener" href="https://www.facebook.com/mongoliantravel/">
-                    <i class="fa-brands fa-facebook-f"></i> 
-                </a>
-                <a aria-label="Instagram" target="_blank" rel="noopener" href="https://www.instagram.com/mongolayalal/">
-                    <i class="fa-brands fa-instagram"></i> 
-                </a>
-                <a aria-label="Youtube" target="_blank" rel="noopener" href="https://www.youtube.com/@mongoliantravelcompany">
-                    <i class="fa-brands fa-youtube"></i> 
-                </a>
-                <a aria-label="Twitter" target="_blank" rel="noopener" href="https://twitter.com/mongolayalal">
-                    <i class="fa-brands fa-twitter"></i> 
-                </a>
-            </div>
-        </section>
-        <nav class="wrapper">
-            <a href="../../index.html" class="logo">
-              <img src="../../assets/img/logo.png" width="193" height="56" alt="logo-mongol-ayalal"/>
-            </a>
-            <ul class="menu">
-              <li>
-                <a aria-label="navigate to home page" href="../../index.html">Нүүр</a>
-              </li>
-              <li>
-                <a aria-label="navigate to travels list page" class="active" href="#">Аяллууд</a>
-              </li>
-              <li>
-                <a aria-label="navigate to blog page" href="blog.html">Мэдээлэл</a>
-              </li>
-              <li>
-                <a aria-label="navigate to contact page" href="contact.html">Холбоо барих</a>
-              </li>
-              <li id="book-button">
-                <a aria-label="navigate to booking page" href="book.html">Захиалах</a>
-              </li>
-              <li class="menu-bottom">
-                <div>
-                    <svg width="16px" height="16px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M21.5 18L14.8571 12M9.14286 12L2.50003 18M2 7L10.1649 12.7154C10.8261 13.1783 11.1567 13.4097 11.5163 13.4993C11.8339 13.5785 12.1661 13.5785 12.4837 13.4993C12.8433 13.4097 13.1739 13.1783 13.8351 12.7154L22 7M6.8 20H17.2C18.8802 20 19.7202 20 20.362 19.673C20.9265 19.3854 21.3854 18.9265 21.673 18.362C22 17.7202 22 16.8802 22 15.2V8.8C22 7.11984 22 6.27976 21.673 5.63803C21.3854 5.07354 20.9265 4.6146 20.362 4.32698C19.7202 4 18.8802 4 17.2 4H6.8C5.11984 4 4.27976 4 3.63803 4.32698C3.07354 4.6146 2.6146 5.07354 2.32698 5.63803C2 6.27976 2 7.11984 2 8.8V15.2C2 16.8802 2 17.7202 2.32698 18.362C2.6146 18.9265 3.07354 19.3854 3.63803 19.673C4.27976 20 5.11984 20 6.8 20Z" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                    <a href="mailto:info@mongolayalal.mn" rel="nofollow">info@mongolayalal.mn</a>
-                </div>
-                <div>
-                    <svg width="16px" height="16px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M14.5 6.5C15.2372 6.64382 15.9689 6.96892 16.5 7.5C17.0311 8.03108 17.3562 8.76284 17.5 9.5M15 3C16.5315 3.17014 17.9097 3.91107 19 5C20.0903 6.08893 20.8279 7.46869 21 9M20.9995 16.4767V19.1864C21.0037 20.2223 20.0723 21.0873 19.0265 20.9929C10.0001 21 3.00006 13.935 3.00713 4.96919C2.91294 3.92895 3.77364 3.00106 4.80817 3.00009H7.52331C7.96253 2.99577 8.38835 3.151 8.72138 3.43684C9.66819 4.24949 10.2772 7.00777 10.0429 8.10428C9.85994 8.96036 8.99696 9.55929 8.41026 10.1448C9.69864 12.4062 11.5747 14.2785 13.8405 15.5644C14.4272 14.9788 15.0274 14.1176 15.8851 13.935C16.9855 13.7008 19.7615 14.3106 20.5709 15.264C20.858 15.6021 21.0105 16.0337 20.9995 16.4767Z" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                    <a href="tel:(+976) 7570 - 7779" rel="nofollow">(+976) 7570 - 7779</a>
-                </div>
-                <div class="left">
-                    <a aria-label="Facebook" target="_blank" rel="noopener" href="https://www.facebook.com/mongoliantravel/">
-                        <i class="fa-brands fa-facebook-f"></i> 
-                    </a>
-                    <a aria-label="Instagram" target="_blank" rel="noopener" href="https://www.instagram.com/mongolayalal/">
-                        <i class="fa-brands fa-instagram"></i> 
-                    </a>
-                    <a aria-label="Youtube" target="_blank" rel="noopener" href="https://www.youtube.com/@mongoliantravelcompany">
-                        <i class="fa-brands fa-youtube"></i> 
-                    </a>
-                    <a aria-label="Twitter" target="_blank" rel="noopener" href="https://twitter.com/mongolayalal">
-                        <i class="fa-brands fa-twitter"></i> 
-                    </a>
-                </div>
-              </li>
-            </ul>
-            <div class="bx bx-menu" id="menu-icon"></div>
-        </nav>
-    </header>
+    <custom-header current="travels"></custom-header>
     <main>
-        <section class="banner">
-            <img src="../../assets/webp/header-tengeriin-haalga.webp" alt="Тэнгэрийн хаалга">
-            <h1>Тэнгэрийн хаалганы аялал</h1>
-        </section>
-        <section class="pre-content">
-            <section class="top-brief">
-                <div class="brief-info">
-                    <div>
-                        <img class="icon-1" src="../../assets/icons/coin.png" alt="Мөнгөн тэмдэгт">
-                    </div>
-                    <div>
-                        <p><b>Үнэ</b></p>
-                        <span>₮3,250,000</span>
-                    </div>
-                </div>
-                <div class="brief-info">
-                    <div>
-                        <img class="icon-1" src="../../assets/icons/clock.png" alt="Цаг">
-                    </div>
-                    <div>
-                        <p><b>Хугацаа</b></p>
-                        <span>9өдөр/8шөнө</span>
-                    </div>
-                </div>
-                <div class="brief-info">
-                    <div>
-                        <img class="icon-1" src="../../assets/icons/group-green.png" alt="Хүмүүс">
-                    </div>
-                    <div>
-                        <p><b>Хүний тоо</b></p>
-                        <span>40</span>
-                    </div>
-                </div>
-                <div class="brief-info">
-                    <div>
-                        <img class="icon-1" src="../../assets/icons/navigator.png" alt="Зай">
-                    </div>
-                    <div>
-                        <p><b>Зай</b></p>
-                        <span>2100км</span>
-                    </div>
-                </div>
-            </section>
-            <ul class="tabs-nav">
-                <li id="selected-tab">
-                    <a href="#"><b>Дэлгэрэнгүй</b></a>
-                </li>
-                <li>
-                    <a href="#"><b>Төлөвлөгөө</b></a>
-                </li>
-                <li>
-                    <a href="#"><b>Байршил</b></a>
-                </li>
-                <li>
-                    <a href="#"><b>Зургийн цомог</b></a>
-                </li>
-                <li>
-                    <a href="#"><b>Нэмэлт мэдээлэл</b></a>
-                </li>
-            </ul>
-        </section>
-        <section class="main-content">
-            <section class="content">
-                <h1>Танилцуулга</h1>
-                <p>Хятадын Хунань мужид Тиэнмэн хэмээх нэгэн уул буй. Энэ газар өдгөө аялал жуулчлалын томоохон цогцолбор болон хөгжжээ. Энэ уулыг оройд нь байх Тэнгэрийн хаалга ихэд алдаршуулсан юм. Тэнгэрийн хаалга болвоос хамгийн өндөрт байдаг нуман хаалга билээ. Энэ хаалга нь (нуман хаалга) өргөөшөө 57 м, уртаашаа 60 м, өндрөөшөө 136 м. <br><br> Байгалийн жамаар үүссэн энэ нуман хаалга МЭӨ 263 онд бий болжээ. Тэр үед энэ хадны хэсэг өгөршиж элэгдэн нурж унасныг Хятадын судар бичигт тэмдэглэн үлдээсэн юм. Чингээд тэр цагаас хойш нуман хаалгыг Тэнгэрийн хаалга гэх болов. <br><br> Нар жаргах цагаар энэ замаар зорчиход эргэн тойрон алган дээр тавьсан мэт ил харагдаж, нар өндөр уулсын цаагуур орж гарахыг ажих боломжтой.
-                    Харин газраар хүрэх бол Тунтиэний авто замаар явдаг. Энэ зам Хятадын хамгийн их бартаатай замд тооцогддог. Нийтдээ 99 эргэлттэй, 11 км-ийн урттай.</p>
-                <table>
-                    <tr class="first-row">
-                        <th>Чиглэл</th>
-                        <td>УБ – Замын-Үүд - Эрээн –Хөх хот - Чангша - Жанжиажэ (Тэнгэрийн хаалга) -Чангша –Хөх хот- Эрээн – Замын-Үүд - УБ</td>
-                    </tr>
-                    <tr>
-                        <th>Хаанаас хөдлөх</th>
-                        <td>Улаанбаатар возкал</td>
-                    </tr>
-                    <tr>
-                        <th>Хэзээ</th>
-                        <td>16:00</td>
-                    </tr>
-                    <tr>
-                        <th>Унаа</th>
-                        <td>Онгоц, автобус, галт тэрэг</td>
-                    </tr>
-                    <tr>
-                        <th>Аяллын үнэд багтсан зүйлс</th>
-                        <td>
-                            <ul>
-                                <li><img src="../../assets/icons/check.png" alt="Check">2 талын галт тэрэг</li>
-                                <li><img src="../../assets/icons/check.png" alt="Check">Автобус, онгоцны билет</li>
-                                <li><img src="../../assets/icons/check.png" alt="Check">Тосох үдэх унаа</li>
-                                <li><img src="../../assets/icons/check.png" alt="Check">Буудал</li>
-                                <li><img src="../../assets/icons/check.png" alt="Check">Хөтөлбөрт орсон хоол</li>
-                                <li><img src="../../assets/icons/check.png" alt="Check">Хөтөлбөрт багтсан үзвэр, хөтөч</li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>Аяллын үнэд багтаагүй зүйлс</th>
-                        <td>
-                            <ul>
-                                <li><img src="../../assets/icons/remove.png" alt="Cross sign">PCR шинжилгээний төлбөр</li>
-                            </ul>
-                        </td>
-                    </tr>
-                </table>
-            </section>
-            <aside id="booking-section">
-                <section class="timer">
-                    <div class="days">
-                        <h2>6</h2>
-                        <span>өдөр</span>
-                    </div>
-                    <div class="hours">
-                        <h2>10</h2>
-                        <span>цаг</span>
-                    </div>
-                    <div class="minutes">
-                        <h2>23</h2>
-                        <span>мин</span>
-                    </div>
-                    <div class="seconds">
-                        <h2>17</h2>
-                        <span>сек</span>
-                    </div>
-                    <!-- <clock-component days="6"></clock-component> -->
-                </section>
-                <section class="booking-form">
-                    <div class="form-top"></div>
-                    <h3>Энэ аяллыг захиалах</h3>
-                    <form action="">
-                        <input type="text" id="name" name="name" placeholder="Нэр" required>
-                        <input type="email" id="email" name="email" placeholder="Имэйл" required>
-                        <input type="email" id="email_verify" name="email_verify" placeholder="Имэйл баталгаажуулах" required>
-                        <input type="tel" id="phone" name="phone" placeholder="Утасны дугаар" required>
-                        <input type="number" id="num_tickets" name="num_tickets" placeholder="Билетийн тоо" required>
-                        <span>Нийт дүн: 2,400,000₮</span>
-                        <textarea id="message" name="message" rows="5" cols="50" placeholder="Мессеж"></textarea>
-                        <input type="submit" value="Илгээх">
-                    </form>
-                </section>
-            </aside>
-        </section>
+        <travel-details></travel-details>
+        <!-- Төстэй аяллууд санал болгох хэсэг -->
         <section class="travel-cat">
-            <h1>Төстэй аяллууд</h1>
-            <div class="card-slider">
-                <div class="card-slider-container">
-                    <custom-card
-                        title="Их Британи"
-                        date="10 өдөр / 9 шөнө"
-                        picture="../../assets/img/card-5-great-britain.png"
-                        price="3,335,000₮ "
-                    ></custom-card>
-                    <custom-card
-                        title="Прага"
-                        date="7 өдөр / 6 шөнө"
-                        picture="../../assets/img/card-6-prague.png"
-                        price="750,000₮"
-                    ></custom-card>
-                    <custom-card
-                        title="Калифорни"
-                        date="8 өдөр / 7 шөнө"
-                        picture="../../assets/img/card-7-california.png"
-                        price="3,350,000₮"
-                    ></custom-card>
-                    <custom-card
-                        title="Сингапур"
-                        date="6 өдөр / 5 шөнө"
-                        picture="../../assets/img/card-8-singapore.png"
-                        price="600,000₮"
-                    ></custom-card>
-                    <custom-card
-                        title="Их Британи"
-                        date="10 өдөр / 9 шөнө"
-                        picture="../../assets/img/card-5-great-britain.png"
-                        price="3,335,000₮ "
-                    ></custom-card>
-                    <custom-card
-                        title="Прага"
-                        date="7 өдөр / 6 шөнө"
-                        picture="../../assets/img/card-6-prague.png"
-                        price="750,000₮"
-                    ></custom-card>
-                </div>
-                <img
-                    alt="previous"
-                    class="arrow left-arrow prev-btn"
-                    src="../../assets/icons/black-left-arrow.svg"
-                />
-                <img
-                    alt="next"
-                    class="arrow right-arrow next-btn"
-                    src="../../assets/icons/black-right-arrow.svg"
-                />
-            </div>
-        </section>
+            <h1>Төстэй аяллууд</h1> 
+              <div class="card-slider">
+                <svg class="prev-btn" xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 96 960 960" width="48" fill="#054822"><path d="M561.615 811.153 324.847 574.385l236.768-237.153 41.615 41.614-195.154 195.539L603.23 769.538l-41.615 41.615Z"/></svg>
+                  <div class="card-slider-container"> 
+                    <div id="recommending-travels-container" class="card-slider-content"> 
+      
+                    </div>
+                  </div>
+                <svg class="next-btn" xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 96 960 960" width="48" fill="#054822"><path d="m375.385 811.153-41.615-41.615 195.154-195.153L333.77 378.846l41.615-41.614 236.768 237.153-236.768 236.768Z"/></svg>
+              </div>  
+          </section>
+        <!-- mobile version дээр захиалах товч байнга доод хэсэгт гарч ирэх -->
         <button class="book-now">
             <a href="#booking-section">Одоо захиал</a>
         </button>
     </main>
+    <!-- footer -->
     <footer>
         <div class="footer-content">
             <section> 
