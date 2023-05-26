@@ -178,7 +178,7 @@ img.landscape {
 	width: calc(100% - 16vw);
 }
 /* Нийтлэл нэгтгэл */
-.wrap-article {
+blog-news {
 	width: 60%;
 }
 /* Нийтлэгч, нийтэлсэн он, сар, өдөр */

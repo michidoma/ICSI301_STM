@@ -12,7 +12,7 @@ class Travel {
     return `
     <section travelid="${this.id}" class="card">
       <img src="${this.image}" alt="${this.altText}">
-      <span>${this.price}</span>
+      <span>${this.price.toLocaleString()+'₮'}</span>
       <h2>${this.title}</h2>
       <p>${this.duration}</p>
     </section>

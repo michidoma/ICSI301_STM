@@ -16,7 +16,7 @@ class News {
           <h2>${this.title}</h2>
           <p>${this.content}</p>
         </div>
-        <button><a href="src/html/blog.html">Цааш унших<i class="material-icons">arrow_forward</i></a></button>
+        <button><a blogid="${this.id}" href="src/html/blog.html?blogid=${this.id}">Цааш унших<i class="material-icons">arrow_forward</i></a></button>
       </section>
     </article>
     `;

@@ -76,7 +76,7 @@ class Card extends HTMLElement {
     </style>
     <section class="card">
       <img src="${this.picture}" alt="${this.title}">
-      <span>${this.price}</span>
+      <span>${this.price.toLocaleString()+'₮'}</span>
       <h2>${this.title}</h2>
       <p>${this.date}</p>
     </section>
